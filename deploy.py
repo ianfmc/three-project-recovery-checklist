@@ -1,5 +1,5 @@
 """Publish isolated resources. UI-only by default after initial deployment."""
-import hashlib,io,json,os,secrets,sys,zipfile
+import base64,hashlib,io,json,os,secrets,sys,zipfile
 from pathlib import Path
 import boto3
 from botocore.config import Config
@@ -70,7 +70,12 @@ if os.environ.get('PUBLISH_DETAILS')=='1':
 outputs={o['OutputKey']:o['OutputValue'] for o in stack['Outputs']}
 secret=lam.get_function_configuration(FunctionName=outputs['FunctionName'])['Environment']['Variables']['ACCESS_TOKEN']
 config=json.dumps({'url':outputs['ApiUrl'],'token':secret}).replace('<','\\u003c')
-html=(ROOT/'index.html').read_text().replace('<link rel="stylesheet" href="styles.css">','<style>'+(ROOT/'styles.css').read_text()+'</style>').replace('window.CONFIG=null;','window.CONFIG='+config+';')
+css=(ROOT/'styles.css').read_text()
+for font in (ROOT/'fonts').iterdir():
+ if font.suffix in ('.woff2','.ttf'):
+  mime='woff2' if font.suffix=='.woff2' else 'ttf'
+  css=css.replace('fonts/'+font.name,'data:font/'+mime+';base64,'+base64.b64encode(font.read_bytes()).decode())
+html=(ROOT/'index.html').read_text().replace('<link rel="stylesheet" href="styles.css">','<style>'+css+'</style>').replace('window.CONFIG=null;','window.CONFIG='+config+';')
 for f in ('logic.js','app.js'):html=html.replace(f'<script src="{f}"></script>','<script>'+(ROOT/f).read_text()+'</script>')
 s3.put_object(Bucket=BUCKET,Key='index.html',Body=html.encode(),ContentType='text/html; charset=utf-8',CacheControl='no-cache, no-store',ServerSideEncryption='AES256')
 url=s3.generate_presigned_url('get_object',Params={'Bucket':BUCKET,'Key':'index.html'},ExpiresIn=604800)

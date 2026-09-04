@@ -22,7 +22,7 @@ The business plan informs RUNWELL’s outcome (design-partner real use and a pat
 
 ## Local preview
 
-Run `python3 -m http.server 8769 --bind 127.0.0.1` in this directory, then open `http://localhost:8769`. Static preview reads `data.json`. Shared edits require the private deployed page. No framework, database, or asset build is required. Brand 72 is preferred if installed; Arial is the fallback.
+Run `python3 -m http.server 8769 --bind 127.0.0.1` in this directory, then open `http://localhost:8769`. Static preview reads `data.json`. Shared edits require the private deployed page. No framework, database, or asset build is required. Lato is bundled and embedded in the published page; Arial is the fallback. Font licensing is included in fonts/OFL.txt.
 
 ## Shared persistence and security
 
