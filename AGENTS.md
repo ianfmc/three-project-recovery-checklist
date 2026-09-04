@@ -5,3 +5,4 @@ Normal ./deploy.sh publishes layout only after initial setup. PUBLISH_DETAILS=1 
 Keep application repositories untouched. All tasks belong to Ian, with AT-, LW-, RW- prefixes. Do not copy SAP source, internal implementation details, customers, credentials, signed URLs, or proprietary prompts here.
 Never commit .private or tokens. Read README.md before deployment/service changes.
 Use Lato typography for this personal checklist; do not apply SAP Brand 72.
+Use bundled Google Material Symbols for interface icons. Ian dislikes emoji-style or standalone Unicode icon characters; do not use them as UI icons.

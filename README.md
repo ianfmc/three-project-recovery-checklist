@@ -8,7 +8,7 @@ Open the private link in `.private/url.txt` after deployment. Anyone with the pa
 
 Routine completion is one click. A release task needs a concise evidence statement. Required task/decision prerequisites must be complete. One task can be in progress per project; Update offers an explicit switch. Blocked work requires a reason and next unblocking action. Reopening preserves evidence and notes; reopen dependent completed work first.
 
-Resolved decisions show a teal check badge and a per-project resolved count. Decision rows link to their dependent tasks, whose expanded details show the recorded answer. Resolving a decision clears its prerequisite, but does not complete implementation work or update application repositories. Decisions with no linked prerequisites remain recorded project guidance.
+Resolved decisions show a teal Google Material Symbols check badge and a per-project resolved count. Decision rows link to their dependent tasks, whose expanded details show the recorded answer. Resolving a decision clears its prerequisite, but does not complete implementation work or update application repositories. Decisions with no linked prerequisites remain recorded project guidance.
 
 The top metrics reflect the selected projects. Work view, search, and hide-completed narrow detailed tasks without changing the project’s completion denominator or hiding its next action. Deferred work is excluded from general completion. Linked release gates reuse canonical tasks and never create duplicate counts. General progress and release readiness are separate.
 
@@ -24,7 +24,7 @@ The business plan informs RUNWELL’s outcome (design-partner real use and a pat
 
 ## Local preview
 
-Run `python3 -m http.server 8769 --bind 127.0.0.1` in this directory, then open `http://localhost:8769`. Static preview reads `data.json`. Shared edits require the private deployed page. No framework, database, or asset build is required. Lato is bundled and embedded in the published page; Arial is the fallback. Font licensing is included in fonts/OFL.txt.
+Run `python3 -m http.server 8769 --bind 127.0.0.1` in this directory, then open `http://localhost:8769`. Static preview reads `data.json`. Shared edits require the private deployed page. No framework, database, or asset build is required. Lato is bundled and embedded in the published page; Arial is the fallback. Font licensing is included in fonts/OFL.txt. Interface icons use embedded Google Material Symbols, with their license alongside the font.
 
 ## Shared persistence and security
 
