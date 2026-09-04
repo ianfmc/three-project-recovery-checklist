@@ -1,0 +1,8 @@
+{
+  "account": "715853571315",
+  "region": "us-west-2",
+  "bucket": "three-program-recovery-715853571315-us-west-2",
+  "stack": "three-program-recovery-control",
+  "api": "https://i36xz2uap0.execute-api.us-west-2.amazonaws.com/data",
+  "function": "three-program-recovery-control-Function-TXvC4gSeK0HX"
+}

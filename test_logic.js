@@ -1,0 +1,13 @@
+const assert=require('node:assert/strict'),R=require('./logic.js'),seed=require('./data.json');let d=structuredClone(seed);
+assert.equal(R.next(d,'AT','2026-09-04').kind,'decision');
+assert.equal(R.next(d,'RW','2026-09-04').item.id,'RW-101');
+assert.equal(R.next(d,'LW','2026-09-04').kind,'decision');
+assert.equal(R.health(d,'AT','2026-09-04').label,'Blocked');
+assert.equal(R.progress(d.tasks).done,0);assert.equal(R.progress(d.tasks).total,d.tasks.filter(t=>t.status!=='deferred').length);
+const doing=d.tasks.find(t=>t.id==='AT-601');doing.status='doing';assert.equal(R.next(d,'AT','2026-09-04').item.id,'AT-601');
+doing.dependencies=['AT-602'];assert.notEqual(R.next(d,'AT','2026-09-04').item.id,'AT-601');
+assert.equal(R.lane(d,'RW','2026-10-01'),'Primary · design-partner release');
+for(const t of d.tasks)t.status='done';for(const de of d.decisions)de.status='resolved';
+assert.equal(R.next(d,'RW').kind,'complete');assert.equal(R.gateDone(d,d.gates[0]),false);
+for(const t of d.tasks)t.evidence='Verified';assert.equal(R.health(d,'RW').label,'Complete');
+console.log('Scheduling, gate, dependency, lane, and completion tests passed.');
