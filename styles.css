@@ -8,3 +8,5 @@
 input:not([type=checkbox]),select,textarea{font-size:16px}
 
 @media(min-width:801px){header{padding:16px 36px}h1{font-size:32px}.header-sub{font-size:16px}#subtitle{font-size:14px}.filters,.metrics,.next,.portfolio{margin-top:12px;margin-bottom:12px}.metric{padding:9px 16px}.metric span,.metric strong{line-height:1.25}.next-item small{font-size:12px}}
+
+.decision-status{display:inline-flex;align-items:center;gap:5px;border-radius:20px;padding:3px 10px;font-size:12px;font-weight:800;margin:0 8px 7px 0;white-space:nowrap}.decision-status.resolved{background:#dff3eb;color:#14614f;border:1px solid #afd6c5}.decision-status.open{background:#fff0d5;color:#805100;border:1px solid #e9ce9b}.decision-row{padding:14px 12px;margin:9px 0;border:1px solid var(--line);border-left:4px solid #ddb861;border-radius:6px;align-items:flex-start}.decision-row.is-resolved{border-left-color:#29977e;background:#f2faf6}.decision-content{min-width:0;flex:1}.decision-content p{overflow-wrap:anywhere}.decision-row>button{flex-shrink:0}.task-decisions{background:#f1f8f5;border-left:3px solid #29977e;padding:12px;margin:12px 0}.decisions .section-heading h3{margin:0}

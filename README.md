@@ -8,6 +8,8 @@ Open the private link in `.private/url.txt` after deployment. Anyone with the pa
 
 Routine completion is one click. A release task needs a concise evidence statement. Required task/decision prerequisites must be complete. One task can be in progress per project; Update offers an explicit switch. Blocked work requires a reason and next unblocking action. Reopening preserves evidence and notes; reopen dependent completed work first.
 
+Resolved decisions show a teal check badge and a per-project resolved count. Decision rows link to their dependent tasks, whose expanded details show the recorded answer. Resolving a decision clears its prerequisite, but does not complete implementation work or update application repositories. Decisions with no linked prerequisites remain recorded project guidance.
+
 The top metrics reflect the selected projects. Work view, search, and hide-completed narrow detailed tasks without changing the project’s completion denominator or hiding its next action. Deferred work is excluded from general completion. Linked release gates reuse canonical tasks and never create duplicate counts. General progress and release readiness are separate.
 
 This weekend’s Kiro setup is bounded for all three projects. AT is the September primary lane; LIVEWELL discovery is secondary; RUNWELL remains foundation-only until October. A future start date affects recommendation, not permission to work ahead. An unresolved critical decision may be the next action. Router fallback remains deferred until deliberately activated. Model names in the plan are candidates, not verified service availability. Cost tracking is manual and optional, with no assumed personal budget.
