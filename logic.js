@@ -8,6 +8,18 @@ function progress(ts){ts=included(ts);const done=ts.filter(t=>t.status==='done')
 function requirements(d,t){return [...t.dependencies.filter(id=>d.tasks.find(x=>x.id===id)?.status!=='done'),...t.decisionDependencies.filter(id=>d.decisions.find(x=>x.id===id)?.status!=='resolved')]}
 function compare(a,b){return (rank[a.priority]??4)-(rank[b.priority]??4)||(a.targetDate||'9999').localeCompare(b.targetDate||'9999')||a.id.localeCompare(b.id)}
 function next(d,p,date=today()){
+ const setupId=d.projects.find(x=>x.id===p)?.setupGate;
+ if(setupId&&d.tasks.find(t=>t.id===setupId)?.status!=='done'){
+  const ancestors=new Set();function gather(id){if(ancestors.has(id))return;ancestors.add(id);const t=d.tasks.find(t=>t.id===id);if(t)for(const dep of t.dependencies)gather(dep)}gather(setupId);
+  const pending=d.tasks.filter(t=>ancestors.has(t.id)&&t.status!=='done');
+  const ready=pending.filter(t=>['ready','doing'].includes(t.status)&&!requirements(d,t).length&&(!t.startDate||t.startDate<=date)).sort((a,b)=>(a.status==='doing'?-1:0)-(b.status==='doing'?-1:0)||compare(a,b));
+  if(ready.length)return {kind:'task',item:ready[0],reason:(ready[0].project===p?'':'Shared installation prerequisite. ')+'Complete Kiro and gstack setup before project work.'};
+  const blocker=pending.filter(t=>t.status==='blocked'&&!requirements(d,t).length).sort(compare)[0];
+  if(blocker)return {kind:'blocker',item:blocker,reason:blocker.nextAction};
+  const scheduled=pending.filter(t=>t.status==='ready'&&!requirements(d,t).length).sort((a,b)=>(a.startDate||'').localeCompare(b.startDate||'')||compare(a,b))[0];
+  if(scheduled)return {kind:'scheduled',item:scheduled,reason:'Installation prerequisite scheduled for '+scheduled.startDate+'.'};
+  return {kind:'waiting',reason:'Finish or unblock the Kiro and gstack installation steps before starting project work.'};
+ }
  const ts=included(tasksFor(d,p)).filter(t=>t.status!=='done');
  if(!ts.length)return {kind:'complete',reason:'All included work is complete.'};
  const ready=ts.filter(t=>!requirements(d,t).length&&t.status!=='blocked'&&!t.conditional&&(t.status==='ready'||t.status==='doing')&&(!t.startDate||t.startDate<=date));

@@ -12,7 +12,7 @@ Resolved decisions show a teal Google Material Symbols check badge and a per-pro
 
 The top metrics reflect the selected projects. Work view, search, and hide-completed narrow detailed tasks without changing the project’s completion denominator or hiding its next action. Deferred work is excluded from general completion. Linked release gates reuse canonical tasks and never create duplicate counts. General progress and release readiness are separate.
 
-This weekend’s Kiro setup is bounded for all three projects. AT is the September primary lane; LIVEWELL discovery is secondary; RUNWELL remains foundation-only until October. A future start date affects recommendation, not permission to work ahead. An unresolved critical decision may be the next action. Router fallback remains deferred until deliberately activated. Model names in the plan are candidates, not verified service availability. Cost tracking is manual and optional, with no assumed personal budget.
+Kiro and gstack installation and verification come first for all three projects. Each project’s setupGate ends at its -635 task. All active substantive tasks, including ADRs, design documents, implementation, and further tooling, depend on that gate. Next Action follows the setup dependency chain before recommending project work or design decisions; shared installation prerequisites may appear under more than one project without duplicate task records. AT is the September primary lane; LIVEWELL discovery is secondary; RUNWELL remains foundation-only until October. A future start date affects recommendation, not permission to work ahead. An unresolved critical decision may be the next action. Router fallback remains deferred until deliberately activated. Model names in the plan are candidates, not verified service availability. Cost tracking is manual and optional, with no assumed personal budget.
 
 ## Sources and reconciliation
 
@@ -74,3 +74,7 @@ No other bucket, stack, checklist, or application resource should be removed.
 ## Resource and cost summary
 
 Dedicated private S3 bucket (HTML, JSON versions, service archives), one Lambda, one HTTP API, one IAM role, and a log group with 14-day retention. No provisioned database, compute instance, or NAT gateway. Charges depend on API calls, Lambda execution, S3 requests/storage/version retention, and logs. While open and idle, one visible tab polls up to 240 times/hour; hidden tabs pause. This is request-based infrastructure, not a quoted monthly price. Application runtime and Kiro usage are separate costs.
+
+## LIVEWELL scope clarification (5 September)
+
+LW-102 now documents disclosure latency and research limitations. LW-103 confirms the selected Capitol Trades acquisition method and applicable access terms. The old broad legal/ethical wording and legal-review phase title were replaced. The already recorded personal-use and source-selection decisions remain unchanged; there is no default general ethics or legal approval exercise.

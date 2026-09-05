@@ -45,7 +45,8 @@
         "currency": "USD",
         "adoptionDecision": "Kiro intended; refine setup from real work",
         "note": ""
-      }
+      },
+      "setupGate": "AT-635"
     },
     {
       "id": "LW",
@@ -62,7 +63,7 @@
       ],
       "phases": [
         "Signal Contract and Product Boundaries",
-        "Disclosure Source and Legal Review",
+        "Disclosure Source and Access",
         "Canonical Data and Lineage",
         "Asset Resolution",
         "Recency Weighting and Aggregation",
@@ -86,7 +87,8 @@
         "currency": "USD",
         "adoptionDecision": "Kiro intended; refine setup from real work",
         "note": ""
-      }
+      },
+      "setupGate": "LW-635"
     },
     {
       "id": "RW",
@@ -130,7 +132,8 @@
         "currency": "USD",
         "adoptionDecision": "Kiro intended; refine setup from real work",
         "note": ""
-      }
+      },
+      "setupGate": "RW-635"
     }
   ],
   "tasks": [
@@ -145,7 +148,9 @@
       "milestone": "AT-W1",
       "priority": "critical",
       "status": "ready",
-      "dependencies": [],
+      "dependencies": [
+        "AT-635"
+      ],
       "decisionDependencies": [
         "AT-D01"
       ],
@@ -174,7 +179,8 @@
       "priority": "critical",
       "status": "ready",
       "dependencies": [
-        "AT-101"
+        "AT-101",
+        "AT-635"
       ],
       "decisionDependencies": [
         "AT-D02"
@@ -204,7 +210,8 @@
       "priority": "critical",
       "status": "ready",
       "dependencies": [
-        "AT-101"
+        "AT-101",
+        "AT-635"
       ],
       "decisionDependencies": [
         "AT-D03"
@@ -233,7 +240,9 @@
       "milestone": "AT-W1",
       "priority": "medium",
       "status": "ready",
-      "dependencies": [],
+      "dependencies": [
+        "AT-635"
+      ],
       "decisionDependencies": [],
       "releaseGate": true,
       "critical": false,
@@ -261,7 +270,8 @@
       "status": "ready",
       "dependencies": [
         "AT-102",
-        "AT-103"
+        "AT-103",
+        "AT-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -288,7 +298,9 @@
       "milestone": "AT-W1",
       "priority": "medium",
       "status": "ready",
-      "dependencies": [],
+      "dependencies": [
+        "AT-635"
+      ],
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
@@ -313,7 +325,9 @@
       "milestone": "AT-W1",
       "priority": "medium",
       "status": "ready",
-      "dependencies": [],
+      "dependencies": [
+        "AT-635"
+      ],
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
@@ -340,7 +354,8 @@
       "status": "ready",
       "dependencies": [
         "AT-105",
-        "AT-106"
+        "AT-106",
+        "AT-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -371,7 +386,8 @@
       "priority": "critical",
       "status": "ready",
       "dependencies": [
-        "AT-201"
+        "AT-201",
+        "AT-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -401,7 +417,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "AT-106"
+        "AT-106",
+        "AT-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -429,7 +446,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "AT-201"
+        "AT-201",
+        "AT-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -459,7 +477,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "AT-201"
+        "AT-201",
+        "AT-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -487,7 +506,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "AT-203"
+        "AT-203",
+        "AT-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -515,7 +535,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "AT-107"
+        "AT-107",
+        "AT-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -542,7 +563,9 @@
       "milestone": "AT-W3",
       "priority": "medium",
       "status": "ready",
-      "dependencies": [],
+      "dependencies": [
+        "AT-635"
+      ],
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
@@ -567,7 +590,9 @@
       "milestone": "AT-W3",
       "priority": "medium",
       "status": "ready",
-      "dependencies": [],
+      "dependencies": [
+        "AT-635"
+      ],
       "decisionDependencies": [],
       "releaseGate": true,
       "critical": false,
@@ -593,7 +618,9 @@
       "milestone": "AT-W3",
       "priority": "medium",
       "status": "ready",
-      "dependencies": [],
+      "dependencies": [
+        "AT-635"
+      ],
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
@@ -619,7 +646,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "AT-303"
+        "AT-303",
+        "AT-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -647,7 +675,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "AT-301"
+        "AT-301",
+        "AT-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -675,7 +704,8 @@
       "priority": "critical",
       "status": "ready",
       "dependencies": [
-        "AT-105"
+        "AT-105",
+        "AT-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -704,7 +734,8 @@
       "status": "ready",
       "dependencies": [
         "AT-202",
-        "AT-204"
+        "AT-204",
+        "AT-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -732,7 +763,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "AT-201"
+        "AT-201",
+        "AT-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -761,7 +793,8 @@
       "status": "ready",
       "dependencies": [
         "AT-301",
-        "AT-401"
+        "AT-401",
+        "AT-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -791,7 +824,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "AT-403"
+        "AT-403",
+        "AT-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -818,7 +852,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "AT-203"
+        "AT-203",
+        "AT-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -848,7 +883,8 @@
       "dependencies": [
         "AT-403",
         "AT-405",
-        "AT-307"
+        "AT-307",
+        "AT-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -875,7 +911,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "AT-406"
+        "AT-406",
+        "AT-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -902,7 +939,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "AT-501"
+        "AT-501",
+        "AT-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -929,7 +967,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "AT-301"
+        "AT-301",
+        "AT-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -956,7 +995,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "AT-305"
+        "AT-305",
+        "AT-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -983,7 +1023,9 @@
       "milestone": "LW-W1",
       "priority": "critical",
       "status": "ready",
-      "dependencies": [],
+      "dependencies": [
+        "LW-635"
+      ],
       "decisionDependencies": [
         "LW-D01"
       ],
@@ -1003,15 +1045,17 @@
     {
       "id": "LW-102",
       "project": "LW",
-      "title": "Define legal/ethical product language and prohibit “Congress knows, therefore buy” claims",
-      "description": "Define legal/ethical product language and prohibit “Congress knows, therefore buy” claims",
+      "title": "Document disclosure delays and research limitations",
+      "description": "For the personal LIVEWELL workflow, document reporting delay, transaction value ranges, ambiguous asset matches, and the difference between observed disclosures and a tested predictive signal. Keep this a concise research note written in Kiro. This is a data-quality task, not a general ethics approval or public-product disclaimer exercise.",
       "phase": "Signal Contract and Product Boundaries",
       "targetDate": "2026-09-30",
       "startDate": "2026-09-04",
       "milestone": "LW-W1",
       "priority": "medium",
       "status": "ready",
-      "dependencies": [],
+      "dependencies": [
+        "LW-635"
+      ],
       "decisionDependencies": [],
       "releaseGate": true,
       "critical": false,
@@ -1021,7 +1065,10 @@
       "workingNote": "",
       "completedAt": null,
       "owner": "Ian",
-      "acceptanceCriteria": [],
+      "acceptanceCriteria": [
+        "The research note identifies latency and uncertainty that affect interpretation.",
+        "The signal remains subject to the existing baseline-versus-augmented validation."
+      ],
       "sourceId": "LW-102",
       "conditional": false,
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only."
@@ -1029,18 +1076,21 @@
     {
       "id": "LW-103",
       "project": "LW",
-      "title": "Define authoritative House/Senate source acquisition and permitted-use review",
-      "description": "Define authoritative House/Senate source acquisition and permitted-use review",
-      "phase": "Disclosure Source and Legal Review",
+      "title": "Confirm Capitol Trades access method for personal research",
+      "description": "Use the source already selected in LW-D02. Confirm a supported way to obtain the required data for the personal workflow and check the terms applicable to that access method, including any stated automation, storage, or reuse conditions. Record what is confirmed and any specific unanswered restriction; do not assume either a ban or unrestricted permission. A separate general legal review is not a default release requirement.",
+      "phase": "Disclosure Source and Access",
       "targetDate": "2026-09-30",
       "startDate": "2026-09-04",
       "milestone": "LW-W1",
       "priority": "critical",
       "status": "ready",
       "dependencies": [
-        "LW-101"
+        "LW-101",
+        "LW-635"
       ],
-      "decisionDependencies": [],
+      "decisionDependencies": [
+        "LW-D02"
+      ],
       "releaseGate": true,
       "critical": true,
       "evidence": "",
@@ -1049,10 +1099,17 @@
       "workingNote": "",
       "completedAt": null,
       "owner": "Ian",
-      "acceptanceCriteria": [],
+      "acceptanceCriteria": [
+        "A workable acquisition method and its relevant source terms are documented.",
+        "Any concrete unresolved access restriction has a specific follow-up action."
+      ],
       "sourceId": "LW-103",
       "conditional": false,
-      "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only."
+      "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
+      "sourceUrls": [
+        "https://www.capitoltrades.com/terms-and-conditions",
+        "https://www.capitoltrades.com/about-us"
+      ]
     },
     {
       "id": "LW-104",
@@ -1066,7 +1123,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "LW-101"
+        "LW-101",
+        "LW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -1096,7 +1154,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "LW-104"
+        "LW-104",
+        "LW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -1123,7 +1182,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "LW-101"
+        "LW-101",
+        "LW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -1150,7 +1210,8 @@
       "priority": "critical",
       "status": "ready",
       "dependencies": [
-        "LW-104"
+        "LW-104",
+        "LW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -1178,7 +1239,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "LW-107"
+        "LW-107",
+        "LW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -1198,7 +1260,7 @@
       "project": "LW",
       "title": "Build raw document/index ingestion with idempotency and source snapshots",
       "description": "Build raw document/index ingestion with idempotency and source snapshots",
-      "phase": "Disclosure Source and Legal Review",
+      "phase": "Disclosure Source and Access",
       "targetDate": "2026-10-16",
       "startDate": "2026-10-01",
       "milestone": "LW-W2",
@@ -1206,7 +1268,8 @@
       "status": "ready",
       "dependencies": [
         "LW-103",
-        "LW-104"
+        "LW-104",
+        "LW-635"
       ],
       "decisionDependencies": [
         "LW-D02"
@@ -1235,7 +1298,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "LW-201"
+        "LW-201",
+        "LW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -1265,7 +1329,8 @@
       "status": "ready",
       "dependencies": [
         "LW-202",
-        "LW-105"
+        "LW-105",
+        "LW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -1293,7 +1358,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "LW-104"
+        "LW-104",
+        "LW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -1322,7 +1388,8 @@
       "status": "ready",
       "dependencies": [
         "LW-203",
-        "LW-106"
+        "LW-106",
+        "LW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -1354,7 +1421,8 @@
         "LW-205",
         "LW-107",
         "LW-108",
-        "LW-301"
+        "LW-301",
+        "LW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -1384,7 +1452,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "LW-205"
+        "LW-205",
+        "LW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -1413,7 +1482,8 @@
       "status": "ready",
       "dependencies": [
         "LW-201",
-        "LW-205"
+        "LW-205",
+        "LW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -1441,7 +1511,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "LW-206"
+        "LW-206",
+        "LW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -1470,7 +1541,8 @@
       "status": "ready",
       "dependencies": [
         "LW-208",
-        "LW-209"
+        "LW-209",
+        "LW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -1497,7 +1569,9 @@
       "milestone": "RW-W1",
       "priority": "critical",
       "status": "ready",
-      "dependencies": [],
+      "dependencies": [
+        "RW-635"
+      ],
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": true,
@@ -1523,7 +1597,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "RW-101"
+        "RW-101",
+        "RW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -1549,7 +1624,9 @@
       "milestone": "RW-W1",
       "priority": "critical",
       "status": "ready",
-      "dependencies": [],
+      "dependencies": [
+        "RW-635"
+      ],
       "decisionDependencies": [],
       "releaseGate": true,
       "critical": true,
@@ -1576,7 +1653,8 @@
       "priority": "critical",
       "status": "ready",
       "dependencies": [
-        "RW-103"
+        "RW-103",
+        "RW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -1603,7 +1681,9 @@
       "milestone": "RW-W1",
       "priority": "high",
       "status": "ready",
-      "dependencies": [],
+      "dependencies": [
+        "RW-635"
+      ],
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
@@ -1628,7 +1708,9 @@
       "milestone": "RW-W1",
       "priority": "medium",
       "status": "ready",
-      "dependencies": [],
+      "dependencies": [
+        "RW-635"
+      ],
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
@@ -1654,7 +1736,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "RW-103"
+        "RW-103",
+        "RW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -1680,7 +1763,9 @@
       "milestone": "RW-W1",
       "priority": "high",
       "status": "ready",
-      "dependencies": [],
+      "dependencies": [
+        "RW-635"
+      ],
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
@@ -1707,7 +1792,8 @@
       "status": "ready",
       "dependencies": [
         "RW-103",
-        "RW-104"
+        "RW-104",
+        "RW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -1735,7 +1821,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "RW-201"
+        "RW-201",
+        "RW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -1762,7 +1849,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "RW-201"
+        "RW-201",
+        "RW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -1789,7 +1877,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "RW-203"
+        "RW-203",
+        "RW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -1816,7 +1905,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "RW-204"
+        "RW-204",
+        "RW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -1846,7 +1936,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "RW-205"
+        "RW-205",
+        "RW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -1874,7 +1965,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "RW-203"
+        "RW-203",
+        "RW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -1902,7 +1994,8 @@
       "status": "ready",
       "dependencies": [
         "RW-206",
-        "RW-207"
+        "RW-207",
+        "RW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -1929,7 +2022,9 @@
       "milestone": "RW-W3",
       "priority": "medium",
       "status": "ready",
-      "dependencies": [],
+      "dependencies": [
+        "RW-635"
+      ],
       "decisionDependencies": [
         "RW-D01"
       ],
@@ -1959,7 +2054,8 @@
       "status": "ready",
       "dependencies": [
         "RW-301",
-        "RW-201"
+        "RW-201",
+        "RW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -1987,7 +2083,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "RW-103"
+        "RW-103",
+        "RW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -2014,7 +2111,9 @@
       "milestone": "RW-W3",
       "priority": "medium",
       "status": "ready",
-      "dependencies": [],
+      "dependencies": [
+        "RW-635"
+      ],
       "decisionDependencies": [],
       "releaseGate": true,
       "critical": false,
@@ -2041,7 +2140,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "RW-205"
+        "RW-205",
+        "RW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -2070,7 +2170,8 @@
       "status": "ready",
       "dependencies": [
         "RW-208",
-        "RW-305"
+        "RW-305",
+        "RW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -2101,7 +2202,8 @@
         "RW-306",
         "RW-302",
         "RW-303",
-        "RW-304"
+        "RW-304",
+        "RW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -2128,7 +2230,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "RW-401"
+        "RW-401",
+        "RW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -2156,7 +2259,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "RW-401"
+        "RW-401",
+        "RW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -2184,7 +2288,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "RW-103"
+        "RW-103",
+        "RW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -2212,7 +2317,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "RW-306"
+        "RW-306",
+        "RW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -2243,7 +2349,8 @@
         "RW-402",
         "RW-403",
         "RW-404",
-        "RW-405"
+        "RW-405",
+        "RW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -2322,7 +2429,8 @@
       "priority": "high",
       "status": "ready",
       "dependencies": [
-        "AT-602"
+        "AT-602",
+        "AT-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -2349,7 +2457,8 @@
       "priority": "high",
       "status": "ready",
       "dependencies": [
-        "AT-603"
+        "AT-603",
+        "AT-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -2376,7 +2485,8 @@
       "priority": "high",
       "status": "ready",
       "dependencies": [
-        "AT-604"
+        "AT-604",
+        "AT-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -2403,7 +2513,8 @@
       "priority": "low",
       "status": "ready",
       "dependencies": [
-        "AT-605"
+        "AT-605",
+        "AT-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -2429,7 +2540,9 @@
       "milestone": "AT-K1",
       "priority": "low",
       "status": "ready",
-      "dependencies": [],
+      "dependencies": [
+        "AT-635"
+      ],
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
@@ -2532,7 +2645,8 @@
       "priority": "high",
       "status": "ready",
       "dependencies": [
-        "LW-602"
+        "LW-602",
+        "LW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -2559,7 +2673,8 @@
       "priority": "high",
       "status": "ready",
       "dependencies": [
-        "LW-603"
+        "LW-603",
+        "LW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -2586,7 +2701,8 @@
       "priority": "high",
       "status": "ready",
       "dependencies": [
-        "LW-604"
+        "LW-604",
+        "LW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -2613,7 +2729,8 @@
       "priority": "low",
       "status": "ready",
       "dependencies": [
-        "LW-605"
+        "LW-605",
+        "LW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -2639,7 +2756,9 @@
       "milestone": "LW-K1",
       "priority": "low",
       "status": "ready",
-      "dependencies": [],
+      "dependencies": [
+        "LW-635"
+      ],
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
@@ -2742,7 +2861,8 @@
       "priority": "high",
       "status": "ready",
       "dependencies": [
-        "RW-602"
+        "RW-602",
+        "RW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -2769,7 +2889,8 @@
       "priority": "high",
       "status": "ready",
       "dependencies": [
-        "RW-603"
+        "RW-603",
+        "RW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -2796,7 +2917,8 @@
       "priority": "high",
       "status": "ready",
       "dependencies": [
-        "RW-604"
+        "RW-604",
+        "RW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -2823,7 +2945,8 @@
       "priority": "low",
       "status": "ready",
       "dependencies": [
-        "RW-605"
+        "RW-605",
+        "RW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -2849,7 +2972,9 @@
       "milestone": "RW-K1",
       "priority": "low",
       "status": "ready",
-      "dependencies": [],
+      "dependencies": [
+        "RW-635"
+      ],
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
@@ -2925,7 +3050,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "AT-602"
+        "AT-602",
+        "AT-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -2980,7 +3106,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "LW-602"
+        "LW-602",
+        "LW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -3007,7 +3134,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "LW-602"
+        "LW-602",
+        "LW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -3034,7 +3162,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "LW-206"
+        "LW-206",
+        "LW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -3061,7 +3190,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "RW-602"
+        "RW-602",
+        "RW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -3088,7 +3218,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "RW-602"
+        "RW-602",
+        "RW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -3115,7 +3246,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "RW-208"
+        "RW-208",
+        "RW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -3142,7 +3274,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "AT-602"
+        "AT-602",
+        "AT-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -3169,7 +3302,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "LW-602"
+        "LW-602",
+        "LW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -3196,7 +3330,8 @@
       "priority": "medium",
       "status": "ready",
       "dependencies": [
-        "RW-602"
+        "RW-602",
+        "RW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -3222,7 +3357,9 @@
       "milestone": "LW-W1",
       "priority": "high",
       "status": "ready",
-      "dependencies": [],
+      "dependencies": [
+        "LW-635"
+      ],
       "decisionDependencies": [],
       "releaseGate": true,
       "critical": false,
@@ -3810,8 +3947,8 @@
     {
       "id": "AT-635",
       "project": "AT",
-      "title": "Smoke-test gstack review and browser tools in AT",
-      "description": "Run one read-only review against a small relevant change or fixture, then use the installed browser skill against a local or dedicated test page. Verify that Chromium launches, the page is read correctly, and the review cites actual project files. Use a sanitized demonstration page or fixture. Record the installed revision, Kiro surface, result, and any correction effort in the working note or existing pilot record. Do not auto-ship, deploy, or complete unrelated project work during installation verification.",
+      "title": "Verify Kiro and gstack are ready for AT work",
+      "description": "Installation acceptance before any ADR, design document, implementation, or other substantive project work. Run one read-only review against a small relevant change or fixture, then use the installed browser skill against a local or dedicated test page. Verify that Chromium launches, the page is read correctly, and the review cites actual project files. Use a sanitized demonstration page or fixture. Record the installed revision, Kiro surface, result, and any correction effort in the working note or existing pilot record. Do not auto-ship, deploy, or complete unrelated project work during installation verification.",
       "phase": "Development Setup: Kiro, SAP Proxy and CAP MCP",
       "targetDate": "2026-09-07",
       "startDate": "2026-09-05",
@@ -3992,8 +4129,8 @@
     {
       "id": "LW-635",
       "project": "LW",
-      "title": "Smoke-test gstack review and browser tools in LW",
-      "description": "Run one read-only review against a small relevant change or fixture, then use the installed browser skill against a local or dedicated test page. Verify that Chromium launches, the page is read correctly, and the review cites actual project files. Use the signal-contract fixture or a research-view test page. Record the installed revision, Kiro surface, result, and any correction effort in the working note or existing pilot record. Do not auto-ship, deploy, or complete unrelated project work during installation verification.",
+      "title": "Verify Kiro and gstack are ready for LW work",
+      "description": "Installation acceptance before any ADR, design document, implementation, or other substantive project work. Run one read-only review against a small relevant change or fixture, then use the installed browser skill against a local or dedicated test page. Verify that Chromium launches, the page is read correctly, and the review cites actual project files. Use the signal-contract fixture or a research-view test page. Record the installed revision, Kiro surface, result, and any correction effort in the working note or existing pilot record. Do not auto-ship, deploy, or complete unrelated project work during installation verification.",
       "phase": "Development Setup: Kiro and AWS MCP",
       "targetDate": "2026-09-07",
       "startDate": "2026-09-05",
@@ -4174,8 +4311,8 @@
     {
       "id": "RW-635",
       "project": "RW",
-      "title": "Smoke-test gstack review and browser tools in RW",
-      "description": "Run one read-only review against a small relevant change or fixture, then use the installed browser skill against a local or dedicated test page. Verify that Chromium launches, the page is read correctly, and the review cites actual project files. Use the CI repair or a test-fleet workflow page. Record the installed revision, Kiro surface, result, and any correction effort in the working note or existing pilot record. Do not auto-ship, deploy, or complete unrelated project work during installation verification.",
+      "title": "Verify Kiro and gstack are ready for RW work",
+      "description": "Installation acceptance before any ADR, design document, implementation, or other substantive project work. Run one read-only review against a small relevant change or fixture, then use the installed browser skill against a local or dedicated test page. Verify that Chromium launches, the page is read correctly, and the review cites actual project files. Use the CI repair or a test-fleet workflow page. Record the installed revision, Kiro surface, result, and any correction effort in the working note or existing pilot record. Do not auto-ship, deploy, or complete unrelated project work during installation verification.",
       "phase": "Development Setup: Kiro and AWS MCP",
       "targetDate": "2026-09-07",
       "startDate": "2026-09-05",
@@ -4387,7 +4524,8 @@
       "recordedDecision": "",
       "note": "",
       "blocks": [
-        "LW-201"
+        "LW-201",
+        "LW-103"
       ]
     },
     {
@@ -4582,7 +4720,7 @@
     {
       "id": "LW-G02",
       "project": "LW",
-      "title": "Source acquisition approved",
+      "title": "Data acquisition method confirmed",
       "taskIds": [
         "LW-103"
       ]
@@ -4664,7 +4802,7 @@
     {
       "id": "LW-G12",
       "project": "LW",
-      "title": "Scope and research language",
+      "title": "Personal scope and research limitations",
       "taskIds": [
         "LW-101",
         "LW-102"
@@ -4761,6 +4899,6 @@
     "weekendEnd": "2026-09-07",
     "switchDate": "2026-10-01",
     "timezone": "America/Los_Angeles",
-    "note": "This weekend: bounded Kiro setup and one useful slice per project. Through September AT is primary, LIVEWELL discovery secondary, RUNWELL foundation only. From October RUNWELL is primary."
+    "note": "First complete and verify Kiro and gstack setup for each project. ADRs, design documents, implementation, and other substantive work follow. After setup: AT is primary through September, LIVEWELL discovery secondary, and RUNWELL foundation only. From October RUNWELL is primary."
   }
 }

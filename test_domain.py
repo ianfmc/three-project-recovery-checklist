@@ -16,17 +16,30 @@ class RulesTest(unittest.TestCase):
    self.assertTrue(expected.issubset({t['id'] for t in self.doc['tasks']}))
   self.assertEqual(len({t['id'] for t in self.doc['tasks']}),len(self.doc['tasks']))
   self.assertTrue(all(t['owner']=='Ian' and t['id'].startswith(t['project']+'-') for t in self.doc['tasks']))
+ def finish_setup(self,project):
+  def finish(id):
+   t=self.task(id)
+   for dep in t['dependencies']:finish(dep)
+   t.update(status='done',completedAt='2026-09-05T12:00:00+00:00',evidence='Setup verified')
+  finish(project+'-635')
+  validate(self.doc)
+ def test_setup_blocks_project_work(self):
+  for id in ('AT-101','LW-101','RW-101'):
+   with self.assertRaisesRegex(ValueError,'635'):self.change('task',id,{'status':'doing'})
+  self.finish_setup('AT');self.change('task','AT-101',{'status':'doing'})
  def test_evidence_gate(self):
+  self.finish_setup('LW')
   with self.assertRaisesRegex(ValueError,'evidence'):self.change('task','AT-106',{'status':'done'}) if self.task('AT-106')['releaseGate'] else self.change('task','LW-301',{'status':'done'})
  def test_dependencies(self):
   with self.assertRaisesRegex(ValueError,'requires'):self.change('task','AT-201',{'status':'done','evidence':'Verified'})
  def test_decision_prerequisite(self):
   with self.assertRaisesRegex(ValueError,'AT-D02'):self.change('task','AT-102',{'status':'doing'})
  def test_one_doing_and_switch(self):
-  self.change('task','AT-601',{'status':'doing'})
-  with self.assertRaisesRegex(ValueError,'one task'):self.change('task','AT-106',{'status':'doing'})
-  self.change('task','AT-106',{'status':'doing'},switchDoing=True)
-  self.assertEqual(self.task('AT-601')['status'],'ready')
+  self.finish_setup('AT')
+  self.change('task','AT-106',{'status':'doing'})
+  with self.assertRaisesRegex(ValueError,'one task'):self.change('task','AT-107',{'status':'doing'})
+  self.change('task','AT-107',{'status':'doing'},switchDoing=True)
+  self.assertEqual(self.task('AT-106')['status'],'ready')
  def test_blocker_fields(self):
   with self.assertRaisesRegex(ValueError,'Blocked'):self.change('task','RW-101',{'status':'blocked'})
   self.change('task','RW-101',{'status':'blocked','blockerReason':'Missing fixture','nextAction':'Create minimal fixture'})

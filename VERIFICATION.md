@@ -59,3 +59,7 @@ The next useful increment should follow actual weekend use: adjust overly broad 
 Added five development-setup tasks per project (AT/LW/RW-631 through -635). New total: 145 tasks, comprising 121 included and 24 deferred; milestones, decisions, and release gates are unchanged. The source reference is ianfmc/gstack revision e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc, checked against its README, setup script, Kiro host config, and official Kiro skill documentation.
 
 Domain validation and scheduling checks passed after the additions. The new tasks use existing project setup phases and weekend milestones; no completed work is inferred. Publication merges definitions and updates the reset seed without installing gstack or changing application repositories.
+
+## Setup-first correction — 5 September 2026
+
+Added project-specific installation prerequisites to active substantive tasks and made Next Action follow incomplete setup before design decisions and project work. Fifteen domain tests and expanded scheduling tests pass, including shared Kiro installation first, independent project setup gates, server rejection of early project work, and normal recommendations after setup. No new task records or release gates were introduced. LIVEWELL task wording was narrowed to research limitations and the chosen source’s access method.
