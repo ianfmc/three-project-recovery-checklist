@@ -2,7 +2,7 @@
 
 Verified 4 September 2026. This verifies the checklist, not the three applications’ readiness.
 
-## Inventory
+## Initial inventory (4 September)
 
 | Project | Included tasks | Deferred / conditional | Total | Linked release gates |
 |---|---:|---:|---:|---:|
@@ -53,3 +53,9 @@ The page is protected through private-link possession, not person-level sign-in.
 Definitions and dependencies are maintained in data.json. Browser updates handle progress, task target dates, evidence, blockers, working notes, decisions, and pilot costs. Original source installation procedures are condensed into task descriptions; this checklist does not install Kiro or modify any application repository.
 
 The next useful increment should follow actual weekend use: adjust overly broad task boundaries and prerequisite links from Ian’s feedback before adding integrations.
+
+## gstack checklist update — 5 September 2026
+
+Added five development-setup tasks per project (AT/LW/RW-631 through -635). New total: 145 tasks, comprising 121 included and 24 deferred; milestones, decisions, and release gates are unchanged. The source reference is ianfmc/gstack revision e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc, checked against its README, setup script, Kiro host config, and official Kiro skill documentation.
+
+Domain validation and scheduling checks passed after the additions. The new tasks use existing project setup phases and weekend milestones; no completed work is inferred. Publication merges definitions and updates the reset seed without installing gstack or changing application repositories.

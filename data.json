@@ -3661,6 +3661,551 @@
       "acceptanceCriteria": [],
       "sourceId": "deferred-scope",
       "conditional": false
+    },
+    {
+      "id": "AT-631",
+      "project": "AT",
+      "title": "Check gstack prerequisites for Kiro",
+      "description": "In this project’s development environment, verify Git, Bun v1.0 or newer, and working Kiro access. Check git --version and bun --version; use kiro-cli --version if using the CLI. Inspect any existing ~/gstack checkout and ~/.kiro/skills/gstack installation before changing them. Reuse a compatible installation; do not overwrite an unrelated checkout.",
+      "phase": "Development Setup: Kiro, SAP Proxy and CAP MCP",
+      "targetDate": "2026-09-07",
+      "startDate": "2026-09-05",
+      "milestone": "AT-K0",
+      "priority": "high",
+      "status": "ready",
+      "dependencies": [
+        "AT-601"
+      ],
+      "decisionDependencies": [],
+      "releaseGate": false,
+      "critical": false,
+      "evidence": "",
+      "blockerReason": "",
+      "nextAction": "",
+      "workingNote": "",
+      "completedAt": null,
+      "owner": "Ian",
+      "acceptanceCriteria": [
+        "Git and Bun are available to Kiro’s terminal.",
+        "Existing gstack origin and installed revision are recorded, or absence is confirmed."
+      ],
+      "sourceId": "gstack-kiro-e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc",
+      "conditional": false,
+      "sourceUrls": [
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/README.md#other-ai-agents",
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/setup",
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/hosts/kiro.ts",
+        "https://kiro.dev/docs/skills/"
+      ]
+    },
+    {
+      "id": "AT-632",
+      "project": "AT",
+      "title": "Install gstack for Kiro from Ian’s fork",
+      "description": "One-time machine setup. If ~/gstack is absent, run:\ngit clone --single-branch --depth 1 https://github.com/ianfmc/gstack.git ~/gstack\ncd ~/gstack\n./setup --host kiro\n\nIf the directory exists, check its origin and local changes before updating; do not clone over it. Review the setup script first. Setup builds the browser tools and installs Chromium when needed. Keep the source checkout in place because installed runtime assets link to it. Record the actual commit with git -C ~/gstack rev-parse HEAD. The reviewed reference is e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc. Use the explicit Kiro host; the default and Claude team/local instructions are not the Kiro installation route.",
+      "phase": "Development Setup: Kiro, SAP Proxy and CAP MCP",
+      "targetDate": "2026-09-07",
+      "startDate": "2026-09-05",
+      "milestone": "AT-K0",
+      "priority": "high",
+      "status": "ready",
+      "dependencies": [
+        "AT-631"
+      ],
+      "decisionDependencies": [],
+      "releaseGate": false,
+      "critical": false,
+      "evidence": "",
+      "blockerReason": "",
+      "nextAction": "",
+      "workingNote": "",
+      "completedAt": null,
+      "owner": "Ian",
+      "acceptanceCriteria": [
+        "Kiro skill files and runtime assets resolve in this project’s environment.",
+        "Installation succeeds without the missing generated-skills warning; investigate bun run build and rerun setup if that warning occurs."
+      ],
+      "sourceId": "gstack-kiro-e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc",
+      "conditional": false,
+      "sourceUrls": [
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/README.md#other-ai-agents",
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/setup",
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/hosts/kiro.ts",
+        "https://kiro.dev/docs/skills/"
+      ]
+    },
+    {
+      "id": "AT-633",
+      "project": "AT",
+      "title": "Confirm gstack skill discovery in this Kiro workspace",
+      "description": "Open only this project in Kiro and start a fresh agent session after setup. Inspect Agent Steering & Skills and the slash-command menu for the installed gstack review and browser skills. Invoke the names actually exposed by this installation. If using a custom CLI agent, verify its resources include skill://~/.kiro/skills/*/SKILL.md. Check for workspace skills that shadow the global names; do not copy the root repository as a standalone skill and lose its runtime dependencies.",
+      "phase": "Development Setup: Kiro, SAP Proxy and CAP MCP",
+      "targetDate": "2026-09-07",
+      "startDate": "2026-09-05",
+      "milestone": "AT-K0",
+      "priority": "medium",
+      "status": "ready",
+      "dependencies": [
+        "AT-632"
+      ],
+      "decisionDependencies": [],
+      "releaseGate": false,
+      "critical": false,
+      "evidence": "",
+      "blockerReason": "",
+      "nextAction": "",
+      "workingNote": "",
+      "completedAt": null,
+      "owner": "Ian",
+      "acceptanceCriteria": [
+        "Kiro discovers and loads the installed review and browser skill instructions.",
+        "The selected agent can locate the browser runtime; record any IDE/CLI-specific limitation."
+      ],
+      "sourceId": "gstack-kiro-e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc",
+      "conditional": false,
+      "sourceUrls": [
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/README.md#other-ai-agents",
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/setup",
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/hosts/kiro.ts",
+        "https://kiro.dev/docs/skills/"
+      ]
+    },
+    {
+      "id": "AT-634",
+      "project": "AT",
+      "title": "Add project-specific gstack usage guidance",
+      "description": "Add a concise gstack section to this project’s Kiro steering, preserving its existing architecture and instructions. Use planning/review/QA skills for bounded tasks, keep deterministic checks authoritative, and make shipping or deployment a separate explicit action. Keep project context separate even though the skills are installed globally. Use sanitized demo inputs and approved SAP development access. Keep gstack out of CAP application dependencies and deployment artifacts; record only sanitized verification results in this checklist.",
+      "phase": "Development Setup: Kiro, SAP Proxy and CAP MCP",
+      "targetDate": "2026-09-07",
+      "startDate": "2026-09-05",
+      "milestone": "AT-K0",
+      "priority": "medium",
+      "status": "ready",
+      "dependencies": [
+        "AT-633",
+        "AT-602"
+      ],
+      "decisionDependencies": [],
+      "releaseGate": false,
+      "critical": false,
+      "evidence": "",
+      "blockerReason": "",
+      "nextAction": "",
+      "workingNote": "",
+      "completedAt": null,
+      "owner": "Ian",
+      "acceptanceCriteria": [
+        "Project steering identifies when to use gstack without changing the application architecture.",
+        "No application credentials or sensitive data are placed in skill configuration or checklist evidence."
+      ],
+      "sourceId": "gstack-kiro-e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc",
+      "conditional": false,
+      "sourceUrls": [
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/README.md#other-ai-agents",
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/setup",
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/hosts/kiro.ts",
+        "https://kiro.dev/docs/skills/"
+      ]
+    },
+    {
+      "id": "AT-635",
+      "project": "AT",
+      "title": "Smoke-test gstack review and browser tools in AT",
+      "description": "Run one read-only review against a small relevant change or fixture, then use the installed browser skill against a local or dedicated test page. Verify that Chromium launches, the page is read correctly, and the review cites actual project files. Use a sanitized demonstration page or fixture. Record the installed revision, Kiro surface, result, and any correction effort in the working note or existing pilot record. Do not auto-ship, deploy, or complete unrelated project work during installation verification.",
+      "phase": "Development Setup: Kiro, SAP Proxy and CAP MCP",
+      "targetDate": "2026-09-07",
+      "startDate": "2026-09-05",
+      "milestone": "AT-K0",
+      "priority": "medium",
+      "status": "ready",
+      "dependencies": [
+        "AT-634"
+      ],
+      "decisionDependencies": [],
+      "releaseGate": false,
+      "critical": false,
+      "evidence": "",
+      "blockerReason": "",
+      "nextAction": "",
+      "workingNote": "",
+      "completedAt": null,
+      "owner": "Ian",
+      "acceptanceCriteria": [
+        "A bounded review and a browser smoke check both succeed.",
+        "The result and actual installed version are recorded; existing project tests remain authoritative."
+      ],
+      "sourceId": "gstack-kiro-e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc",
+      "conditional": false,
+      "sourceUrls": [
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/README.md#other-ai-agents",
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/setup",
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/hosts/kiro.ts",
+        "https://kiro.dev/docs/skills/"
+      ]
+    },
+    {
+      "id": "LW-631",
+      "project": "LW",
+      "title": "Check gstack prerequisites for Kiro",
+      "description": "In this project’s development environment, verify Git, Bun v1.0 or newer, and working Kiro access. Check git --version and bun --version; use kiro-cli --version if using the CLI. Inspect any existing ~/gstack checkout and ~/.kiro/skills/gstack installation before changing them. Reuse a compatible installation; do not overwrite an unrelated checkout.",
+      "phase": "Development Setup: Kiro and AWS MCP",
+      "targetDate": "2026-09-07",
+      "startDate": "2026-09-05",
+      "milestone": "LW-K0",
+      "priority": "high",
+      "status": "ready",
+      "dependencies": [
+        "AT-601"
+      ],
+      "decisionDependencies": [],
+      "releaseGate": false,
+      "critical": false,
+      "evidence": "",
+      "blockerReason": "",
+      "nextAction": "",
+      "workingNote": "",
+      "completedAt": null,
+      "owner": "Ian",
+      "acceptanceCriteria": [
+        "Git and Bun are available to Kiro’s terminal.",
+        "Existing gstack origin and installed revision are recorded, or absence is confirmed."
+      ],
+      "sourceId": "gstack-kiro-e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc",
+      "conditional": false,
+      "sourceUrls": [
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/README.md#other-ai-agents",
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/setup",
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/hosts/kiro.ts",
+        "https://kiro.dev/docs/skills/"
+      ]
+    },
+    {
+      "id": "LW-632",
+      "project": "LW",
+      "title": "Verify the shared gstack installation for LW",
+      "description": "Reuse the machine-wide installation completed in AT-632. Confirm ~/.kiro/skills/gstack and the gstack-prefixed skill folders are present and their runtime links resolve to the retained source checkout. Do not repeat setup or create another shared-runtime checkbox completion merely because you switched projects. If this project uses a different machine or isolated development environment, perform the same fork installation and ./setup --host kiro there, then record that environment separately.",
+      "phase": "Development Setup: Kiro and AWS MCP",
+      "targetDate": "2026-09-07",
+      "startDate": "2026-09-05",
+      "milestone": "LW-K0",
+      "priority": "high",
+      "status": "ready",
+      "dependencies": [
+        "LW-631",
+        "AT-632"
+      ],
+      "decisionDependencies": [],
+      "releaseGate": false,
+      "critical": false,
+      "evidence": "",
+      "blockerReason": "",
+      "nextAction": "",
+      "workingNote": "",
+      "completedAt": null,
+      "owner": "Ian",
+      "acceptanceCriteria": [
+        "Kiro skill files and runtime assets resolve in this project’s environment.",
+        "Installation succeeds without the missing generated-skills warning; investigate bun run build and rerun setup if that warning occurs."
+      ],
+      "sourceId": "gstack-kiro-e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc",
+      "conditional": false,
+      "sourceUrls": [
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/README.md#other-ai-agents",
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/setup",
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/hosts/kiro.ts",
+        "https://kiro.dev/docs/skills/"
+      ]
+    },
+    {
+      "id": "LW-633",
+      "project": "LW",
+      "title": "Confirm gstack skill discovery in this Kiro workspace",
+      "description": "Open only this project in Kiro and start a fresh agent session after setup. Inspect Agent Steering & Skills and the slash-command menu for the installed gstack review and browser skills. Invoke the names actually exposed by this installation. If using a custom CLI agent, verify its resources include skill://~/.kiro/skills/*/SKILL.md. Check for workspace skills that shadow the global names; do not copy the root repository as a standalone skill and lose its runtime dependencies.",
+      "phase": "Development Setup: Kiro and AWS MCP",
+      "targetDate": "2026-09-07",
+      "startDate": "2026-09-05",
+      "milestone": "LW-K0",
+      "priority": "medium",
+      "status": "ready",
+      "dependencies": [
+        "LW-632"
+      ],
+      "decisionDependencies": [],
+      "releaseGate": false,
+      "critical": false,
+      "evidence": "",
+      "blockerReason": "",
+      "nextAction": "",
+      "workingNote": "",
+      "completedAt": null,
+      "owner": "Ian",
+      "acceptanceCriteria": [
+        "Kiro discovers and loads the installed review and browser skill instructions.",
+        "The selected agent can locate the browser runtime; record any IDE/CLI-specific limitation."
+      ],
+      "sourceId": "gstack-kiro-e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc",
+      "conditional": false,
+      "sourceUrls": [
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/README.md#other-ai-agents",
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/setup",
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/hosts/kiro.ts",
+        "https://kiro.dev/docs/skills/"
+      ]
+    },
+    {
+      "id": "LW-634",
+      "project": "LW",
+      "title": "Add project-specific gstack usage guidance",
+      "description": "Add a concise gstack section to this project’s Kiro steering, preserving its existing architecture and instructions. Use planning/review/QA skills for bounded tasks, keep deterministic checks authoritative, and make shipping or deployment a separate explicit action. Keep project context separate even though the skills are installed globally. Retain the NADEX baseline, point-in-time availability rules, and reproducible research fixtures. Use synthetic disclosure samples for the first review and browser check.",
+      "phase": "Development Setup: Kiro and AWS MCP",
+      "targetDate": "2026-09-07",
+      "startDate": "2026-09-05",
+      "milestone": "LW-K0",
+      "priority": "medium",
+      "status": "ready",
+      "dependencies": [
+        "LW-633",
+        "LW-602"
+      ],
+      "decisionDependencies": [],
+      "releaseGate": false,
+      "critical": false,
+      "evidence": "",
+      "blockerReason": "",
+      "nextAction": "",
+      "workingNote": "",
+      "completedAt": null,
+      "owner": "Ian",
+      "acceptanceCriteria": [
+        "Project steering identifies when to use gstack without changing the application architecture.",
+        "No application credentials or sensitive data are placed in skill configuration or checklist evidence."
+      ],
+      "sourceId": "gstack-kiro-e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc",
+      "conditional": false,
+      "sourceUrls": [
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/README.md#other-ai-agents",
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/setup",
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/hosts/kiro.ts",
+        "https://kiro.dev/docs/skills/"
+      ]
+    },
+    {
+      "id": "LW-635",
+      "project": "LW",
+      "title": "Smoke-test gstack review and browser tools in LW",
+      "description": "Run one read-only review against a small relevant change or fixture, then use the installed browser skill against a local or dedicated test page. Verify that Chromium launches, the page is read correctly, and the review cites actual project files. Use the signal-contract fixture or a research-view test page. Record the installed revision, Kiro surface, result, and any correction effort in the working note or existing pilot record. Do not auto-ship, deploy, or complete unrelated project work during installation verification.",
+      "phase": "Development Setup: Kiro and AWS MCP",
+      "targetDate": "2026-09-07",
+      "startDate": "2026-09-05",
+      "milestone": "LW-K0",
+      "priority": "medium",
+      "status": "ready",
+      "dependencies": [
+        "LW-634"
+      ],
+      "decisionDependencies": [],
+      "releaseGate": false,
+      "critical": false,
+      "evidence": "",
+      "blockerReason": "",
+      "nextAction": "",
+      "workingNote": "",
+      "completedAt": null,
+      "owner": "Ian",
+      "acceptanceCriteria": [
+        "A bounded review and a browser smoke check both succeed.",
+        "The result and actual installed version are recorded; existing project tests remain authoritative."
+      ],
+      "sourceId": "gstack-kiro-e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc",
+      "conditional": false,
+      "sourceUrls": [
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/README.md#other-ai-agents",
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/setup",
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/hosts/kiro.ts",
+        "https://kiro.dev/docs/skills/"
+      ]
+    },
+    {
+      "id": "RW-631",
+      "project": "RW",
+      "title": "Check gstack prerequisites for Kiro",
+      "description": "In this project’s development environment, verify Git, Bun v1.0 or newer, and working Kiro access. Check git --version and bun --version; use kiro-cli --version if using the CLI. Inspect any existing ~/gstack checkout and ~/.kiro/skills/gstack installation before changing them. Reuse a compatible installation; do not overwrite an unrelated checkout.",
+      "phase": "Development Setup: Kiro and AWS MCP",
+      "targetDate": "2026-09-07",
+      "startDate": "2026-09-05",
+      "milestone": "RW-K0",
+      "priority": "high",
+      "status": "ready",
+      "dependencies": [
+        "AT-601"
+      ],
+      "decisionDependencies": [],
+      "releaseGate": false,
+      "critical": false,
+      "evidence": "",
+      "blockerReason": "",
+      "nextAction": "",
+      "workingNote": "",
+      "completedAt": null,
+      "owner": "Ian",
+      "acceptanceCriteria": [
+        "Git and Bun are available to Kiro’s terminal.",
+        "Existing gstack origin and installed revision are recorded, or absence is confirmed."
+      ],
+      "sourceId": "gstack-kiro-e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc",
+      "conditional": false,
+      "sourceUrls": [
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/README.md#other-ai-agents",
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/setup",
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/hosts/kiro.ts",
+        "https://kiro.dev/docs/skills/"
+      ]
+    },
+    {
+      "id": "RW-632",
+      "project": "RW",
+      "title": "Verify the shared gstack installation for RW",
+      "description": "Reuse the machine-wide installation completed in AT-632. Confirm ~/.kiro/skills/gstack and the gstack-prefixed skill folders are present and their runtime links resolve to the retained source checkout. Do not repeat setup or create another shared-runtime checkbox completion merely because you switched projects. If this project uses a different machine or isolated development environment, perform the same fork installation and ./setup --host kiro there, then record that environment separately.",
+      "phase": "Development Setup: Kiro and AWS MCP",
+      "targetDate": "2026-09-07",
+      "startDate": "2026-09-05",
+      "milestone": "RW-K0",
+      "priority": "high",
+      "status": "ready",
+      "dependencies": [
+        "RW-631",
+        "AT-632"
+      ],
+      "decisionDependencies": [],
+      "releaseGate": false,
+      "critical": false,
+      "evidence": "",
+      "blockerReason": "",
+      "nextAction": "",
+      "workingNote": "",
+      "completedAt": null,
+      "owner": "Ian",
+      "acceptanceCriteria": [
+        "Kiro skill files and runtime assets resolve in this project’s environment.",
+        "Installation succeeds without the missing generated-skills warning; investigate bun run build and rerun setup if that warning occurs."
+      ],
+      "sourceId": "gstack-kiro-e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc",
+      "conditional": false,
+      "sourceUrls": [
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/README.md#other-ai-agents",
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/setup",
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/hosts/kiro.ts",
+        "https://kiro.dev/docs/skills/"
+      ]
+    },
+    {
+      "id": "RW-633",
+      "project": "RW",
+      "title": "Confirm gstack skill discovery in this Kiro workspace",
+      "description": "Open only this project in Kiro and start a fresh agent session after setup. Inspect Agent Steering & Skills and the slash-command menu for the installed gstack review and browser skills. Invoke the names actually exposed by this installation. If using a custom CLI agent, verify its resources include skill://~/.kiro/skills/*/SKILL.md. Check for workspace skills that shadow the global names; do not copy the root repository as a standalone skill and lose its runtime dependencies.",
+      "phase": "Development Setup: Kiro and AWS MCP",
+      "targetDate": "2026-09-07",
+      "startDate": "2026-09-05",
+      "milestone": "RW-K0",
+      "priority": "medium",
+      "status": "ready",
+      "dependencies": [
+        "RW-632"
+      ],
+      "decisionDependencies": [],
+      "releaseGate": false,
+      "critical": false,
+      "evidence": "",
+      "blockerReason": "",
+      "nextAction": "",
+      "workingNote": "",
+      "completedAt": null,
+      "owner": "Ian",
+      "acceptanceCriteria": [
+        "Kiro discovers and loads the installed review and browser skill instructions.",
+        "The selected agent can locate the browser runtime; record any IDE/CLI-specific limitation."
+      ],
+      "sourceId": "gstack-kiro-e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc",
+      "conditional": false,
+      "sourceUrls": [
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/README.md#other-ai-agents",
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/setup",
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/hosts/kiro.ts",
+        "https://kiro.dev/docs/skills/"
+      ]
+    },
+    {
+      "id": "RW-634",
+      "project": "RW",
+      "title": "Add project-specific gstack usage guidance",
+      "description": "Add a concise gstack section to this project’s Kiro steering, preserving its existing architecture and instructions. Use planning/review/QA skills for bounded tasks, keep deterministic checks authoritative, and make shipping or deployment a separate explicit action. Keep project context separate even though the skills are installed globally. Retain the existing React/MUI and AWS application architecture, tenant boundaries, and CI checks. Use a test fleet and a local or dedicated test environment for first QA.",
+      "phase": "Development Setup: Kiro and AWS MCP",
+      "targetDate": "2026-09-07",
+      "startDate": "2026-09-05",
+      "milestone": "RW-K0",
+      "priority": "medium",
+      "status": "ready",
+      "dependencies": [
+        "RW-633",
+        "RW-602"
+      ],
+      "decisionDependencies": [],
+      "releaseGate": false,
+      "critical": false,
+      "evidence": "",
+      "blockerReason": "",
+      "nextAction": "",
+      "workingNote": "",
+      "completedAt": null,
+      "owner": "Ian",
+      "acceptanceCriteria": [
+        "Project steering identifies when to use gstack without changing the application architecture.",
+        "No application credentials or sensitive data are placed in skill configuration or checklist evidence."
+      ],
+      "sourceId": "gstack-kiro-e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc",
+      "conditional": false,
+      "sourceUrls": [
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/README.md#other-ai-agents",
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/setup",
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/hosts/kiro.ts",
+        "https://kiro.dev/docs/skills/"
+      ]
+    },
+    {
+      "id": "RW-635",
+      "project": "RW",
+      "title": "Smoke-test gstack review and browser tools in RW",
+      "description": "Run one read-only review against a small relevant change or fixture, then use the installed browser skill against a local or dedicated test page. Verify that Chromium launches, the page is read correctly, and the review cites actual project files. Use the CI repair or a test-fleet workflow page. Record the installed revision, Kiro surface, result, and any correction effort in the working note or existing pilot record. Do not auto-ship, deploy, or complete unrelated project work during installation verification.",
+      "phase": "Development Setup: Kiro and AWS MCP",
+      "targetDate": "2026-09-07",
+      "startDate": "2026-09-05",
+      "milestone": "RW-K0",
+      "priority": "medium",
+      "status": "ready",
+      "dependencies": [
+        "RW-634"
+      ],
+      "decisionDependencies": [],
+      "releaseGate": false,
+      "critical": false,
+      "evidence": "",
+      "blockerReason": "",
+      "nextAction": "",
+      "workingNote": "",
+      "completedAt": null,
+      "owner": "Ian",
+      "acceptanceCriteria": [
+        "A bounded review and a browser smoke check both succeed.",
+        "The result and actual installed version are recorded; existing project tests remain authoritative."
+      ],
+      "sourceId": "gstack-kiro-e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc",
+      "conditional": false,
+      "sourceUrls": [
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/README.md#other-ai-agents",
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/setup",
+        "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/hosts/kiro.ts",
+        "https://kiro.dev/docs/skills/"
+      ]
     }
   ],
   "milestones": [

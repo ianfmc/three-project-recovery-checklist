@@ -20,6 +20,8 @@ Seed derived from Ian’s `three-program-recovery-plan.md`, assessment 30 August
 
 Unverified application work is open. Historical assessment percentages are contextual only. The known delivery and Kiro-direction decisions are recorded as resolved; no application task is inferred complete. Original milestones are retained; September RUNWELL work is limited to CI repair, credential boundaries, backlog triage, and bounded setup/evaluation. RW billing is due October 16 ahead of implementation. Dates are evaluated in America/Los_Angeles.
 
+gstack additions (5 September 2026): AT-631–635, LW-631–635, and RW-631–635 cover prerequisites, shared installation, Kiro discovery, project steering, and a bounded review/browser smoke check. The canonical machine installation is AT-632; LIVEWELL and RUNWELL verify reuse separately. Instructions follow Ian’s fork at revision e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc, including the explicit `./setup --host kiro` route; source links are retained on each task. These are uncompleted checklist instructions, not evidence of an installation.
+
 The business plan informs RUNWELL’s outcome (design-partner real use and a path to payment); its broader roadmap does not silently expand the approved release scope.
 
 ## Local preview
