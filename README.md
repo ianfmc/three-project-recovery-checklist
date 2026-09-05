@@ -78,3 +78,5 @@ Dedicated private S3 bucket (HTML, JSON versions, service archives), one Lambda,
 ## LIVEWELL scope clarification (5 September)
 
 LW-102 now documents disclosure latency and research limitations. LW-103 confirms the selected Capitol Trades acquisition method and applicable access terms. The old broad legal/ethical wording and legal-review phase title were replaced. The already recorded personal-use and source-selection decisions remain unchanged; there is no default general ethics or legal approval exercise.
+
+LIVEWELL scope (5 September): solely Ian’s personal early-warning system for potential NADEX trades. The outcome, ADR task, explanation/alert task, milestone, and scope decision reflect this. Multi-user access and a commercial product are outside the current scope.

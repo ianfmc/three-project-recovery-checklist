@@ -52,17 +52,17 @@
       "id": "LW",
       "name": "LIVEWELL",
       "deadline": "2026-11-13",
-      "outcome": "Preserve the existing NADEX workflow and evaluate congressional disclosures as an additive contextual signal. Deliver reproducible, scheduled processing and leakage-safe evidence for retaining or rejecting the signal.",
+      "outcome": "Build Ian’s personal early-warning system to identify potential NADEX trades for his review. Preserve the existing NADEX workflow and evaluate congressional disclosures as an additional contextual signal. Provide timely candidate alerts, clear reasons, and reproducible results so Ian can decide whether to trade.",
       "current": "Assessment: 30 August 2026. A decision-support UI, data pipeline foundation, and backtesting framework exist. Source acquisition, lineage, asset mapping, and incremental-value validation remain. Historical readiness estimate: 60–70%; not verified completion.",
       "deferred": [
         "Replacing the existing strategy",
         "Standalone trade triggers from congressional activity",
-        "Multi-user expansion without a scope decision",
+        "Offering LIVEWELL to other users or as a commercial product",
         "Dedicated GPU hosting",
         "Central model gateway before a demonstrated need"
       ],
       "phases": [
-        "Signal Contract and Product Boundaries",
+        "Signal Contract and Personal Workflow",
         "Disclosure Source and Access",
         "Canonical Data and Lineage",
         "Asset Resolution",
@@ -71,7 +71,7 @@
         "Baseline-versus-Augmented Ablation",
         "Explanation, Monitoring, and Reproducibility",
         "Development Setup: Kiro and AWS MCP",
-        "Final Personal-MVP Release Gate"
+        "Final Personal Early-Warning Release Gate"
       ],
       "latestNote": null,
       "cost": {
@@ -1015,9 +1015,9 @@
     {
       "id": "LW-101",
       "project": "LW",
-      "title": "Write feature ADR: congressional activity is an additive contextual signal; NADEX remains primary",
-      "description": "Write feature ADR: congressional activity is an additive contextual signal; NADEX remains primary",
-      "phase": "Signal Contract and Product Boundaries",
+      "title": "Write the ADR for Ian’s personal NADEX early-warning workflow",
+      "description": "Document LIVEWELL as Ian’s own early-warning system for identifying potential NADEX trades. Describe candidate alerts, the information needed to assess them, and Ian’s review and trading decision. Congressional activity is an additional contextual signal within the existing NADEX workflow. Multi-user access, external customers, subscriptions, and commercialization are outside the current scope; do not design for them.",
+      "phase": "Signal Contract and Personal Workflow",
       "targetDate": "2026-09-30",
       "startDate": "2026-09-04",
       "milestone": "LW-W1",
@@ -1037,7 +1037,10 @@
       "workingNote": "",
       "completedAt": null,
       "owner": "Ian",
-      "acceptanceCriteria": [],
+      "acceptanceCriteria": [
+        "The ADR defines the personal alert-to-review workflow and the existing baseline it extends.",
+        "No multi-user or commercial-product requirements are introduced."
+      ],
       "sourceId": "LW-101",
       "conditional": false,
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only."
@@ -1047,7 +1050,7 @@
       "project": "LW",
       "title": "Document disclosure delays and research limitations",
       "description": "For the personal LIVEWELL workflow, document reporting delay, transaction value ranges, ambiguous asset matches, and the difference between observed disclosures and a tested predictive signal. Keep this a concise research note written in Kiro. This is a data-quality task, not a general ethics approval or public-product disclaimer exercise.",
-      "phase": "Signal Contract and Product Boundaries",
+      "phase": "Signal Contract and Personal Workflow",
       "targetDate": "2026-09-30",
       "startDate": "2026-09-04",
       "milestone": "LW-W1",
@@ -1443,8 +1446,8 @@
     {
       "id": "LW-207",
       "project": "LW",
-      "title": "Add congressional-signal explanation and research views without replacing core NADEX pages",
-      "description": "Add congressional-signal explanation and research views without replacing core NADEX pages",
+      "title": "Show potential NADEX trades and explain why they were flagged",
+      "description": "Extend the existing personal NADEX views with early-warning candidates, their timing and supporting evidence, uncertainty, and whether congressional activity contributed to the alert. Keep the workflow focused on Ian reviewing potential trades.",
       "phase": "Explanation, Monitoring, and Reproducibility",
       "targetDate": "2026-11-13",
       "startDate": "2026-10-01",
@@ -3294,7 +3297,7 @@
       "id": "LW-620",
       "project": "LW",
       "title": "Record model aliases, escalation policy, and minimal usage measures",
-      "description": "Choose an available economy model for routine tasks; Qwen3 Coder Next is the plan’s initial candidate, not a verified availability claim. Record tested model selection and fallback aliases, secret-free configuration examples, and smoke checks. Escalate explicitly for architecture, security, tenant isolation, statistical correctness, or two failed repair attempts. Log usage/outcome, never source contents or secrets. No assumed personal spending cap.",
+      "description": "Choose an available economy model for routine tasks; Qwen3 Coder Next is the plan’s initial candidate, not a verified availability claim. Record tested model selection and fallback aliases, secret-free configuration examples, and smoke checks. Escalate explicitly for architecture, personal-account security, statistical correctness, or two failed repair attempts. Log usage/outcome, never source contents or secrets. No assumed personal spending cap.",
       "phase": "Development Setup: Kiro and AWS MCP",
       "targetDate": "2026-09-07",
       "startDate": "2026-09-04",
@@ -3577,8 +3580,8 @@
     {
       "id": "LW-902",
       "project": "LW",
-      "title": "Multi-user expansion without a scope decision",
-      "description": "Explicitly outside this release. Revisit only through a deliberate scope decision.",
+      "title": "Offering LIVEWELL to other users or as a commercial product",
+      "description": "Outside the current scope. LIVEWELL is solely Ian’s personal NADEX early-warning system; there is no planned multi-user scenario or product. Reconsider only if Ian explicitly changes this scope.",
       "phase": "Development Setup: Kiro and AWS MCP",
       "targetDate": null,
       "startDate": "2026-09-04",
@@ -4397,7 +4400,7 @@
     {
       "id": "LW-W4",
       "project": "LW",
-      "name": "Personal MVP",
+      "name": "Personal early-warning system ready",
       "targetDate": "2026-11-13"
     },
     {
@@ -4504,12 +4507,12 @@
     {
       "id": "LW-D01",
       "project": "LW",
-      "title": "Personal research or future multi-user scope",
+      "title": "Personal NADEX early-warning scope",
       "dueDate": "2026-09-04",
-      "impact": "Controls product boundaries",
-      "status": "open",
-      "recordedDecision": "",
-      "note": "",
+      "impact": "Defines Ian’s personal alert-and-review workflow",
+      "status": "resolved",
+      "recordedDecision": "LIVEWELL is solely my personal early-warning system to help identify potential trades on NADEX. Assume no multi-user scenario or commercial product for the time being.",
+      "note": "Scope clarified by Ian on 5 September 2026.",
       "blocks": [
         "LW-101"
       ]

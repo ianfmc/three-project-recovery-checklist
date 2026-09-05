@@ -6,3 +6,4 @@ Keep application repositories untouched. All tasks belong to Ian, with AT-, LW-,
 Never commit .private or tokens. Read README.md before deployment/service changes.
 Use Lato typography for this personal checklist; do not apply SAP Brand 72.
 Use bundled Google Material Symbols for interface icons. Ian dislikes emoji-style or standalone Unicode icon characters; do not use them as UI icons.
+LIVEWELL is Ian’s personal early-warning system for potential NADEX trades. Assume no multi-user scenario or commercial product unless Ian explicitly changes that scope.
