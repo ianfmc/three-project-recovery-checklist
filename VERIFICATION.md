@@ -63,3 +63,7 @@ Domain validation and scheduling checks passed after the additions. The new task
 ## Setup-first correction — 5 September 2026
 
 Added project-specific installation prerequisites to active substantive tasks and made Next Action follow incomplete setup before design decisions and project work. Fifteen domain tests and expanded scheduling tests pass, including shared Kiro installation first, independent project setup gates, server rejection of early project work, and normal recommendations after setup. No new task records or release gates were introduced. LIVEWELL task wording was narrowed to research limitations and the chosen source’s access method.
+
+## Task status ribbons · 5 September 2026
+
+Added neutral task borders with teal for doing and muted rose for explicitly blocked tasks. Existing status text, completion treatment, and purple project border retained. JavaScript syntax check passed. Browser preview with disposable ready/doing/blocked/done samples confirmed rendering and spacing; no live progress was edited. Layout-only deployment succeeded and the published HTML was checked for the status classes and color rules.
