@@ -25,9 +25,6 @@ def validate(doc):
   for k in ('evidence','blockerReason','nextAction','workingNote'):text(t[k])
   if t['targetDate']:
    datetime.strptime(t['targetDate'],'%Y-%m-%d')
-  if t['status']=='doing':
-   if t['project'] in active:raise ValueError('Only one task may be in progress per project. Select the switch option.')
-   active.add(t['project'])
   if t['status']=='blocked' and (not t['blockerReason'].strip() or not t['nextAction'].strip()):raise ValueError('Blocked work needs both a reason and a next unblocking action.')
   if any(id not in dec for id in t['decisionDependencies']):raise ValueError('Unknown decision prerequisite.')
   if t['status'] in ('done','doing'):
@@ -63,9 +60,6 @@ def apply_change(original,body,seed):
   if not t or set(patch)-TASK_FIELDS:raise ValueError('Unknown task or unsupported task fields.')
   prior=t['status']
   for k,v in patch.items():t[k]=None if k=='targetDate' and not v else text(v)
-  if t['status']=='doing' and body.get('switchDoing'):
-   for other in doc['tasks']:
-    if other['project']==t['project'] and other['id']!=id and other['status']=='doing':other['status']='ready'
   t['completedAt']=(t.get('completedAt') if prior=='done' else time) if t['status']=='done' else None
  elif op=='decision':
   d=next((d for d in doc['decisions'] if d['id']==id),None)

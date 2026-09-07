@@ -6,7 +6,7 @@ Ian’s private checklist for Autonomous Tournament (AT), LIVEWELL (LW), and RUN
 
 Open the private link in `.private/url.txt` after deployment. Anyone with the page can read and edit the shared checklist. Select a project to recalculate its metrics and next action. Expand a project to see context, notes, decisions, tasks, release gates, and optional pilot costs.
 
-Routine completion is one click. A release task needs a concise evidence statement. Required task/decision prerequisites must be complete. One task can be in progress per project; Update offers an explicit switch. Blocked work requires a reason and next unblocking action. Reopening preserves evidence and notes; reopen dependent completed work first.
+Routine completion is one click. A release task needs a concise evidence statement. Required task/decision prerequisites must be complete. Multiple tasks may be in progress per project; starting another task does not reset existing progress. Blocked work requires a reason and next unblocking action. Reopening preserves evidence and notes; reopen dependent completed work first.
 
 Resolved decisions show a teal Google Material Symbols check badge and a per-project resolved count. Decision rows link to their dependent tasks, whose expanded details show the recorded answer. Resolving a decision clears its prerequisite, but does not complete implementation work or update application repositories. Decisions with no linked prerequisites remain recorded project guidance.
 
@@ -30,7 +30,7 @@ Run `python3 -m http.server 8769 --bind 127.0.0.1` in this directory, then open 
 
 ## Shared persistence and security
 
-Private, versioned, encrypted S3 `data.json` is authoritative. A dedicated API Gateway HTTP API and Python Lambda enforce evidence, prerequisite, status, WIP, import, and conflict rules. IAM grants the function only GetObject/PutObject on this checklist’s exact JSON key. There is no access to Tournament data or the application repositories.
+Private, versioned, encrypted S3 `data.json` is authoritative. A dedicated API Gateway HTTP API and Python Lambda enforce evidence, prerequisite, status, import, and conflict rules. IAM grants the function only GetObject/PutObject on this checklist’s exact JSON key. There is no access to Tournament data or the application repositories.
 
 Every update carries a document revision and uses S3 conditional writes. Conflicts return a visible error rather than overwrite another device. Polling runs every 15 seconds while the page is visible and on focus; it pauses for open editors and unsaved note drafts. Unsaved note text is retained in browser storage. Saved progress is never presented as successful offline. Full note history is available through S3 version history; the UI displays only the latest note.
 

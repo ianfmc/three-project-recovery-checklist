@@ -34,12 +34,12 @@ class RulesTest(unittest.TestCase):
   with self.assertRaisesRegex(ValueError,'requires'):self.change('task','AT-201',{'status':'done','evidence':'Verified'})
  def test_decision_prerequisite(self):
   with self.assertRaisesRegex(ValueError,'AT-D02'):self.change('task','AT-102',{'status':'doing'})
- def test_one_doing_and_switch(self):
+ def test_multiple_doing_preserves_existing_progress(self):
   self.finish_setup('AT')
   self.change('task','AT-106',{'status':'doing'})
-  with self.assertRaisesRegex(ValueError,'one task'):self.change('task','AT-107',{'status':'doing'})
   self.change('task','AT-107',{'status':'doing'},switchDoing=True)
-  self.assertEqual(self.task('AT-106')['status'],'ready')
+  self.assertEqual(self.task('AT-106')['status'],'doing')
+  self.assertEqual(self.task('AT-107')['status'],'doing')
  def test_blocker_fields(self):
   with self.assertRaisesRegex(ValueError,'Blocked'):self.change('task','RW-101',{'status':'blocked'})
   self.change('task','RW-101',{'status':'blocked','blockerReason':'Missing fixture','nextAction':'Create minimal fixture'})
