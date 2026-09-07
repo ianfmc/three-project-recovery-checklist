@@ -80,3 +80,7 @@ Dedicated private S3 bucket (HTML, JSON versions, service archives), one Lambda,
 LW-102 now documents disclosure latency and research limitations. LW-103 confirms the selected Capitol Trades acquisition method and applicable access terms. The old broad legal/ethical wording and legal-review phase title were replaced. The already recorded personal-use and source-selection decisions remain unchanged; there is no default general ethics or legal approval exercise.
 
 LIVEWELL scope (5 September): solely Ian’s personal early-warning system for potential NADEX trades. The outcome, ADR task, explanation/alert task, milestone, and scope decision reflect this. Multi-user access and a commercial product are outside the current scope.
+
+## LIVEWELL progress and security follow-ups · 7 September
+
+User-reported project evidence is stored in the live checklist. Added LW-613 (root-key retirement and root MFA), LW-614 (deployment via an assumable role), and LW-615 (legacy IAM audit). LW-613 is linked to release gate LW-G13. The new tasks have no invented due dates; security actions remain unperformed by this checklist agent. Draft ADR acceptance remains with Ian.

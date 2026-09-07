@@ -4346,6 +4346,101 @@
         "https://github.com/ianfmc/gstack/blob/e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc/hosts/kiro.ts",
         "https://kiro.dev/docs/skills/"
       ]
+    },
+    {
+      "id": "LW-613",
+      "project": "LW",
+      "title": "Retire root access key and enable root MFA",
+      "description": "Retire root access key and enable root MFA",
+      "phase": "Development Setup: Kiro and AWS MCP",
+      "targetDate": null,
+      "startDate": "2026-09-07",
+      "milestone": "LW-K0",
+      "priority": "critical",
+      "status": "ready",
+      "dependencies": [
+        "LW-611",
+        "LW-635"
+      ],
+      "decisionDependencies": [],
+      "releaseGate": true,
+      "critical": true,
+      "evidence": "",
+      "blockerReason": "",
+      "nextAction": "",
+      "workingNote": "",
+      "completedAt": null,
+      "owner": "Ian",
+      "acceptanceCriteria": [
+        "Verify working non-root inspection and administrative/deployment access before retiring root-key use.",
+        "Deactivate the root access key and confirm LIVEWELL and RUNWELL continue to work; delete the key after verification.",
+        "Enable root MFA and remove root credentials from routine CLI profiles; record sanitized verification evidence."
+      ],
+      "sourceId": "LW-613",
+      "conditional": false,
+      "evidenceRequirement": "Record sanitized verification of root-key retirement, root MFA, and working non-root access."
+    },
+    {
+      "id": "LW-614",
+      "project": "LW",
+      "title": "Configure LIVEWELL deployment through an assumable role",
+      "description": "Configure LIVEWELL deployment through an assumable role",
+      "phase": "Development Setup: Kiro and AWS MCP",
+      "targetDate": null,
+      "startDate": "2026-09-07",
+      "milestone": "LW-K0",
+      "priority": "medium",
+      "status": "ready",
+      "dependencies": [
+        "LW-611",
+        "LW-635"
+      ],
+      "decisionDependencies": [],
+      "releaseGate": false,
+      "critical": false,
+      "evidence": "",
+      "blockerReason": "",
+      "nextAction": "",
+      "workingNote": "",
+      "completedAt": null,
+      "owner": "Ian",
+      "acceptanceCriteria": [
+        "Verify authorized deployment through an assumable role with MFA rather than a long-lived user key.",
+        "Keep read-only inspection separate from deployment access; record sanitized verification results."
+      ],
+      "sourceId": "LW-614",
+      "conditional": false
+    },
+    {
+      "id": "LW-615",
+      "project": "LW",
+      "title": "Audit and clean legacy IAM in the personal account",
+      "description": "Audit and clean legacy IAM in the personal account",
+      "phase": "Development Setup: Kiro and AWS MCP",
+      "targetDate": null,
+      "startDate": "2026-09-07",
+      "milestone": "LW-K0",
+      "priority": "medium",
+      "status": "ready",
+      "dependencies": [
+        "LW-611",
+        "LW-635"
+      ],
+      "decisionDependencies": [],
+      "releaseGate": false,
+      "critical": false,
+      "evidence": "",
+      "blockerReason": "",
+      "nextAction": "",
+      "workingNote": "",
+      "completedAt": null,
+      "owner": "Ian",
+      "acceptanceCriteria": [
+        "Inventory legacy access and verify whether LIVEWELL, RUNWELL, or another live workload depends on it.",
+        "For confirmed unused legacy access, deactivate keys, verify no impact, then remove the unused access; record sanitized results."
+      ],
+      "sourceId": "LW-615",
+      "conditional": false
     }
   ],
   "milestones": [
@@ -4895,6 +4990,14 @@
       "title": "Onboarding and support",
       "taskIds": [
         "RW-405"
+      ]
+    },
+    {
+      "id": "LW-G13",
+      "project": "LW",
+      "title": "Personal AWS account access secured",
+      "taskIds": [
+        "LW-613"
       ]
     }
   ],
