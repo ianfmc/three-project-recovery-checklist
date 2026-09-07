@@ -83,7 +83,7 @@ LIVEWELL scope (5 September): solely Ian’s personal early-warning system for p
 
 ## LIVEWELL progress and security follow-ups · 7 September
 
-User-reported project evidence is stored in the live checklist. Added LW-613 (root-key retirement and root MFA), LW-614 (deployment via an assumable role), and LW-615 (legacy IAM audit). LW-613 is linked to release gate LW-G13. The new tasks have no invented due dates; security actions remain unperformed by this checklist agent. Draft ADR acceptance remains with Ian.
+User-reported project evidence is stored in the live checklist. LW-613 consolidates non-root administration, root MFA, root access-key retirement, and legacy IAM cleanup; the former LW-614/LW-615 items are absorbed, with their live notes retained in LW-613. LW-613 remains linked to release gate LW-G13. Its ordered criteria require verified admin access first, followed by root MFA, key deactivation, approximately 24 hours of cross-project verification, key deletion, CLI-profile correction, and verified-unused legacy-user removal. Root console login is retained for owner recovery. No due date is invented; security actions remain unperformed by this checklist agent. Draft ADR acceptance remains with Ian.
 
 ## RUNWELL account isolation and transfer gate · 7 September
 

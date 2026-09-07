@@ -4499,8 +4499,8 @@
     {
       "id": "LW-613",
       "project": "LW",
-      "title": "Retire root access key and enable root MFA",
-      "description": "Retire root access key and enable root MFA",
+      "title": "Complete account security: non-root administration, root MFA and key retirement",
+      "description": "Consolidates the account-security roll-up, absorbing LW-614 (deployment identity) and LW-615 (legacy IAM cleanup). Establish and verify a non-root admin identity, enable root MFA, then retire the root programmatic access key in a lockout-safe order. Retain root console login for owner recovery; delete only the root access key.",
       "phase": "Development Setup: Kiro and AWS MCP",
       "targetDate": null,
       "startDate": "2026-09-07",
@@ -4521,75 +4521,18 @@
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [
-        "Verify working non-root inspection and administrative/deployment access before retiring root-key use.",
-        "Deactivate the root access key and confirm LIVEWELL and RUNWELL continue to work; delete the key after verification.",
-        "Enable root MFA and remove root credentials from routine CLI profiles; record sanitized verification evidence."
+        "1. Confirm or establish admin IAM identity ianfmc with AdministratorAccess and MFA; verify non-root access.",
+        "2. Confirm livewell-ro read-only access works (already verified under LW-611).",
+        "3. Enable root MFA.",
+        "4. Deactivate the root access key.",
+        "5. Confirm nothing breaks across LIVEWELL and RUNWELL over approximately 24 hours.",
+        "6. Delete the root access key after verification.",
+        "7. Repoint or remove the default CLI profile so it no longer uses root.",
+        "8. Remove the legacy amplify-elys user only after confirming it powers nothing live."
       ],
       "sourceId": "LW-613",
       "conditional": false,
-      "evidenceRequirement": "Record sanitized verification of root-key retirement, root MFA, and working non-root access."
-    },
-    {
-      "id": "LW-614",
-      "project": "LW",
-      "title": "Configure LIVEWELL deployment through an assumable role",
-      "description": "Configure LIVEWELL deployment through an assumable role",
-      "phase": "Development Setup: Kiro and AWS MCP",
-      "targetDate": null,
-      "startDate": "2026-09-07",
-      "milestone": "LW-K0",
-      "priority": "medium",
-      "status": "ready",
-      "dependencies": [
-        "LW-611",
-        "LW-635"
-      ],
-      "decisionDependencies": [],
-      "releaseGate": false,
-      "critical": false,
-      "evidence": "",
-      "blockerReason": "",
-      "nextAction": "",
-      "workingNote": "",
-      "completedAt": null,
-      "owner": "Ian",
-      "acceptanceCriteria": [
-        "Verify authorized deployment through an assumable role with MFA rather than a long-lived user key.",
-        "Keep read-only inspection separate from deployment access; record sanitized verification results."
-      ],
-      "sourceId": "LW-614",
-      "conditional": false
-    },
-    {
-      "id": "LW-615",
-      "project": "LW",
-      "title": "Audit and clean legacy IAM in the personal account",
-      "description": "Audit and clean legacy IAM in the personal account",
-      "phase": "Development Setup: Kiro and AWS MCP",
-      "targetDate": null,
-      "startDate": "2026-09-07",
-      "milestone": "LW-K0",
-      "priority": "medium",
-      "status": "ready",
-      "dependencies": [
-        "LW-611",
-        "LW-635"
-      ],
-      "decisionDependencies": [],
-      "releaseGate": false,
-      "critical": false,
-      "evidence": "",
-      "blockerReason": "",
-      "nextAction": "",
-      "workingNote": "",
-      "completedAt": null,
-      "owner": "Ian",
-      "acceptanceCriteria": [
-        "Inventory legacy access and verify whether LIVEWELL, RUNWELL, or another live workload depends on it.",
-        "For confirmed unused legacy access, deactivate keys, verify no impact, then remove the unused access; record sanitized results."
-      ],
-      "sourceId": "LW-615",
-      "conditional": false
+      "evidenceRequirement": "Sanitized evidence: admin identity verified non-root with MFA; root MFA enabled; root access key deleted; default CLI profile no longer root; legacy user removed. Retain root console login for owner recovery."
     }
   ],
   "milestones": [
