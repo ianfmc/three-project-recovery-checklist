@@ -105,6 +105,7 @@
         "Broad internationalization"
       ],
       "phases": [
+        "AWS Account and Infrastructure Setup",
         "CI/CD and Reproducible Deployment",
         "Authentication and Tenant Isolation",
         "Credential and API Boundaries",
@@ -1562,6 +1563,151 @@
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only."
     },
     {
+      "id": "RW-6001",
+      "project": "RW",
+      "title": "Obtain human confirmation of RUNWELL account identity and transferability",
+      "description": "Decision C permits clean RUNWELL account/organization setup and infrastructure-as-code work now. Obtain written identity/transferability confirmation from an AWS account manager and/or legal counsel before adding a third party’s payment method or executing an account transfer. This is not an infrastructure-build or production-release prerequisite. Supporting decision: RUNWELL ADR-0001, docs/adr/0001-aws-account-isolation.md.",
+      "phase": "AWS Account and Infrastructure Setup",
+      "targetDate": null,
+      "startDate": "2026-09-07",
+      "milestone": "RW-K0",
+      "priority": "critical",
+      "status": "ready",
+      "dependencies": [],
+      "decisionDependencies": [],
+      "releaseGate": true,
+      "critical": true,
+      "evidence": "",
+      "blockerReason": "",
+      "nextAction": "",
+      "workingNote": "",
+      "completedAt": null,
+      "owner": "Ian",
+      "acceptanceCriteria": [
+        "Review RUNWELL ADR-0001 and the specific account identity/transferability question.",
+        "Record written human confirmation from an AWS account manager and/or legal counsel; automated Support routing does not satisfy this item.",
+        "Do not add a third party’s payment method or execute an account transfer before that confirmation."
+      ],
+      "sourceId": "RW-6001",
+      "conditional": false,
+      "evidenceRequirement": "Written human account-identity/transferability confirmation and reference to RUNWELL ADR-0001."
+    },
+    {
+      "id": "RW-6002",
+      "project": "RW",
+      "title": "Create RUNWELL organization and fresh business management account",
+      "description": "Create the organization and a fresh business management account under admin@run-well.io according to ADR-0001. Keep the consumer-linked personal account outside the management role. Account setup is permitted under decision C; RW-6001 still gates third-party payment/ownership actions.",
+      "phase": "AWS Account and Infrastructure Setup",
+      "targetDate": null,
+      "startDate": "2026-09-07",
+      "milestone": "RW-K0",
+      "priority": "high",
+      "status": "ready",
+      "dependencies": [],
+      "decisionDependencies": [],
+      "releaseGate": false,
+      "critical": false,
+      "evidence": "",
+      "blockerReason": "",
+      "nextAction": "",
+      "workingNote": "",
+      "completedAt": null,
+      "owner": "Ian",
+      "acceptanceCriteria": [
+        "Create the organization and a fresh business management account under admin@run-well.io according to ADR-0001. Keep the consumer-linked personal account outside the management role. Account setup is permitted under decision C; RW-6001 still gates third-party payment/ownership actions."
+      ],
+      "sourceId": "RW-6002",
+      "conditional": false
+    },
+    {
+      "id": "RW-6003",
+      "project": "RW",
+      "title": "Create the RUNWELL member account",
+      "description": "Create the dedicated RUNWELL member account. Record account and organization creation dates for checking the documented age requirements before a future migration. Any future ownership/payment action remains gated by RW-6001.",
+      "phase": "AWS Account and Infrastructure Setup",
+      "targetDate": null,
+      "startDate": "2026-09-07",
+      "milestone": "RW-K0",
+      "priority": "high",
+      "status": "ready",
+      "dependencies": [
+        "RW-6002"
+      ],
+      "decisionDependencies": [],
+      "releaseGate": false,
+      "critical": false,
+      "evidence": "",
+      "blockerReason": "",
+      "nextAction": "",
+      "workingNote": "",
+      "completedAt": null,
+      "owner": "Ian",
+      "acceptanceCriteria": [
+        "Create the dedicated RUNWELL member account. Record account and organization creation dates for checking the documented age requirements before a future migration. Any future ownership/payment action remains gated by RW-6001."
+      ],
+      "sourceId": "RW-6003",
+      "conditional": false
+    },
+    {
+      "id": "RW-6004",
+      "project": "RW",
+      "title": "Establish the RUNWELL infrastructure-as-code baseline",
+      "description": "Set up the CDK / Amplify Gen 2 baseline for the dedicated member account. Document environments and deployment configuration; use the non-root deployment role and keep credentials out of source control.",
+      "phase": "AWS Account and Infrastructure Setup",
+      "targetDate": null,
+      "startDate": "2026-09-07",
+      "milestone": "RW-K0",
+      "priority": "high",
+      "status": "ready",
+      "dependencies": [
+        "RW-6003",
+        "RW-6005"
+      ],
+      "decisionDependencies": [],
+      "releaseGate": false,
+      "critical": false,
+      "evidence": "",
+      "blockerReason": "",
+      "nextAction": "",
+      "workingNote": "",
+      "completedAt": null,
+      "owner": "Ian",
+      "acceptanceCriteria": [
+        "Set up the CDK / Amplify Gen 2 baseline for the dedicated member account. Document environments and deployment configuration; use the non-root deployment role and keep credentials out of source control."
+      ],
+      "sourceId": "RW-6004",
+      "conditional": false
+    },
+    {
+      "id": "RW-6005",
+      "project": "RW",
+      "title": "Configure runwell-ro inspection and an assumable deployment role",
+      "description": "Configure the runwell-ro read-only profile and a separate assumable deployment role. Verify non-root identities and read/write separation. Do not use root for routine development, inspection, or deployment.",
+      "phase": "AWS Account and Infrastructure Setup",
+      "targetDate": null,
+      "startDate": "2026-09-07",
+      "milestone": "RW-K0",
+      "priority": "high",
+      "status": "ready",
+      "dependencies": [
+        "RW-6003"
+      ],
+      "decisionDependencies": [],
+      "releaseGate": false,
+      "critical": false,
+      "evidence": "",
+      "blockerReason": "",
+      "nextAction": "",
+      "workingNote": "",
+      "completedAt": null,
+      "owner": "Ian",
+      "acceptanceCriteria": [
+        "Configure the runwell-ro read-only profile and a separate assumable deployment role. Verify non-root identities and read/write separation. Do not use root for routine development, inspection, or deployment."
+      ],
+      "sourceId": "RW-6005",
+      "conditional": false
+    },
+    {
       "id": "RW-101",
       "project": "RW",
       "title": "Resolve latest landing CI failure and protect `main` with required checks",
@@ -1629,7 +1775,7 @@
       "status": "ready",
       "dependencies": [
         "RW-635",
-        "RW-613"
+        "RW-6004"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -1687,7 +1833,7 @@
       "status": "ready",
       "dependencies": [
         "RW-635",
-        "RW-613"
+        "RW-6004"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -3225,7 +3371,7 @@
       "dependencies": [
         "RW-602",
         "RW-635",
-        "RW-613"
+        "RW-6005"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -4444,36 +4590,6 @@
       ],
       "sourceId": "LW-615",
       "conditional": false
-    },
-    {
-      "id": "RW-613",
-      "project": "RW",
-      "title": "Confirm AWS account isolation and transfer mechanics with AWS Support",
-      "description": "Obtain written AWS Support answers to the prepared eight-question list before any RUNWELL AWS infrastructure build. Proposed account structure: RUNWELL in its own AWS Organizations member account under admin@run-well.io, with a fresh business management account separate from the consumer-linked personal account, and infrastructure as code from day one. Confirm the conditions for future M&A/funding transfer. Supporting ADR: docs/adr/0001-aws-account-isolation.md; its prompt is prepared for the RUNWELL Kiro session, not yet verified as written. Do not create the organization, accounts, infrastructure baseline, or read-only profile follow-ons until Support replies.",
-      "phase": "Development Setup: Kiro and AWS MCP",
-      "targetDate": null,
-      "startDate": "2026-09-07",
-      "milestone": "RW-K0",
-      "priority": "critical",
-      "status": "ready",
-      "dependencies": [],
-      "decisionDependencies": [],
-      "releaseGate": true,
-      "critical": true,
-      "evidence": "",
-      "blockerReason": "",
-      "nextAction": "",
-      "workingNote": "",
-      "completedAt": null,
-      "owner": "Ian",
-      "acceptanceCriteria": [
-        "Record AWS Support’s written answers to the prepared eight-question list, including account isolation and transfer conditions.",
-        "Record the resulting account-isolation decision in docs/adr/0001-aws-account-isolation.md, incorporating Support conditions.",
-        "Identify the permitted next steps from Support’s response before creating organization/account, infrastructure-as-code, and read-only-profile follow-on tasks."
-      ],
-      "sourceId": "RW-613",
-      "conditional": false,
-      "evidenceRequirement": "AWS Support written answers and the reconciled account-isolation ADR; no credentials or private access links."
     }
   ],
   "milestones": [
@@ -5031,14 +5147,6 @@
       "title": "Personal AWS account access secured",
       "taskIds": [
         "LW-613"
-      ]
-    },
-    {
-      "id": "RW-G11",
-      "project": "RW",
-      "title": "AWS account isolation and transfer confirmed",
-      "taskIds": [
-        "RW-613"
       ]
     }
   ],

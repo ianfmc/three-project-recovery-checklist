@@ -85,6 +85,8 @@ LIVEWELL scope (5 September): solely Ian’s personal early-warning system for p
 
 User-reported project evidence is stored in the live checklist. Added LW-613 (root-key retirement and root MFA), LW-614 (deployment via an assumable role), and LW-615 (legacy IAM audit). LW-613 is linked to release gate LW-G13. The new tasks have no invented due dates; security actions remain unperformed by this checklist agent. Draft ADR acceptance remains with Ian.
 
-## RUNWELL AWS Support prerequisite · 7 September
+## RUNWELL account isolation and transfer gate · 7 September
 
-RW-613 requires written AWS Support confirmation and the account-isolation ADR before RUNWELL AWS infrastructure work. It has no prerequisites and directly gates RW-103, RW-105, and RW-611; deployment-dependent tasks inherit the gate. Billing/design and local tooling can continue, but their AWS infrastructure actions must await this confirmation. Organization/account creation, infrastructure-as-code baseline, and a new read-only profile remain unspecified follow-ons until Support replies. The checklist deployment stays in its existing account.
+ADR-0001 decision C permits clean business organization/member-account setup and infrastructure-as-code work now. RW-6001 (formerly RW-613) requires written human account-identity/transferability confirmation before adding a third party’s payment method or executing an account transfer. It is not a build or release prerequisite; its evidence-required completion remains separate from production release gates.
+
+RW-6001 appears first in the AWS setup section, followed by RW-6002–6005 (organization/management account, member account, infrastructure-as-code baseline, and non-root inspection/deployment access). The baseline depends on the deployment role even though that role appears afterward numerically. RW-103 and RW-105 depend on the new baseline; RW-611 depends on the new access setup. The checklist itself remains in its existing AWS account. Current decisions, notes and progress live in versioned S3.
