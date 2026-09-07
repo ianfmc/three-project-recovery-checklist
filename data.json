@@ -1628,7 +1628,8 @@
       "priority": "critical",
       "status": "ready",
       "dependencies": [
-        "RW-635"
+        "RW-635",
+        "RW-613"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -1685,7 +1686,8 @@
       "priority": "high",
       "status": "ready",
       "dependencies": [
-        "RW-635"
+        "RW-635",
+        "RW-613"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -3222,7 +3224,8 @@
       "status": "ready",
       "dependencies": [
         "RW-602",
-        "RW-635"
+        "RW-635",
+        "RW-613"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -4441,6 +4444,36 @@
       ],
       "sourceId": "LW-615",
       "conditional": false
+    },
+    {
+      "id": "RW-613",
+      "project": "RW",
+      "title": "Confirm AWS account isolation and transfer mechanics with AWS Support",
+      "description": "Obtain written AWS Support answers to the prepared eight-question list before any RUNWELL AWS infrastructure build. Proposed account structure: RUNWELL in its own AWS Organizations member account under admin@run-well.io, with a fresh business management account separate from the consumer-linked personal account, and infrastructure as code from day one. Confirm the conditions for future M&A/funding transfer. Supporting ADR: docs/adr/0001-aws-account-isolation.md; its prompt is prepared for the RUNWELL Kiro session, not yet verified as written. Do not create the organization, accounts, infrastructure baseline, or read-only profile follow-ons until Support replies.",
+      "phase": "Development Setup: Kiro and AWS MCP",
+      "targetDate": null,
+      "startDate": "2026-09-07",
+      "milestone": "RW-K0",
+      "priority": "critical",
+      "status": "ready",
+      "dependencies": [],
+      "decisionDependencies": [],
+      "releaseGate": true,
+      "critical": true,
+      "evidence": "",
+      "blockerReason": "",
+      "nextAction": "",
+      "workingNote": "",
+      "completedAt": null,
+      "owner": "Ian",
+      "acceptanceCriteria": [
+        "Record AWS Support’s written answers to the prepared eight-question list, including account isolation and transfer conditions.",
+        "Record the resulting account-isolation decision in docs/adr/0001-aws-account-isolation.md, incorporating Support conditions.",
+        "Identify the permitted next steps from Support’s response before creating organization/account, infrastructure-as-code, and read-only-profile follow-on tasks."
+      ],
+      "sourceId": "RW-613",
+      "conditional": false,
+      "evidenceRequirement": "AWS Support written answers and the reconciled account-isolation ADR; no credentials or private access links."
     }
   ],
   "milestones": [
@@ -4998,6 +5031,14 @@
       "title": "Personal AWS account access secured",
       "taskIds": [
         "LW-613"
+      ]
+    },
+    {
+      "id": "RW-G11",
+      "project": "RW",
+      "title": "AWS account isolation and transfer confirmed",
+      "taskIds": [
+        "RW-613"
       ]
     }
   ],
