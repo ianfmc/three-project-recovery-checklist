@@ -67,3 +67,7 @@ Added project-specific installation prerequisites to active substantive tasks an
 ## Task status ribbons · 5 September 2026
 
 Added neutral task borders with teal for doing and muted rose for explicitly blocked tasks. Existing status text, completion treatment, and purple project border retained. JavaScript syntax check passed. Browser preview with disposable ready/doing/blocked/done samples confirmed rendering and spacing; no live progress was edited. Layout-only deployment succeeded and the published HTML was checked for the status classes and color rules.
+
+## RUNWELL ADR 0002
+
+Published the critical-path AWS Account & Identity Setup chain RW-6001–6008 with preserved AT/LW progress. Browser verification of RW-406 shows blocked and explicitly requires RW-6008. Domain checks reject starting deployment tasks before RW-6008. Scoped publication uses checklist-tools without bucket-administration changes; current reset definitions are embedded and reset uses validated import. No live reset was run.

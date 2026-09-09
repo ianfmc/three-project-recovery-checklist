@@ -105,7 +105,7 @@
         "Broad internationalization"
       ],
       "phases": [
-        "AWS Account and Infrastructure Setup",
+        "AWS Account & Identity Setup",
         "CI/CD and Reproducible Deployment",
         "Authentication and Tenant Isolation",
         "Credential and API Boundaries",
@@ -1565,15 +1565,218 @@
     {
       "id": "RW-6001",
       "project": "RW",
-      "title": "Obtain human confirmation of RUNWELL account identity and transferability",
-      "description": "Decision C permits clean RUNWELL account/organization setup and infrastructure-as-code work now. Obtain written identity/transferability confirmation from an AWS account manager and/or legal counsel before adding a third party’s payment method or executing an account transfer. This is not an infrastructure-build or production-release prerequisite. Supporting decision: RUNWELL ADR-0001, docs/adr/0001-aws-account-isolation.md.",
-      "phase": "AWS Account and Infrastructure Setup",
+      "title": "Create dedicated AWS account",
+      "description": "Create a new standalone AWS account under admin@run-well.io, a fresh business identity with no Amazon.com consumer history. Do not use the personal/consumer-linked account. Source: RUNWELL ADR 0002, AWS account isolation with security parity. Out of scope: irreversible payment-ownership or account-transfer actions. These require an explicit human decision and, for M&A transfer, an AWS account-manager conversation. No setup completion authorizes those actions.",
+      "phase": "AWS Account & Identity Setup",
       "targetDate": null,
-      "startDate": "2026-09-07",
+      "startDate": "2026-09-08",
       "milestone": "RW-K0",
       "priority": "critical",
       "status": "ready",
       "dependencies": [],
+      "decisionDependencies": [],
+      "releaseGate": false,
+      "critical": true,
+      "evidence": "",
+      "blockerReason": "",
+      "nextAction": "",
+      "workingNote": "",
+      "completedAt": null,
+      "owner": "Ian",
+      "acceptanceCriteria": [
+        "Create a new standalone AWS account under admin@run-well.io, a fresh business identity with no Amazon.com consumer history. Do not use the personal/consumer-linked account."
+      ],
+      "sourceId": "RW-6001",
+      "conditional": false
+    },
+    {
+      "id": "RW-6002",
+      "project": "RW",
+      "title": "Create AWS Organization",
+      "description": "Place the new account in its own AWS Organizations structure. The management account is the fresh business account, never a personal/consumer-linked one. Source: RUNWELL ADR 0002, AWS account isolation with security parity. Out of scope: irreversible payment-ownership or account-transfer actions. These require an explicit human decision and, for M&A transfer, an AWS account-manager conversation. No setup completion authorizes those actions.",
+      "phase": "AWS Account & Identity Setup",
+      "targetDate": null,
+      "startDate": "2026-09-08",
+      "milestone": "RW-K0",
+      "priority": "critical",
+      "status": "ready",
+      "dependencies": [
+        "RW-6001"
+      ],
+      "decisionDependencies": [],
+      "releaseGate": false,
+      "critical": true,
+      "evidence": "",
+      "blockerReason": "",
+      "nextAction": "",
+      "workingNote": "",
+      "completedAt": null,
+      "owner": "Ian",
+      "acceptanceCriteria": [
+        "Place the new account in its own AWS Organizations structure. The management account is the fresh business account, never a personal/consumer-linked one."
+      ],
+      "sourceId": "RW-6002",
+      "conditional": false
+    },
+    {
+      "id": "RW-6003",
+      "project": "RW",
+      "title": "Secure root user",
+      "description": "Enable root MFA and confirm no root access keys exist. Record root as break-glass only, with no daily use. Source: RUNWELL ADR 0002, AWS account isolation with security parity. Out of scope: irreversible payment-ownership or account-transfer actions. These require an explicit human decision and, for M&A transfer, an AWS account-manager conversation. No setup completion authorizes those actions.",
+      "phase": "AWS Account & Identity Setup",
+      "targetDate": null,
+      "startDate": "2026-09-08",
+      "milestone": "RW-K0",
+      "priority": "critical",
+      "status": "ready",
+      "dependencies": [
+        "RW-6002"
+      ],
+      "decisionDependencies": [],
+      "releaseGate": false,
+      "critical": true,
+      "evidence": "",
+      "blockerReason": "",
+      "nextAction": "",
+      "workingNote": "",
+      "completedAt": null,
+      "owner": "Ian",
+      "acceptanceCriteria": [
+        "Enable root MFA and confirm no root access keys exist. Record root as break-glass only, with no daily use."
+      ],
+      "sourceId": "RW-6003",
+      "conditional": false
+    },
+    {
+      "id": "RW-6004",
+      "project": "RW",
+      "title": "Create admin role (assumed by ianfmc)",
+      "description": "Use ianfmc as the human sign-in identity with minimal standing permissions sufficient to assume the dedicated admin role. Require MFA for assumption. Administrative privileges come from this role, never root or a long-lived admin user. Source: RUNWELL ADR 0002, AWS account isolation with security parity. Out of scope: irreversible payment-ownership or account-transfer actions. These require an explicit human decision and, for M&A transfer, an AWS account-manager conversation. No setup completion authorizes those actions.",
+      "phase": "AWS Account & Identity Setup",
+      "targetDate": null,
+      "startDate": "2026-09-08",
+      "milestone": "RW-K0",
+      "priority": "critical",
+      "status": "ready",
+      "dependencies": [
+        "RW-6003"
+      ],
+      "decisionDependencies": [],
+      "releaseGate": false,
+      "critical": true,
+      "evidence": "",
+      "blockerReason": "",
+      "nextAction": "",
+      "workingNote": "",
+      "completedAt": null,
+      "owner": "Ian",
+      "acceptanceCriteria": [
+        "Use ianfmc as the human sign-in identity with minimal standing permissions sufficient to assume the dedicated admin role. Require MFA for assumption. Administrative privileges come from this role, never root or a long-lived admin user."
+      ],
+      "sourceId": "RW-6004",
+      "conditional": false
+    },
+    {
+      "id": "RW-6005",
+      "project": "RW",
+      "title": "Create runwell-ro read-only identity",
+      "description": "Configure the runwell-ro read-only IAM profile for AWS review and inspection. Verify permitted reads and denied writes. Source: RUNWELL ADR 0002, AWS account isolation with security parity. Out of scope: irreversible payment-ownership or account-transfer actions. These require an explicit human decision and, for M&A transfer, an AWS account-manager conversation. No setup completion authorizes those actions.",
+      "phase": "AWS Account & Identity Setup",
+      "targetDate": null,
+      "startDate": "2026-09-08",
+      "milestone": "RW-K0",
+      "priority": "critical",
+      "status": "ready",
+      "dependencies": [
+        "RW-6004"
+      ],
+      "decisionDependencies": [],
+      "releaseGate": false,
+      "critical": true,
+      "evidence": "",
+      "blockerReason": "",
+      "nextAction": "",
+      "workingNote": "",
+      "completedAt": null,
+      "owner": "Ian",
+      "acceptanceCriteria": [
+        "Configure the runwell-ro read-only IAM profile for AWS review and inspection. Verify permitted reads and denied writes."
+      ],
+      "sourceId": "RW-6005",
+      "conditional": false
+    },
+    {
+      "id": "RW-6006",
+      "project": "RW",
+      "title": "Create scoped deploy role",
+      "description": "Create a least-privilege CI/deployment role with no long-lived user access keys. Verify its scoped permissions and temporary-credential authentication. Source: RUNWELL ADR 0002, AWS account isolation with security parity. Out of scope: irreversible payment-ownership or account-transfer actions. These require an explicit human decision and, for M&A transfer, an AWS account-manager conversation. No setup completion authorizes those actions.",
+      "phase": "AWS Account & Identity Setup",
+      "targetDate": null,
+      "startDate": "2026-09-08",
+      "milestone": "RW-K0",
+      "priority": "critical",
+      "status": "ready",
+      "dependencies": [
+        "RW-6005"
+      ],
+      "decisionDependencies": [],
+      "releaseGate": false,
+      "critical": true,
+      "evidence": "",
+      "blockerReason": "",
+      "nextAction": "",
+      "workingNote": "",
+      "completedAt": null,
+      "owner": "Ian",
+      "acceptanceCriteria": [
+        "Create a least-privilege CI/deployment role with no long-lived user access keys. Verify its scoped permissions and temporary-credential authentication."
+      ],
+      "sourceId": "RW-6006",
+      "conditional": false
+    },
+    {
+      "id": "RW-6007",
+      "project": "RW",
+      "title": "Establish infrastructure-as-code baseline",
+      "description": "Commit CDK/CloudFormation/Amplify Gen 2 scaffolding. Declare all resources as code, including codifying the initial account and identity setup where supported. No hand-built console resources going forward. Source: RUNWELL ADR 0002, AWS account isolation with security parity. Out of scope: irreversible payment-ownership or account-transfer actions. These require an explicit human decision and, for M&A transfer, an AWS account-manager conversation. No setup completion authorizes those actions.",
+      "phase": "AWS Account & Identity Setup",
+      "targetDate": null,
+      "startDate": "2026-09-08",
+      "milestone": "RW-K0",
+      "priority": "critical",
+      "status": "ready",
+      "dependencies": [
+        "RW-6006"
+      ],
+      "decisionDependencies": [],
+      "releaseGate": false,
+      "critical": true,
+      "evidence": "",
+      "blockerReason": "",
+      "nextAction": "",
+      "workingNote": "",
+      "completedAt": null,
+      "owner": "Ian",
+      "acceptanceCriteria": [
+        "Commit CDK/CloudFormation/Amplify Gen 2 scaffolding. Declare all resources as code, including codifying the initial account and identity setup where supported. No hand-built console resources going forward."
+      ],
+      "sourceId": "RW-6007",
+      "conditional": false
+    },
+    {
+      "id": "RW-6008",
+      "project": "RW",
+      "title": "Verify security parity & IaC",
+      "description": "Verify root MFA and no root keys; no daily root use; ianfmc admin-role assumption requires MFA and succeeds; runwell-ro is read-only; CI/deploy role is scoped with no long-lived keys; and all resources are declared as code. Record sanitized verification evidence. This is the group completion gate. Source: RUNWELL ADR 0002, AWS account isolation with security parity. Out of scope: irreversible payment-ownership or account-transfer actions. These require an explicit human decision and, for M&A transfer, an AWS account-manager conversation. No setup completion authorizes those actions.",
+      "phase": "AWS Account & Identity Setup",
+      "targetDate": null,
+      "startDate": "2026-09-08",
+      "milestone": "RW-K0",
+      "priority": "critical",
+      "status": "ready",
+      "dependencies": [
+        "RW-6007"
+      ],
       "decisionDependencies": [],
       "releaseGate": true,
       "critical": true,
@@ -1584,128 +1787,11 @@
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [
-        "Review RUNWELL ADR-0001 and the specific account identity/transferability question.",
-        "Record written human confirmation from an AWS account manager and/or legal counsel; automated Support routing does not satisfy this item.",
-        "Do not add a third party’s payment method or execute an account transfer before that confirmation."
+        "Verify root MFA and no root keys; no daily root use; ianfmc admin-role assumption requires MFA and succeeds; runwell-ro is read-only; CI/deploy role is scoped with no long-lived keys; and all resources are declared as code. Record sanitized verification evidence. This is the group completion gate."
       ],
-      "sourceId": "RW-6001",
+      "sourceId": "RW-6008",
       "conditional": false,
-      "evidenceRequirement": "Written human account-identity/transferability confirmation and reference to RUNWELL ADR-0001."
-    },
-    {
-      "id": "RW-6002",
-      "project": "RW",
-      "title": "Create RUNWELL organization and fresh business management account",
-      "description": "Create the organization and a fresh business management account under admin@run-well.io according to ADR-0001. Keep the consumer-linked personal account outside the management role. Account setup is permitted under decision C; RW-6001 still gates third-party payment/ownership actions.",
-      "phase": "AWS Account and Infrastructure Setup",
-      "targetDate": null,
-      "startDate": "2026-09-07",
-      "milestone": "RW-K0",
-      "priority": "high",
-      "status": "ready",
-      "dependencies": [],
-      "decisionDependencies": [],
-      "releaseGate": false,
-      "critical": false,
-      "evidence": "",
-      "blockerReason": "",
-      "nextAction": "",
-      "workingNote": "",
-      "completedAt": null,
-      "owner": "Ian",
-      "acceptanceCriteria": [
-        "Create the organization and a fresh business management account under admin@run-well.io according to ADR-0001. Keep the consumer-linked personal account outside the management role. Account setup is permitted under decision C; RW-6001 still gates third-party payment/ownership actions."
-      ],
-      "sourceId": "RW-6002",
-      "conditional": false
-    },
-    {
-      "id": "RW-6003",
-      "project": "RW",
-      "title": "Create the RUNWELL member account",
-      "description": "Create the dedicated RUNWELL member account. Record account and organization creation dates for checking the documented age requirements before a future migration. Any future ownership/payment action remains gated by RW-6001.",
-      "phase": "AWS Account and Infrastructure Setup",
-      "targetDate": null,
-      "startDate": "2026-09-07",
-      "milestone": "RW-K0",
-      "priority": "high",
-      "status": "ready",
-      "dependencies": [
-        "RW-6002"
-      ],
-      "decisionDependencies": [],
-      "releaseGate": false,
-      "critical": false,
-      "evidence": "",
-      "blockerReason": "",
-      "nextAction": "",
-      "workingNote": "",
-      "completedAt": null,
-      "owner": "Ian",
-      "acceptanceCriteria": [
-        "Create the dedicated RUNWELL member account. Record account and organization creation dates for checking the documented age requirements before a future migration. Any future ownership/payment action remains gated by RW-6001."
-      ],
-      "sourceId": "RW-6003",
-      "conditional": false
-    },
-    {
-      "id": "RW-6004",
-      "project": "RW",
-      "title": "Establish the RUNWELL infrastructure-as-code baseline",
-      "description": "Set up the CDK / Amplify Gen 2 baseline for the dedicated member account. Document environments and deployment configuration; use the non-root deployment role and keep credentials out of source control.",
-      "phase": "AWS Account and Infrastructure Setup",
-      "targetDate": null,
-      "startDate": "2026-09-07",
-      "milestone": "RW-K0",
-      "priority": "high",
-      "status": "ready",
-      "dependencies": [
-        "RW-6003",
-        "RW-6005"
-      ],
-      "decisionDependencies": [],
-      "releaseGate": false,
-      "critical": false,
-      "evidence": "",
-      "blockerReason": "",
-      "nextAction": "",
-      "workingNote": "",
-      "completedAt": null,
-      "owner": "Ian",
-      "acceptanceCriteria": [
-        "Set up the CDK / Amplify Gen 2 baseline for the dedicated member account. Document environments and deployment configuration; use the non-root deployment role and keep credentials out of source control."
-      ],
-      "sourceId": "RW-6004",
-      "conditional": false
-    },
-    {
-      "id": "RW-6005",
-      "project": "RW",
-      "title": "Configure runwell-ro inspection and an assumable deployment role",
-      "description": "Configure the runwell-ro read-only profile and a separate assumable deployment role. Verify non-root identities and read/write separation. Do not use root for routine development, inspection, or deployment.",
-      "phase": "AWS Account and Infrastructure Setup",
-      "targetDate": null,
-      "startDate": "2026-09-07",
-      "milestone": "RW-K0",
-      "priority": "high",
-      "status": "ready",
-      "dependencies": [
-        "RW-6003"
-      ],
-      "decisionDependencies": [],
-      "releaseGate": false,
-      "critical": false,
-      "evidence": "",
-      "blockerReason": "",
-      "nextAction": "",
-      "workingNote": "",
-      "completedAt": null,
-      "owner": "Ian",
-      "acceptanceCriteria": [
-        "Configure the runwell-ro read-only profile and a separate assumable deployment role. Verify non-root identities and read/write separation. Do not use root for routine development, inspection, or deployment."
-      ],
-      "sourceId": "RW-6005",
-      "conditional": false
+      "evidenceRequirement": "Sanitized security-parity verification and committed IaC references for all checks in RW-6008."
     },
     {
       "id": "RW-101",
@@ -1775,7 +1861,7 @@
       "status": "ready",
       "dependencies": [
         "RW-635",
-        "RW-6004"
+        "RW-6008"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -1833,7 +1919,7 @@
       "status": "ready",
       "dependencies": [
         "RW-635",
-        "RW-6004"
+        "RW-6008"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -1888,7 +1974,8 @@
       "status": "ready",
       "dependencies": [
         "RW-103",
-        "RW-635"
+        "RW-635",
+        "RW-6008"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -2235,7 +2322,8 @@
       "status": "ready",
       "dependencies": [
         "RW-103",
-        "RW-635"
+        "RW-635",
+        "RW-6008"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -2382,7 +2470,8 @@
       "status": "ready",
       "dependencies": [
         "RW-401",
-        "RW-635"
+        "RW-635",
+        "RW-6008"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -2440,7 +2529,8 @@
       "status": "ready",
       "dependencies": [
         "RW-103",
-        "RW-635"
+        "RW-635",
+        "RW-6008"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
@@ -2488,8 +2578,8 @@
     {
       "id": "RW-406",
       "project": "RW",
-      "title": "Production release by 1 December",
-      "description": "Production release by 1 December",
+      "title": "Ship / deploy production release by 1 December",
+      "description": "RUNWELL /ship and production deployment gate. Do not ship or deploy before RW-6008 and all release prerequisites are complete. Out of scope: irreversible payment-ownership or account-transfer actions. These require an explicit human decision and, for M&A transfer, an AWS account-manager conversation. No setup completion authorizes those actions.",
       "phase": "Design-Partner UAT",
       "targetDate": "2026-12-01",
       "startDate": "2026-11-23",
@@ -2501,7 +2591,8 @@
         "RW-403",
         "RW-404",
         "RW-405",
-        "RW-635"
+        "RW-635",
+        "RW-6008"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
@@ -5090,6 +5181,14 @@
       "title": "Personal AWS account access secured",
       "taskIds": [
         "LW-613"
+      ]
+    },
+    {
+      "id": "RW-G11",
+      "project": "RW",
+      "title": "/ship and AWS deploy: security parity & IaC",
+      "taskIds": [
+        "RW-6008"
       ]
     }
   ],

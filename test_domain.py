@@ -40,6 +40,18 @@ class RulesTest(unittest.TestCase):
   self.change('task','AT-107',{'status':'doing'},switchDoing=True)
   self.assertEqual(self.task('AT-106')['status'],'doing')
   self.assertEqual(self.task('AT-107')['status'],'doing')
+ def test_runwell_identity_chain_gates_shipping(self):
+  self.finish_setup('RW')
+  for number in range(2,9):
+   self.assertEqual(self.task(f'RW-600{number}')['dependencies'],[f'RW-600{number-1}'])
+  for id in ['RW-103','RW-105','RW-402','RW-406']:
+   with self.assertRaisesRegex(ValueError,'RW-6008'):
+    self.change('task',id,{'status':'doing'})
+ def test_reset_via_import_keeps_current_definitions(self):
+  self.finish_setup('RW')
+  self.change('import',document=copy.deepcopy(SEED))
+  self.assertEqual(self.task('RW-6001')['status'],'ready')
+  self.assertIn('RW-6008',self.task('RW-406')['dependencies'])
  def test_blocker_fields(self):
   with self.assertRaisesRegex(ValueError,'Blocked'):self.change('task','RW-101',{'status':'blocked'})
   self.change('task','RW-101',{'status':'blocked','blockerReason':'Missing fixture','nextAction':'Create minimal fixture'})

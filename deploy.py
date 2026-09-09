@@ -69,7 +69,7 @@ if os.environ.get('PUBLISH_DETAILS')=='1':
  live=merged
 outputs={o['OutputKey']:o['OutputValue'] for o in stack['Outputs']}
 secret=lam.get_function_configuration(FunctionName=outputs['FunctionName'])['Environment']['Variables']['ACCESS_TOKEN']
-config=json.dumps({'url':outputs['ApiUrl'],'token':secret}).replace('<','\\u003c')
+config=json.dumps({'url':outputs['ApiUrl'],'token':secret,'resetSeed':seed}).replace('<','\\u003c')
 css=(ROOT/'styles.css').read_text()
 for font in (ROOT/'fonts').iterdir():
  if font.suffix in ('.woff2','.ttf'):
