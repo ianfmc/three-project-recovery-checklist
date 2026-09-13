@@ -101,4 +101,4 @@ Next actions are shown per active project track. Optional demo, conditional inte
 
 AT-108–111 deliver the program recommendation by 18 September without demo dependencies. RUNWELL payment testing and Business OS repair/financial capabilities gate partner UAT alongside the workflow. LIVEWELL’s offline research preparation is independent of access clearance, actual acquisition requires LW-110, ablation requires the frozen baseline, and production integration remains deferred pending explicit acceptance of positive results. Existing IDs and completion evidence are preserved.
 
-Weekly allocation percentages are agreed; 20 total project hours (11 AT / 7 RUNWELL / 2 LIVEWELL) is a recommendation pending Ian’s capacity confirmation, not an automatic schedule or spending commitment.
+Approved weekly capacity: 15 total project hours at AT 55% / RUNWELL 35% / LIVEWELL 10%. AT receives 8h15m within SAP working hours. RUNWELL receives 5h15m and LIVEWELL 1h30m during evenings/weekends, totaling 6h45m of personal time. Review weekly before increasing this baseline; no calendar events or additional spending are implied.

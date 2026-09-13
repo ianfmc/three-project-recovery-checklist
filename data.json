@@ -6177,11 +6177,28 @@
     "weekendEnd": "2026-09-07",
     "switchDate": null,
     "timezone": "America/Los_Angeles",
-    "note": "AT program recommendation due 18 September; demo optional and independent. RUNWELL workflow, payments and Business OS advance now toward a 25 September internal readiness checkpoint. LIVEWELL core baseline and bounded research proceed in parallel; production signal integration is conditional on positive ablation. Planning allocation: AT 55%, RUNWELL 35%, LIVEWELL 10%. Review priorities weekly; no automatic October switch.",
+    "note": "AT program recommendation due 18 September; demo optional and independent. RUNWELL workflow, payments and Business OS advance now toward a 25 September internal readiness checkpoint. LIVEWELL core baseline and bounded research proceed in parallel; production signal integration is conditional on positive ablation. Planning allocation: AT 55%, RUNWELL 35%, LIVEWELL 10%. Review priorities weekly; no automatic October switch. Weekly capacity: 15 total project hours — AT 8h15m within SAP working hours; RUNWELL 5h15m and LIVEWELL 1h30m during evenings/weekends (6h45m personal time total). Start with this sustainable baseline; review weekly before increasing hours.",
     "allocationPercent": {
       "AT": 55,
       "RW": 35,
       "LW": 10
+    },
+    "weeklyCapacity": {
+      "totalHours": 15,
+      "projectHours": {
+        "AT": 8.25,
+        "RW": 5.25,
+        "LW": 1.5
+      },
+      "workHoursProjects": [
+        "AT"
+      ],
+      "personalTimeProjects": [
+        "RW",
+        "LW"
+      ],
+      "personalHours": 6.75,
+      "reviewCadence": "weekly"
     }
   }
 }
