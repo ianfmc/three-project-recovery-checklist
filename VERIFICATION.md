@@ -71,3 +71,8 @@ Added neutral task borders with teal for doing and muted rose for explicitly blo
 ## RUNWELL ADR 0002
 
 Published the critical-path AWS Account & Identity Setup chain RW-6001–6008 with preserved AT/LW progress. Browser verification of RW-406 shows blocked and explicitly requires RW-6008. Domain checks reject starting deployment tasks before RW-6008. Scoped publication uses checklist-tools without bucket-administration changes; current reset definitions are embedded and reset uses validated import. No live reset was run.
+
+
+## 13 September — strategic branch revision
+
+Validated the live-state draft and initial-state definitions (170 tasks). No missing references or dependency cycles. All 17 domain tests pass, including the unchanged server prerequisite enforcement. Browser scheduling checks cover independent AT recommendation/demo branches, LIVEWELL research before production, payment and Business OS prerequisites for partner UAT, and doing-task visibility despite obsolete future start dates. A read-only local browser preview showed AT-108 as the primary AT action, LW-301 and LW-104 in separate tracks, and RW-6006/RW-301/RW-308/RW-109 as the corresponding RUNWELL entry points. Optional/conditional gate totals and completed-prerequisite display were reviewed. No application infrastructure or external communications were executed.

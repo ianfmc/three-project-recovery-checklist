@@ -18,3 +18,5 @@ input:not([type=checkbox]),select,textarea{font-size:16px}
 .task{border-left:3px solid var(--line);padding-left:10px}
 .task.doing{border-left-color:var(--teal)}
 .task.blocked{border-left-color:#b34e68}
+
+.next-support{padding:12px;border:1px solid var(--line);border-radius:6px;align-self:start}.next-support>summary{cursor:pointer;font-size:14px;font-weight:700}.next-support .next-item{margin-top:10px}.next-item>b{display:block;font-size:13px;color:var(--teal,#137d72);margin-bottom:8px}
