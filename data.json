@@ -1957,7 +1957,7 @@
       "id": "RW-6008",
       "project": "RW",
       "title": "Verify security parity & IaC",
-      "description": "Verify root MFA and no root keys, no daily root use, successful MFA-required ianfmc-to-Admin assumption, read-only runwell-ro access, scoped deployment permissions, and committed infrastructure definitions. After RW-6007 and those identity checks, run a controlled test deployment in the intended RUNWELL application account using the Amplify role. This test is part of completing RW-6008 and does not require RW-6008 or RW-103 to be complete first. Restrict it to the defined test environment/resources; it does not authorize production /ship. Record temporary-credential authentication, successful test deployment, and sanitized evidence. If the test fails, fix and rerun within this bounded verification task. Source: RUNWELL ADR 0002. Irreversible payment-ownership or account-transfer actions remain outside scope and require an explicit human decision; M&A transfer also requires an AWS account-manager conversation.",
+      "description": "Verify root MFA and no root keys, no daily root use, successful MFA-gated admin-role assumption for ian.aws, read-only runwell-ro access, scoped deployment permissions, and committed infrastructure definitions. After RW-6007 and those identity checks, run a controlled test deployment in the intended RUNWELL application account using the Amplify role. This test is part of completing RW-6008 and does not require RW-6008 or RW-103 to be complete first. Restrict it to the defined test environment/resources; it does not authorize production /ship. Record temporary-credential authentication, successful test deployment, and sanitized evidence. If the test fails, fix and rerun within this bounded verification task. Source: RUNWELL ADR 0002. Irreversible payment-ownership or account-transfer actions remain outside scope and require an explicit human decision; M&A transfer also requires an AWS account-manager conversation.",
       "phase": "AWS Account & Identity Setup",
       "targetDate": "2026-09-12",
       "startDate": "2026-09-13",
@@ -1977,7 +1977,7 @@
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [
-        "Security-parity checks pass: root MFA/no root keys/no daily root use; MFA-required Admin assumption; read-only inspection identity; scoped deploy role without long-lived user keys.",
+        "Security-parity checks pass: root MFA and no root keys in management (…4030) and workload (…4375), no daily root use; MFA-gated admin-role assumption for ian.aws; read-only runwell-ro with denied-write evidence; scoped deploy role without long-lived user keys.",
         "Infrastructure definitions are committed and account for the resources under test.",
         "A controlled test deployment succeeds through the intended Amplify role using temporary credentials. Record the environment, role, commit, result, and any corrections without secrets.",
         "Only after all checks pass is this group complete. Full SaaS deployment RW-103 and production /ship remain downstream."
@@ -2886,6 +2886,42 @@
       "acceptanceCriteria": [],
       "sourceId": "RW-406",
       "conditional": false,
+      "track": "release"
+    },
+    {
+      "id": "RW-112",
+      "project": "RW",
+      "title": "Point run-well.io + www.run-well.io to the new landing app (workload account)",
+      "description": "Cut the production marketing domain over to the runwell landing app in workload account (…4375), after the RW-6001–6008 foundation group closes at RW-G11. Reported prerequisite verified 2026-09-20: landing renders green on its Amplify URL, but infra/landing-form is not yet deployed in the workload account and no custom domain is attached. Do not repoint production DNS until the landing-form backend and end-to-end form submission pass and the new landing renders correctly on its *.amplifyapp.com URL.",
+      "phase": "Deployment and Domain Cutover",
+      "targetDate": null,
+      "startDate": "2026-09-20",
+      "milestone": "RW-P1",
+      "priority": "high",
+      "status": "ready",
+      "dependencies": [
+        "RW-6008",
+        "RW-635"
+      ],
+      "decisionDependencies": [],
+      "releaseGate": true,
+      "critical": false,
+      "evidence": "",
+      "blockerReason": "",
+      "nextAction": "After RW-6008 is complete, deploy infra/landing-form into workload account (…4375) and verify end-to-end early-access form submission and the Amplify landing URL before changing production DNS. Confirm a cutover target date.",
+      "workingNote": "2026-09-20: Ian reports landing rendering verified in workload account (…4375). Landing-form backend and custom-domain association remain outstanding. This launch task is outside the AWS Account & Identity Setup group; foundation closes at RW-G11. Target date to be agreed.",
+      "completedAt": null,
+      "owner": "Ian",
+      "acceptanceCriteria": [
+        "infra/landing-form SAM stack deployed to workload account (…4375), and the early-access form submits successfully end-to-end.",
+        "New landing verified rendering on its *.amplifyapp.com URL.",
+        "run-well.io and www.run-well.io added as custom domains on the runwell Amplify app, with ACM certificate issued.",
+        "DNS updated at the provider; old-app domain association removed if present (one app per domain). Do not repoint production DNS until criteria 1–2 pass.",
+        "Custom domain serves the new site with a valid certificate."
+      ],
+      "sourceId": "RW-112",
+      "conditional": false,
+      "evidenceRequirement": "Sanitized landing-form deployment and end-to-end submission result, Amplify URL rendering, domain association/certificate, DNS cutover, and final HTTPS verification.",
       "track": "release"
     },
     {
