@@ -9,9 +9,9 @@
     {
       "id": "AT",
       "name": "Autonomous Tournament",
-      "deadline": "2026-09-18",
-      "outcome": "Prepare an evidence-backed next-tournament program recommendation by 18 September: identify the decision, decision-makers and decision window; document results, contributions and sustainability gaps; propose an operating model and decision request reviewed with the small colleague group. The technical demonstration is optional supporting evidence and must not delay the recommendation.",
-      "current": "13 September: program recommendation is the priority. Identify the actual leadership decision window first. Prior demonstration work remains available as optional supporting work; no new deliverables are credited complete.",
+      "deadline": "2026-09-25",
+      "outcome": "Capture organizer observations, develop the peer proposal, record peer feedback and prepare the executive decision deck by 25 September for leadership decisions by 30 September. Direct delivery experience carries substantial weight; unanimity is not required. Demo readiness does not gate this decision process.",
+      "current": "23 September: peer pre-read v3 supports the proposal. The program branch now separates organizer assessment, peer proposal, peer review and executive synthesis. Existing completion records remain authoritative.",
       "deferred": [
         "Other line-of-business demos",
         "Full Work Zone experience",
@@ -53,7 +53,7 @@
       "tracks": [
         {
           "id": "program",
-          "name": "Program recommendation · due 18 September",
+          "name": "Program recommendation · executive pre-read 25 September",
           "mode": "active"
         },
         {
@@ -66,7 +66,8 @@
           "name": "Tooling and housekeeping",
           "mode": "housekeeping"
         }
-      ]
+      ],
+      "previousDeadline": "2026-09-18"
     },
     {
       "id": "LW",
@@ -5080,12 +5081,12 @@
     {
       "id": "AT-109",
       "project": "AT",
-      "title": "Document results, contributions, and sustainability gaps",
-      "description": "Document what worked, who contributed, and what required exceptional personal effort. Distinguish evidence from estimates. Keep detailed internal evidence in the appropriate work repository and only sanitized references in this checklist.",
+      "title": "Capture organizer observations and lessons",
+      "description": "Capture Ian’s delivery experience: what worked, contributions, regional differences, exceptional effort, capacity constraints and sustainability gaps. Distinguish direct observations, interpretations, estimates and unanswered questions. Record available results and evidence gaps without inventing outcomes. A candid organizer assessment sufficient to support a proposal completes this step; peer validation and comprehensive outcome measurement are not prerequisites. Keep detailed internal material in the approved work repository; use sanitized references here.",
       "track": "program",
       "phase": "Program Recommendation — Priority",
       "milestone": "AT-P1",
-      "targetDate": "2026-09-16",
+      "targetDate": "2026-09-23",
       "startDate": "2026-09-13",
       "priority": "critical",
       "status": "ready",
@@ -5103,21 +5104,22 @@
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [
-        "Evidence-backed results and fair contribution attribution are recorded.",
-        "Unsustainable effort, capacity constraints, and required changes are explicit."
+        "Organizer observations cover successes, contributions, delivery effort, regional differences and needed changes sufficiently to support a proposal.",
+        "Direct observations are distinguished from interpretations and estimates; missing evidence and open questions are explicit. No audited retrospective or prior peer agreement is required."
       ],
       "sourceId": "strategy-2026-09-13",
-      "conditional": false
+      "conditional": false,
+      "previousTargetDate": "2026-09-16"
     },
     {
       "id": "AT-110",
       "project": "AT",
-      "title": "Draft the next-program recommendation and decision request",
-      "description": "Recommend the operating model, responsibilities, staffing, resources, and a defined role for the people who delivered the tournament. State the decision requested and consequences of under-resourcing. Reuse relevant narrative work from AT-101/107/301/503 where useful; none of those demo tasks is a prerequisite.",
+      "title": "Draft the proposal and decisions for peer discussion",
+      "description": "Develop a proposal grounded in Ian’s delivery experience. Explain the recommended direction, meaningful alternatives and trade-offs, and decisions needed. Cover the proposed operating model, responsibilities, continuing roles for experienced contributors, and staffing/resource questions. The deliverable is a peer pre-read, not an approved program or executive-final deck. Assignments, funding and final timing may remain open for discussion. Reuse the existing peer pre-read; no demo-readiness prerequisite.",
       "track": "program",
       "phase": "Program Recommendation — Priority",
       "milestone": "AT-P1",
-      "targetDate": "2026-09-17",
+      "targetDate": "2026-09-23",
       "startDate": "2026-09-13",
       "priority": "critical",
       "status": "ready",
@@ -5135,26 +5137,60 @@
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [
-        "Recommendation covers operating model, ownership, staffing and resources.",
-        "Roles for experienced contributors and the specific leadership decision request are explicit."
+        "A coherent peer proposal states the recommended direction, rationale, meaningful alternatives and decisions needed.",
+        "Proposed operating responsibilities, experienced-contributor roles and staffing/resource questions are covered; unresolved assignments, funding and dates are identified without requiring approval."
       ],
       "sourceId": "strategy-2026-09-13",
-      "conditional": false
+      "conditional": false,
+      "previousTargetDate": "2026-09-17"
     },
     {
       "id": "AT-111",
       "project": "AT",
-      "title": "Review with colleagues and prepare the leadership discussion",
-      "description": "Review with the small colleague group, incorporate or document feedback, and prepare the concise recommendation and supporting evidence for the actual leadership decision window. No demonstration readiness dependency. This task prepares the discussion; external messages or submissions require Ian’s explicit action or authorization.",
+      "title": "Review with peers and record the recommendation",
+      "description": "Gather input from the small peer group and test the proposal’s assumptions. Give substantial weight to Ian’s first-hand delivery experience and accountability; weigh other input by relevant experience and supporting evidence, not equal votes. Record accepted corrections, proposed changes and their disposition, agreement and remaining differences. Seek consensus without requiring unanimity. Carry the resulting recommendation and any material dissent forward to AT-112; do not delay the executive decision window waiting for universal agreement.",
       "track": "program",
       "phase": "Program Recommendation — Priority",
       "milestone": "AT-P1",
-      "targetDate": "2026-09-18",
+      "targetDate": "2026-09-23",
       "startDate": "2026-09-13",
       "priority": "critical",
       "status": "ready",
       "dependencies": [
         "AT-110",
+        "AT-635"
+      ],
+      "decisionDependencies": [],
+      "releaseGate": false,
+      "critical": true,
+      "evidence": "",
+      "blockerReason": "",
+      "nextAction": "",
+      "workingNote": "",
+      "completedAt": null,
+      "owner": "Ian",
+      "acceptanceCriteria": [
+        "Peer feedback, resulting revisions or reasons for retaining the proposal, and outstanding differences are recorded.",
+        "A clear recommendation is ready for executive synthesis, grounded in delivery experience and available evidence. Material dissent is retained; unanimity is not required."
+      ],
+      "sourceId": "strategy-2026-09-13",
+      "conditional": false,
+      "previousTargetDate": "2026-09-18"
+    },
+    {
+      "id": "AT-112",
+      "project": "AT",
+      "title": "Prepare the executive decision deck",
+      "description": "Convert the peer-reviewed proposal into a concise executive-ready deck for the confirmed leadership decision window. Present the recommendation, supporting observations and results with their limits, meaningful alternatives, resource and capacity implications, proposed roles for experienced contributors, and explicit decisions requested. Carry forward material disagreements rather than require unanimity. Prepare the revised leadership pre-read by 25 September for decisions by 30 September 2026. No demo prerequisite. Sending or submitting materials is a separate explicit action.",
+      "track": "program",
+      "phase": "Program Recommendation — Priority",
+      "milestone": "AT-P1",
+      "targetDate": "2026-09-25",
+      "startDate": "2026-09-23",
+      "priority": "critical",
+      "status": "ready",
+      "dependencies": [
+        "AT-111",
         "AT-635"
       ],
       "decisionDependencies": [],
@@ -5167,11 +5203,13 @@
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [
-        "Colleague feedback and resulting revisions are recorded.",
-        "Recommendation is ready by 18 September or earlier if the decision window requires it, with an explicit decision request."
+        "Executive deck states a clear recommendation and leadership decision request, with rationale, alternatives and staffing/resource implications.",
+        "Peer input and material unresolved differences are reflected; observations, estimates and proposed commitments remain distinguishable.",
+        "Revised leadership pre-read is ready by 25 September for the 30 September decision window; no demo or unanimous peer agreement is required."
       ],
-      "sourceId": "strategy-2026-09-13",
-      "conditional": false
+      "sourceId": "strategy-2026-09-23",
+      "conditional": false,
+      "evidenceRequirement": "Sanitized executive-deck reference and readiness record identifying the decision request, peer-feedback disposition and confirmed decision window."
     },
     {
       "id": "RW-109",
@@ -5680,8 +5718,9 @@
     {
       "id": "AT-P1",
       "project": "AT",
-      "name": "Program recommendation reviewed and ready",
-      "targetDate": "2026-09-18"
+      "name": "Peer input incorporated; executive decision deck ready",
+      "targetDate": "2026-09-25",
+      "previousTargetDate": "2026-09-18"
     },
     {
       "id": "RW-P1",
@@ -6185,9 +6224,9 @@
     {
       "id": "AT-G15",
       "project": "AT",
-      "title": "Program recommendation ready by 18 September",
+      "title": "Executive decision deck ready by 25 September",
       "taskIds": [
-        "AT-111"
+        "AT-112"
       ]
     },
     {
@@ -6213,7 +6252,7 @@
     "weekendEnd": "2026-09-07",
     "switchDate": null,
     "timezone": "America/Los_Angeles",
-    "note": "AT program recommendation due 18 September; demo optional and independent. RUNWELL workflow, payments and Business OS advance now toward a 25 September internal readiness checkpoint. LIVEWELL core baseline and bounded research proceed in parallel; production signal integration is conditional on positive ablation. Planning allocation: AT 55%, RUNWELL 35%, LIVEWELL 10%. Review priorities weekly; no automatic October switch. Weekly capacity: 15 total project hours — AT 8h15m within SAP working hours; RUNWELL 5h15m and LIVEWELL 1h30m during evenings/weekends (6h45m personal time total). Start with this sustainable baseline; review weekly before increasing hours.",
+    "note": "AT organizer assessment and peer proposal feed peer input by 23 September, an executive pre-read by 25 September and leadership decisions by 30 September. Delivery experience carries substantial weight; unanimity and demo readiness are not prerequisites. RUNWELL workflow, payments and Business OS advance now toward a 25 September internal readiness checkpoint. LIVEWELL core baseline and bounded research proceed in parallel; production signal integration is conditional on positive ablation. Planning allocation: AT 55%, RUNWELL 35%, LIVEWELL 10%. Review priorities weekly; no automatic October switch. Weekly capacity: 15 total project hours — AT 8h15m within SAP working hours; RUNWELL 5h15m and LIVEWELL 1h30m during evenings/weekends (6h45m personal time total). Start with this sustainable baseline; review weekly before increasing hours.",
     "allocationPercent": {
       "AT": 55,
       "RW": 35,
