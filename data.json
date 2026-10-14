@@ -1958,7 +1958,7 @@
       "id": "RW-6008",
       "project": "RW",
       "title": "Verify security parity & IaC",
-      "description": "Verify root MFA and no root keys, no daily root use, successful MFA-gated admin-role assumption for ian.aws, read-only runwell-ro access, scoped deployment permissions, and committed infrastructure definitions. After RW-6007 and those identity checks, run a controlled test deployment in the intended RUNWELL application account using the Amplify role. This test is part of completing RW-6008 and does not require RW-6008 or RW-103 to be complete first. Restrict it to the defined test environment/resources; it does not authorize production /ship. Record temporary-credential authentication, successful test deployment, and sanitized evidence. If the test fails, fix and rerun within this bounded verification task. Source: RUNWELL ADR 0002. Irreversible payment-ownership or account-transfer actions remain outside scope and require an explicit human decision; M&A transfer also requires an AWS account-manager conversation.",
+      "description": "Verify management-root MFA and no root keys; for the member account, accept centrally removed root credentials with root sign-in/recovery disabled, or root MFA with no root keys, no daily root use, successful MFA-gated admin-role assumption for ian.aws, read-only runwell-ro access, scoped deployment permissions, and committed infrastructure definitions. After RW-6007 and those identity checks, run a controlled test deployment in the intended RUNWELL application account using the Amplify role. This test is part of completing RW-6008 and does not require RW-6008 or RW-103 to be complete first. Restrict it to the defined test environment/resources; it does not authorize production /ship. Record temporary-credential authentication, successful test deployment, and sanitized evidence. If the test fails, fix and rerun within this bounded verification task. Source: RUNWELL ADR 0002. Irreversible payment-ownership or account-transfer actions remain outside scope and require an explicit human decision; M&A transfer also requires an AWS account-manager conversation.",
       "phase": "AWS Account & Identity Setup",
       "targetDate": "2026-09-12",
       "startDate": "2026-09-13",
@@ -1978,7 +1978,7 @@
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [
-        "Security-parity checks pass: root MFA and no root keys in management (…4030) and workload (…4375), no daily root use; MFA-gated admin-role assumption for ian.aws; read-only runwell-ro with denied-write evidence; scoped deploy role without long-lived user keys.",
+        "Security-parity checks pass: management root MFA with no root access keys; workload root credentials centrally removed with root sign-in/recovery disabled (or root MFA with no root keys); no daily root use; MFA-enforced admin-role access in both accounts; read-only runwell-ro with denied-write evidence; scoped deploy role without long-lived user keys.",
         "Infrastructure definitions are committed and account for the resources under test.",
         "A controlled test deployment succeeds through the intended Amplify role using temporary credentials. Record the environment, role, commit, result, and any corrections without secrets.",
         "Only after all checks pass is this group complete. Full SaaS deployment RW-103 and production /ship remain downstream."
@@ -5310,7 +5310,7 @@
       "id": "RW-308",
       "project": "RW",
       "title": "Define the minimum Business OS pilot operations",
-      "description": "Define the smallest useful development/repair loop and financial summary needed while partners test. Reuse current Business OS capabilities; specify defect intake, triage, repair status, verification and release links, plus coupon/subscription/payment outcomes. This planning task can proceed while deployment is being verified.",
+      "description": "Define the smallest useful development/repair loop and financial summary needed while partners test. Reuse current Business OS capabilities; specify defect intake, triage, repair status, verification and release links, plus coupon/subscription/payment outcomes. This planning task can proceed while deployment is being verified. Define a bounded dogfooding trial in which Ian uses Business OS as the primary operational record for real SaaS development and repair while Kiro/gstack performs development. Record an agreed duration or work-item count, scope, entry conditions, allowed manual workarounds, success criteria and a review point. The trial includes a real defect-to-repair loop and financial visibility under RW-310; full autonomy is not required.",
       "track": "businessos",
       "phase": "Business OS Pilot Operations",
       "milestone": "RW-P1",
@@ -5332,7 +5332,8 @@
       "owner": "Ian",
       "acceptanceCriteria": [
         "A bounded repair workflow and financial summary are specified.",
-        "Existing capabilities, gaps and acceptance examples are recorded for RW-309/310."
+        "Existing capabilities, gaps and acceptance examples are recorded for RW-309/310.",
+        "A bounded dogfooding trial plan records duration or work-item count, entry conditions, ownership, success criteria, permitted manual steps and the review point. Reuse existing gstack plans/reviews; clarify scope with office-hours/plan-ceo-review as needed and review execution with plan-eng-review."
       ],
       "sourceId": "strategy-2026-09-13",
       "conditional": false
@@ -5341,7 +5342,7 @@
       "id": "RW-309",
       "project": "RW",
       "title": "Verify Business OS defect-to-repair workflow",
-      "description": "Make Business OS usable as the primary plane for managing SaaS development and repair. Verify that a partner-reported defect can be captured, triaged, assigned or linked to repair work, tracked through verification and release, and reported back with an audit trail. Keep destructive operations and deployment explicit.",
+      "description": "Make Business OS usable as the primary plane for managing SaaS development and repair. Verify that a partner-reported defect can be captured, triaged, assigned or linked to repair work, tracked through verification and release, and reported back with an audit trail. Keep destructive operations and deployment explicit. Execute the bounded dogfooding trial defined in RW-308 after prerequisites are satisfied. Use Business OS as the primary operational record, take at least one small real SaaS defect through intake, triage, ownership, linked repair, verification, explicitly approved release and closure. Record work handled, work diverted to other tools, manual handoffs and friction. Review outcomes with gstack retro and propose the next bounded improvement.",
       "track": "businessos",
       "phase": "Business OS Pilot Operations",
       "milestone": "RW-P1",
@@ -5367,7 +5368,8 @@
       "owner": "Ian",
       "acceptanceCriteria": [
         "One representative defect travels from report through verified repair with durable status and ownership.",
-        "Development/repair links and permissions work; Business OS supports partner testing rather than waiting until after it."
+        "Development/repair links and permissions work; Business OS supports partner testing rather than waiting until after it.",
+        "The RW-308 dogfooding trial is executed and reviewed: at least one real defect completes the verified repair loop; work handled, tool escapes, manual workarounds and friction are recorded. A gstack retrospective documents success-criteria results and proposes the next improvement. Shipping/deployment retains existing explicit approval and gates."
       ],
       "sourceId": "strategy-2026-09-13",
       "conditional": false
@@ -5562,7 +5564,8 @@
       "owner": "Ian",
       "acceptanceCriteria": [
         "Core deployment and end-to-end workflow are verified with sanitized evidence.",
-        "Failures and recovery are tested; no congressional prerequisite is introduced."
+        "Failures and recovery are tested; no congressional prerequisite is introduced.",
+        "Replay the pinned baseline-v1 code/model against frozen inputs without modifying the frozen prefix; compare regenerated outputs with signals-export.json, document any nondeterminism/tolerance and explain discrepancies. Record actual commands, code/model references and sanitized result."
       ],
       "sourceId": "strategy-2026-09-13",
       "conditional": false
