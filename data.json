@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "revision": 0,
+  "revision": 179,
   "title": "Three-Program Recovery",
-  "subtitle": "Autonomous Tournament, LIVEWELL, and RUNWELL—from recovery plan to reliable release.",
+  "subtitle": "Autonomous Tournament, LIVEWELL, and RUNWELL\u2014from recovery plan to reliable release.",
   "assessmentDate": "2026-08-30",
-  "updatedAt": null,
+  "updatedAt": "2026-10-16T10:00:00+00:00",
   "projects": [
     {
       "id": "AT",
@@ -21,7 +21,7 @@
         "Runtime MCP extension until core demo is stable"
       ],
       "phases": [
-        "Program Recommendation — Priority",
+        "Program Recommendation \u2014 Priority",
         "Executive Story and Scope",
         "Production Topology and Authentication",
         "SAP AI Core Integration",
@@ -32,7 +32,11 @@
         "Development Setup: Kiro, SAP Proxy and CAP MCP",
         "Program Recommendation and Optional Demo Gates"
       ],
-      "latestNote": null,
+      "latestNote": {
+        "text": "15 September 2026 \u2014 AT-108 COMPLETE: decision sought, sanitized decision-making/adviser roles, confirmed input/decision dates and schedule check recorded in its working note. Executive Sponsor owns outcomes and defers substantially to the Execution Team on particulars. Advisers: Internal Partner Leadership, External Partner Leadership, Market Unit Leadership, NA and LAC Tournament Leads. Deliverable: evidence-backed LT presentation framework with alternatives and trade-offs; tournament timing and full program remain for leadership decisions. Customer selection and event commitment accountability are the critical path. Retain AT-109 evidence/results/gaps 16 September, AT-110 initial framework draft 17 September and AT-111 colleague review/initial framework ready 18 September. Confirmed follow-on dates: adviser input 23 September; revised LT pre-read 25 September; leadership decisions by 30 September 2026. Preparation schedule fits this window; no acceleration currently required. The parallel application, colloquially called the demo, is intended to capture adviser input. It supports the decision process; application readiness does not block AT-108. Recommended contingency if unavailable: structured input in the approved work repository to protect input and decision dates. No next-tournament delivery timeline is approved. Internal names/details remain in the approved work repository. Resume with AT-109, now ready. Planning allocation remains 55%; prior tooling/model-trial completions remain recorded.\n\n16 October 2026 \u2014 Provisional effort points added to remaining active-scope tasks for velocity measurement. Scale: 1/2/3/5/8; completed and deferred tasks left unestimated. Points are comparative estimates, not promises.",
+        "owner": "Ian",
+        "updatedAt": "2026-10-16T10:00:00+00:00"
+      },
       "cost": {
         "model": "",
         "tier": "Economy",
@@ -49,16 +53,16 @@
       },
       "setupGate": "AT-635",
       "planningWeight": 55,
-      "laneLabel": "55% planning allocation · program recommendation first",
+      "laneLabel": "55% planning allocation \u00b7 program recommendation first",
       "tracks": [
         {
           "id": "program",
-          "name": "Program recommendation · executive pre-read 25 September",
+          "name": "Program recommendation \u00b7 executive pre-read 25 September",
           "mode": "active"
         },
         {
           "id": "demo",
-          "name": "Technical demo · optional",
+          "name": "Technical demo \u00b7 optional",
           "mode": "optional"
         },
         {
@@ -73,8 +77,8 @@
       "id": "LW",
       "name": "LIVEWELL",
       "deadline": "2026-11-13",
-      "outcome": "Build Ian’s personal early-warning system to identify potential NADEX trades for his review. Preserve the existing NADEX workflow and evaluate congressional disclosures as an additional contextual signal. Provide timely candidate alerts, clear reasons, and reproducible results so Ian can decide whether to trade.",
-      "current": "Assessment: 30 August 2026. A decision-support UI, data pipeline foundation, and backtesting framework exist. Source acquisition, lineage, asset mapping, and incremental-value validation remain. Historical readiness estimate: 60–70%; not verified completion.",
+      "outcome": "Build Ian\u2019s personal early-warning system to identify potential NADEX trades for his review. Preserve the existing NADEX workflow and evaluate congressional disclosures as an additional contextual signal. Provide timely candidate alerts, clear reasons, and reproducible results so Ian can decide whether to trade.",
+      "current": "Assessment: 30 August 2026. A decision-support UI, data pipeline foundation, and backtesting framework exist. Source acquisition, lineage, asset mapping, and incremental-value validation remain. Historical readiness estimate: 60\u201370%; not verified completion.",
       "deferred": [
         "Replacing the existing strategy",
         "Standalone trade triggers from congressional activity",
@@ -95,7 +99,11 @@
         "Development Setup: Kiro and AWS MCP",
         "Final Personal Early-Warning Release Gate"
       ],
-      "latestNote": null,
+      "latestNote": {
+        "text": "26 September 2026 \u2014 LIVEWELL remains a personal early-warning system for potential NADEX trades. LW-301 DONE / LW-G01 satisfied: baseline-v1 tag (e5ec61e) pushed, 563 frozen S3 objects (~65 MB), pinned model and signals export verified; manifest FROZEN (f77c0bd). Earlier reproduction evidence plus today\u2019s freeze steps complete baseline milestone LW-A1. Core operational reliability and readiness reviews LW-302/303 remain separate open tasks; the entire core production track is not claimed complete.\n\nLW-101/102/103 remain complete. Research references: disclosure limitations (8e013a6), official-source access method/terms (ff9efd0), notebook-first track plan and ablation sketch (ef6ceea), all reported pushed. LW-103 research completion is distinct from access clearance: existing LW-110 remains blocked on the commercial-purpose classification and applicable access conditions; no calls made yet. Any actual data acquisition, including a one-time notebook pull, waits for LW-110.\n\nCongressional research is optional and parked: LW-104\u2013108, LW-111/112 and notebook work LW-203/205/206 deferred until Ian chooses to resume. Frozen baseline is available for eventual ablation. Production integration stays deferred behind positive ablation and explicit acceptance under LW-113. Core work remains independent. Account-security follow-up reports legacy amplify-elys removed; read-only inspection used livewell-ro. No trade execution or new acquisition is authorized by these updates.\n\n27 September 2026 \u2014 Reconciliation: baseline freeze remains done, but no frozen round-trip replay was executed this cycle. Ian approved tracking that replay under LW-302 core reliability, independently of parked LW-206. Existing LW-110 remains the access gate; no duplicate task or new acquisition permission. Email sending remains unconfirmed.\n\n2 October 2026 \u2014 LW-302 doing: reported frozen scoring replay matches all 1,831 comparable rows exactly. The other 15,032 export rows were unscored and outside this comparison. Operational reliability checks and broader upstream verification remain open. Research/access gate remains unchanged.\n\n14 October 2026 \u2014 LW-302 local operational-reliability portion exercised on frozen baseline: 19/19 compute scores reproduced; bounded failure isolation and recovery passed with no cross-contamination; scratch FastAPI serve path returned core endpoints 200. Commit fe6ae14 pushed. Deployment, scheduling, rendered UI, and backtest coverage remain open; LW-302 stays doing.\n\n15 October 2026 \u2014 LW-302 rendered-UI evidence accepted as partial: vestigial A2UI removal fixed blank screen; commit d05f77b pushed; 76/76 web tests pass; five core screens render real data with zero console errors. Deployed EventBridge scheduling and a controlled deployed run remain open. Backtest coverage is tracked separately from LW-302 and proposed for a new task or LW-303 subtask.\n\n15 October 2026 \u2014 LW-302 DONE. Accepted full operational-reliability evidence: local compute/recovery, scratch API, rendered UI, enabled EventBridge schedule matching CDK, and one observed scheduled run writing scored output with the pinned model. Backtest coverage is now standalone LW-304, ready and local/scratch-only.\n\n16 October 2026 \u2014 Provisional effort points added to remaining active-scope tasks for velocity measurement. Scale: 1/2/3/5/8; completed and deferred tasks left unestimated. Points are comparative estimates, not promises.",
+        "owner": "Ian",
+        "updatedAt": "2026-10-16T10:00:00+00:00"
+      },
       "cost": {
         "model": "",
         "tier": "Economy",
@@ -112,21 +120,21 @@
       },
       "setupGate": "LW-635",
       "planningWeight": 10,
-      "laneLabel": "10% planning allocation · baseline first, research alongside",
+      "laneLabel": "10% planning allocation \u00b7 baseline first, research alongside",
       "tracks": [
         {
           "id": "core",
-          "name": "A · Core baseline and production",
+          "name": "A \u00b7 Core baseline and production",
           "mode": "active"
         },
         {
           "id": "research",
-          "name": "B · Congressional research",
+          "name": "B \u00b7 Congressional research",
           "mode": "active"
         },
         {
           "id": "integration",
-          "name": "C · Signal integration only after positive ablation",
+          "name": "C \u00b7 Signal integration only after positive ablation",
           "mode": "conditional"
         },
         {
@@ -141,7 +149,7 @@
       "name": "RUNWELL",
       "deadline": "2026-12-01",
       "outcome": "Enable design partners to exercise real fleet/checklist workflows and the real Stripe payment/entitlement path at no additional cost using the agreed coupons. Business OS is the management plane for SaaS development and defect repair and provides rudimentary financial insight. Deliver all three capabilities with security, reproducible deployment, and support; full release target remains 1 December.",
-      "current": "13 September: account setup RW-6001–6005 is recorded complete. Role configuration, IaC and controlled test verification precede full deployment. Workflow, payment and Business OS tracks advance together; 25 September is an internal readiness checkpoint, not authorization for external access or production shipping.",
+      "current": "13 September: account setup RW-6001\u20136005 is recorded complete. Role configuration, IaC and controlled test verification precede full deployment. Workflow, payment and Business OS tracks advance together; 25 September is an internal readiness checkpoint, not authorization for external access or production shipping.",
       "deferred": [
         "Accounting and booking integrations",
         "Predictive and cross-tenant analytics",
@@ -167,7 +175,11 @@
         "Development Setup: Kiro and AWS MCP",
         "Final Design-Partner Release Gate"
       ],
-      "latestNote": null,
+      "latestNote": {
+        "text": "26 September 2026 \u2014 Browser credential-elimination foundation advanced. Audit and ADR completed; Plans 4/5 written, extending the migration to five slices. Plan 1 verified live: RUNWELL-IO-owned GitHub App with limited repository permissions and secure SSM configuration in workload account (\u20264375), us-west-1; old personal App/key retired. Plan 2 is partly applied: two Lambda schema authorization gaps must be fixed before auth/helper, agent execution and deployment. Plans 3\u20135 remain unstarted. Browser provider credentials are still exposed; RW-105 remains incomplete and real-user onboarding must wait for removal and verification. Organization-owner fixes and sprint handoff are local commit 4df46de, not pushed, no PR/merge. RW-6008 security-parity evidence remains outstanding. Business OS has 59 pre-existing failing unit tests, planned for a separate repair branch. Other-agent SaaS changes are excluded from today\u2019s progress. See RW-105 for detailed substep evidence, RW-102 for test/CI gaps, RW-604 for handoff, RW-309 for the unverified repair workflow.\n\n27 September 2026 \u2014 Separate SaaS lane: PR #318 (abb5c74) reportedly adds nine missing models, restores local typecheck (0 errors), passes 421 tests/72 files and build, and adds the SaaS build type gate; MUI v9 migration included. Pushed, unmerged, undeployed; no live-data validation. RW-203 and RW-102 now blocked with this partial progress recorded because RW-201/RW-101 prerequisites remain open. RW-104 requires schema-level tenant authorization and cross-org deny proof; allow.authenticated() alone is not that evidence. Coordinate shared monorepo/schema work before merge; RW-6008 and production release gates remain open.\n\n2 October 2026 \u2014 RW-6008 DONE: management root MFA/no keys and centrally absent workload root credentials accepted; Ian confirms MFA enforced for all accounts; read-only denied-write and prior controlled deploy/IaC evidence recorded. RW-103 now ready; RW-105 doing. Plan 2 schema fixes are local commit 350450c, unpushed/unmerged/undeployed; helper/execution and Plans 3\u20135 remain. Browser credentials still present. No production ship or application deployment authorized.\n\n14 October 2026 \u2014 Approved October 2 handoff reconciled: PR #319/ddc309c reported merged and deployed (Amplify job #8, nine tables); SaaS type gate merged. RW-103 doing; RW-104/203 remain blocked pending their prerequisites and tenant/live-workflow verification. RW-105 doing: 350450c pushed, unmerged/undeployed as of October 2. Sequence required config before dependent grants, checking ancestry to avoid duplicates. These are dated handoff observations, not new October 14 deployment checks.\n\n14 October 2026 \u2014 RW-105 credential decision R1 approved for agentHandler only: Amplify secret() for the private key and explicit ordinary function configuration for App/installation IDs. Preserve existing SSM parameters pending consumer review. Plan 743e730 is pushed; handler/helper/agents already exist, so next work is credential wiring, grant review and focused verification. No application changes/tests/deployment are credited to this planning handoff; RW-105 remains doing.\n\n14 October 2026 \u2014 Approved inbox disposition: RW-104 tenant isolation remains blocked pending deployed two-org deny-path evidence. RW-301 T1 accept-invite fix is accepted as local progress and should travel with that shared SaaS deployment. RW-105 valid implementation is 93c3d44; 350450c model-level grants were invalid and superseded. Approved order is Business OS 93c3d44 supervised deploy-to-verify first, then SaaS rebases onto updated main and independently verifies tenant isolation. No merge/deploy performed by governance.\n\n14 October 2026 \u2014 Ian accepted the RW-105 deploy-to-verify evidence: merge 62eaf9f, Amplify job #10 succeeded, deployed credential wiring and Query/Mutation-only AppSync IAM verified. Live runAgent was deliberately not invoked; no production write or external token spend is needed. RW-105 remains doing for browser credential removal and Plans 3\u20135. SaaS tenant-isolation lane may rebase onto 62eaf9f, rerun checks and submit its own land request; it is not yet authorized to merge/deploy.\n\n14 October 2026 \u2014 SaaS handoff surfaced a pre-existing clean-install TS2353 blocker on main 62eaf9f: three custom Cognito attributes in runwell-saas/amplify/auth/resource.ts use unsupported required:false under pinned Amplify types. No fix applied. This shared auth/platform issue must be owned and fixed before the next clean-install SaaS deploy; tenant-isolation work remains separate.\n\n14 October 2026 \u2014 Shared SaaS auth blocker resolved: unsupported required:false removed from three custom Cognito attributes; fix c0ec369 landed as merge fc7c300 and runwell-saas Amplify job #10 passed BUILD/DEPLOY/VERIFY. SaaS tenant-isolation lane subsequently rebased and merged as aa1e82e; job #11 passed. RW-104 remains blocked because deployed two-org deny-path tests have not run. Stale amplify_outputs.json still points to the retired personal-account backend and must be repaired before valid tenant testing.\n\n15 October 2026 \u2014 RW-105 Plans 3\u20135 scope committed/pushed as 056f7f4 (plan only; status remains doing). Live audit found 9 VITE_ provider-credential reads across 6 files. Proposed serialized slices A Strategy, B demand-gen/growth drawers, C vestigial executive/github cleanup, D CI guard. Decisions pending on delete-vs-wire, docs-to-main, and agent-port breadth. SaaS separately proposed per-environment Amplify outputs with an account-agnostic placeholder; awaiting approval before implementation or tenant tests.\n\n16 October 2026 \u2014 Provisional effort points added to remaining active-scope tasks for velocity measurement. Scale: 1/2/3/5/8; completed and deferred tasks left unestimated. Points are comparative estimates, not promises.",
+        "owner": "Ian",
+        "updatedAt": "2026-10-16T10:00:00+00:00"
+      },
       "cost": {
         "model": "",
         "tier": "Economy",
@@ -184,7 +196,7 @@
       },
       "setupGate": "RW-635",
       "planningWeight": 35,
-      "laneLabel": "35% planning allocation · workflow, payments and Business OS",
+      "laneLabel": "35% planning allocation \u00b7 workflow, payments and Business OS",
       "tracks": [
         {
           "id": "foundation",
@@ -203,7 +215,7 @@
         },
         {
           "id": "businessos",
-          "name": "Business OS · repair and financial insight",
+          "name": "Business OS \u00b7 repair and financial insight",
           "mode": "active"
         },
         {
@@ -235,7 +247,7 @@
       "startDate": "2026-09-04",
       "milestone": "AT-W1",
       "priority": "critical",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "AT-635"
       ],
@@ -244,11 +256,11 @@
       ],
       "releaseGate": true,
       "critical": false,
-      "evidence": "",
+      "evidence": "Executive audience: Matheus, with Aaron Boucher, Shane, and Matheus' peers as the October downstream audience\n\nDecision: Approve the six-dimension framework and the LessonsLearned application as the mechanism for collecting multi-source advisor evidence to inform the 2027 tournament operating model\n\nGolden demo story: A manually constructed example \u2014 one finding, one dimension \u2014 structured as what the app would collect and synthesize, demonstrating why no single person can produce this alone",
       "blockerReason": "",
       "nextAction": "",
       "workingNote": "",
-      "completedAt": null,
+      "completedAt": "2026-09-18T01:10:58+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [],
       "sourceId": "AT-101",
@@ -288,7 +300,8 @@
       "conditional": false,
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
       "track": "demo",
-      "optional": true
+      "optional": true,
+      "effortPoints": 5
     },
     {
       "id": "AT-103",
@@ -321,7 +334,8 @@
       "conditional": false,
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
       "track": "demo",
-      "optional": true
+      "optional": true,
+      "effortPoints": 5
     },
     {
       "id": "AT-104",
@@ -351,7 +365,8 @@
       "conditional": false,
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
       "track": "demo",
-      "optional": true
+      "optional": true,
+      "effortPoints": 5
     },
     {
       "id": "AT-105",
@@ -383,7 +398,8 @@
       "conditional": false,
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
       "track": "demo",
-      "optional": true
+      "optional": true,
+      "effortPoints": 3
     },
     {
       "id": "AT-106",
@@ -412,7 +428,8 @@
       "sourceId": "AT-106",
       "conditional": false,
       "track": "demo",
-      "optional": true
+      "optional": true,
+      "effortPoints": 2
     },
     {
       "id": "AT-107",
@@ -441,7 +458,8 @@
       "sourceId": "AT-107",
       "conditional": false,
       "track": "demo",
-      "optional": true
+      "optional": true,
+      "effortPoints": 2
     },
     {
       "id": "AT-201",
@@ -476,7 +494,8 @@
       "conditional": false,
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
       "track": "demo",
-      "optional": true
+      "optional": true,
+      "effortPoints": 5
     },
     {
       "id": "AT-202",
@@ -509,7 +528,8 @@
       "conditional": false,
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
       "track": "demo",
-      "optional": true
+      "optional": true,
+      "effortPoints": 5
     },
     {
       "id": "AT-203",
@@ -540,7 +560,8 @@
       "conditional": false,
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
       "track": "demo",
-      "optional": true
+      "optional": true,
+      "effortPoints": 3
     },
     {
       "id": "AT-204",
@@ -573,7 +594,8 @@
       "conditional": false,
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
       "track": "demo",
-      "optional": true
+      "optional": true,
+      "effortPoints": 5
     },
     {
       "id": "AT-205",
@@ -604,7 +626,8 @@
       "conditional": false,
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
       "track": "demo",
-      "optional": true
+      "optional": true,
+      "effortPoints": 5
     },
     {
       "id": "AT-206",
@@ -635,7 +658,8 @@
       "conditional": false,
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
       "track": "demo",
-      "optional": true
+      "optional": true,
+      "effortPoints": 3
     },
     {
       "id": "AT-301",
@@ -666,7 +690,8 @@
       "conditional": false,
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
       "track": "demo",
-      "optional": true
+      "optional": true,
+      "effortPoints": 5
     },
     {
       "id": "AT-302",
@@ -695,7 +720,8 @@
       "sourceId": "AT-302",
       "conditional": false,
       "track": "demo",
-      "optional": true
+      "optional": true,
+      "effortPoints": 3
     },
     {
       "id": "AT-303",
@@ -725,7 +751,8 @@
       "conditional": false,
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
       "track": "demo",
-      "optional": true
+      "optional": true,
+      "effortPoints": 2
     },
     {
       "id": "AT-304",
@@ -754,7 +781,8 @@
       "sourceId": "AT-304",
       "conditional": false,
       "track": "demo",
-      "optional": true
+      "optional": true,
+      "effortPoints": 3
     },
     {
       "id": "AT-305",
@@ -785,7 +813,8 @@
       "conditional": false,
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
       "track": "demo",
-      "optional": true
+      "optional": true,
+      "effortPoints": 2
     },
     {
       "id": "AT-306",
@@ -816,7 +845,8 @@
       "conditional": false,
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
       "track": "demo",
-      "optional": true
+      "optional": true,
+      "effortPoints": 2
     },
     {
       "id": "AT-307",
@@ -847,7 +877,8 @@
       "conditional": false,
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
       "track": "demo",
-      "optional": true
+      "optional": true,
+      "effortPoints": 5
     },
     {
       "id": "AT-401",
@@ -879,7 +910,8 @@
       "conditional": false,
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
       "track": "demo",
-      "optional": true
+      "optional": true,
+      "effortPoints": 5
     },
     {
       "id": "AT-402",
@@ -910,7 +942,8 @@
       "conditional": false,
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
       "track": "demo",
-      "optional": true
+      "optional": true,
+      "effortPoints": 2
     },
     {
       "id": "AT-403",
@@ -944,7 +977,8 @@
       "conditional": false,
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
       "track": "demo",
-      "optional": true
+      "optional": true,
+      "effortPoints": 5
     },
     {
       "id": "AT-404",
@@ -974,7 +1008,8 @@
       "sourceId": "AT-404",
       "conditional": false,
       "track": "demo",
-      "optional": true
+      "optional": true,
+      "effortPoints": 3
     },
     {
       "id": "AT-405",
@@ -1005,7 +1040,8 @@
       "conditional": false,
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
       "track": "demo",
-      "optional": true
+      "optional": true,
+      "effortPoints": 3
     },
     {
       "id": "AT-406",
@@ -1037,7 +1073,8 @@
       "sourceId": "AT-406",
       "conditional": false,
       "track": "demo",
-      "optional": true
+      "optional": true,
+      "effortPoints": 3
     },
     {
       "id": "AT-501",
@@ -1067,7 +1104,8 @@
       "sourceId": "AT-501",
       "conditional": false,
       "track": "demo",
-      "optional": true
+      "optional": true,
+      "effortPoints": 3
     },
     {
       "id": "AT-502",
@@ -1097,7 +1135,8 @@
       "sourceId": "AT-502",
       "conditional": false,
       "track": "demo",
-      "optional": true
+      "optional": true,
+      "effortPoints": 3
     },
     {
       "id": "AT-503",
@@ -1127,7 +1166,8 @@
       "sourceId": "AT-503",
       "conditional": false,
       "track": "demo",
-      "optional": true
+      "optional": true,
+      "effortPoints": 8
     },
     {
       "id": "AT-504",
@@ -1158,19 +1198,20 @@
       "conditional": false,
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
       "track": "demo",
-      "optional": true
+      "optional": true,
+      "effortPoints": 3
     },
     {
       "id": "LW-101",
       "project": "LW",
-      "title": "Write the ADR for Ian’s personal NADEX early-warning workflow",
-      "description": "Document LIVEWELL as Ian’s own early-warning system for identifying potential NADEX trades. Describe candidate alerts, the information needed to assess them, and Ian’s review and trading decision. Congressional activity is an additional contextual signal within the existing NADEX workflow. Multi-user access, external customers, subscriptions, and commercialization are outside the current scope; do not design for them.",
+      "title": "Write the ADR for Ian\u2019s personal NADEX early-warning workflow",
+      "description": "Document LIVEWELL as Ian\u2019s own early-warning system for identifying potential NADEX trades. Describe candidate alerts, the information needed to assess them, and Ian\u2019s review and trading decision. Congressional activity is an additional contextual signal within the existing NADEX workflow. Multi-user access, external customers, subscriptions, and commercialization are outside the current scope; do not design for them.",
       "phase": "Signal Contract and Personal Workflow",
       "targetDate": "2026-09-30",
       "startDate": "2026-09-04",
       "milestone": "LW-W1",
       "priority": "critical",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "LW-635"
       ],
@@ -1179,11 +1220,11 @@
       ],
       "releaseGate": true,
       "critical": true,
-      "evidence": "",
+      "evidence": "LW-101 DONE \u2014 ADR at docs/adr/0001-congressional-trading-signal.md; personal early-warning scope (LW-D01 aligned); congress = contextual signal, ablation-gated (LW-206), leakage-safe clock (LW-107); accepted, implementation deferred behind verified core.",
       "blockerReason": "",
       "nextAction": "",
-      "workingNote": "",
-      "completedAt": null,
+      "workingNote": "docs/adr/0001-congressional-trading-signal.md written and reframed to the personal early-warning scope (congress = contextual signal, not product/standalone trigger; respects LW-D01, LW-900/901/902). References LW-107 leakage-safe clock, LW-206 ablation, LW-301 baseline, and the full instrument universe (indices/metals/energy/forex) with the congress\u2192index bridge. Status in-doc: Accepted, implementation deferred. Accepted by Ian; ADR task complete. Checklist status: accepted by Ian and complete. Implementation remains deferred behind verified core.",
+      "completedAt": "2026-09-08T00:45:51+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [
         "The ADR defines the personal alert-to-review workflow and the existing baseline it extends.",
@@ -1204,18 +1245,18 @@
       "startDate": "2026-09-04",
       "milestone": "LW-W1",
       "priority": "medium",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "LW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
       "critical": false,
-      "evidence": "",
+      "evidence": "Standalone research note committed at docs/research/congressional-disclosure-limitations.md (commit 8e013a6). Covers purpose, the three-clock timing model (transaction vs filing/publication vs LIVEWELL observation),\n  value-range/ambiguous-asset/amendment/coverage limitations, look-ahead prevention (disclosed trade is historical as of publication date), and the LW-206 ablation as the promotion gate. Official STOCK Act deadlines cited (House Ethics, Senate Ethics/eFD, OGE, CRS R42495). Follows LW-D02 official-sources scope; OGE out of scope for v1. Supersedes the in-ADR coverage noted in the LW-102 working note",
       "blockerReason": "",
       "nextAction": "",
-      "workingNote": "",
-      "completedAt": null,
+      "workingNote": "captured within the ADR (STOCK Act 30/45-day lag, value ranges, ambiguous asset matches, observed-disclosure vs tested-signal). Needs extraction into a standalone concise research note to fully satisfy LW-102.\n\n26 September 2026 \u2014 Disclosure-limitations research remains complete: docs/research/congressional-disclosure-limitations.md, commit 8e013a6, reported pushed. Existing completion retained.",
+      "completedAt": "2026-09-13T20:40:22+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [
         "The research note identifies latency and uncertainty that affect interpretation.",
@@ -1236,7 +1277,7 @@
       "startDate": "2026-09-04",
       "milestone": "LW-W1",
       "priority": "critical",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "LW-101",
         "LW-635"
@@ -1246,11 +1287,11 @@
       ],
       "releaseGate": true,
       "critical": true,
-      "evidence": "",
+      "evidence": "Access-method + terms research committed at docs/research/congressional-disclosure-access.md (commit ff9efd0). Source per LW-D02 (official House Clerk FD + Senate eFD; not Capitol Trades; OGE out of scope v1). Confirmed acquisition path:\n  House annual index ZIP + individual PTR PDFs (live-verified HTTP 200, application/pdf); Senate agreement-gated search. Recommended tool: self-hosted Quantgress (MIT, verified); fallback jffrz78/congress-trades-app (MIT). Gating open\n  question: commercial-purpose reuse classification for personal trading research is UNVERIFIED on both sources \u2014 follow-up: House Legislative Resource Center (202) 226-5200, Senate Office of Public Records (202) 224-0322. Automation\n  permission + recipient retention UNVERIFIED \u2014 follow-up: clerkweb@mail.house.gov (mailto:clerkweb@mail.house.gov) + Senate Public Records. Acquisition method and terms documented; each unresolved restriction has a specific follow-up action",
       "blockerReason": "",
       "nextAction": "",
-      "workingNote": "",
-      "completedAt": null,
+      "workingNote": "26 September 2026 \u2014 Access-method/terms research remains complete (docs/research/congressional-disclosure-access.md, ff9efd0, reported pushed). The separate existing LW-110 task holds the unresolved personal-trading commercial-purpose classification and relevant access conditions. No calls reported yet; completion of research is not permission to acquire data. No duplicate follow-up task needed.",
+      "completedAt": "2026-09-13T21:46:57+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [
         "A workable acquisition method and its relevant source terms are documented.",
@@ -1275,7 +1316,7 @@
       "startDate": "2026-09-13",
       "milestone": "LW-B1",
       "priority": "medium",
-      "status": "ready",
+      "status": "deferred",
       "dependencies": [
         "LW-101",
         "LW-635"
@@ -1285,8 +1326,8 @@
       "critical": false,
       "evidence": "",
       "blockerReason": "",
-      "nextAction": "",
-      "workingNote": "",
+      "nextAction": "Resume only when Ian prioritizes the optional congressional research spike. Resolve LW-110 before acquiring actual disclosures; follow the notebook-first sequence and complete ablation before production integration.",
+      "workingNote": "26 September 2026 \u2014 Parked per Ian\u2019s stated priority: congressional signal is a nice-to-have on the core LIVEWELL workflow. Planning references: docs/research/congressional-signal-track-plan.md and docs/research/lw206-ablation-notebook-sketch.md (ef6ceea, reported pushed). LW-301 frozen-baseline prerequisite is now complete; this does not authorize disclosure acquisition or certify this research task complete.",
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [
@@ -1308,7 +1349,7 @@
       "startDate": "2026-09-13",
       "milestone": "LW-B1",
       "priority": "medium",
-      "status": "ready",
+      "status": "deferred",
       "dependencies": [
         "LW-104",
         "LW-635"
@@ -1318,8 +1359,8 @@
       "critical": false,
       "evidence": "",
       "blockerReason": "",
-      "nextAction": "",
-      "workingNote": "",
+      "nextAction": "Resume only when Ian prioritizes the optional congressional research spike. Resolve LW-110 before acquiring actual disclosures; follow the notebook-first sequence and complete ablation before production integration.",
+      "workingNote": "26 September 2026 \u2014 Parked per Ian\u2019s stated priority: congressional signal is a nice-to-have on the core LIVEWELL workflow. Planning references: docs/research/congressional-signal-track-plan.md and docs/research/lw206-ablation-notebook-sketch.md (ef6ceea, reported pushed). LW-301 frozen-baseline prerequisite is now complete; this does not authorize disclosure acquisition or certify this research task complete.",
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [],
@@ -1338,7 +1379,7 @@
       "startDate": "2026-09-13",
       "milestone": "LW-B1",
       "priority": "medium",
-      "status": "ready",
+      "status": "deferred",
       "dependencies": [
         "LW-101",
         "LW-635"
@@ -1348,8 +1389,8 @@
       "critical": false,
       "evidence": "",
       "blockerReason": "",
-      "nextAction": "",
-      "workingNote": "",
+      "nextAction": "Resume only when Ian prioritizes the optional congressional research spike. Resolve LW-110 before acquiring actual disclosures; follow the notebook-first sequence and complete ablation before production integration.",
+      "workingNote": "office-hours design (docs/designs/congressional-trading-signal.md) settled bridge = sector/index rollup with per-instrument routing (indices strong, commodities medium, forex deferred), curated version-controlled ticker\u2192instrument map, recency-weighted aggregation, ablation as accept/reject gate. Feeds these items; formal definitions still to be written under LW-W1.\n\n26 September 2026 \u2014 Parked per Ian\u2019s stated priority: congressional signal is a nice-to-have on the core LIVEWELL workflow. Planning references: docs/research/congressional-signal-track-plan.md and docs/research/lw206-ablation-notebook-sketch.md (ef6ceea, reported pushed). LW-301 frozen-baseline prerequisite is now complete; this does not authorize disclosure acquisition or certify this research task complete.",
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [],
@@ -1368,7 +1409,7 @@
       "startDate": "2026-09-13",
       "milestone": "LW-B1",
       "priority": "critical",
-      "status": "ready",
+      "status": "deferred",
       "dependencies": [
         "LW-104",
         "LW-635"
@@ -1378,8 +1419,8 @@
       "critical": true,
       "evidence": "",
       "blockerReason": "",
-      "nextAction": "",
-      "workingNote": "",
+      "nextAction": "Resume only when Ian prioritizes the optional congressional research spike. Resolve LW-110 before acquiring actual disclosures; follow the notebook-first sequence and complete ablation before production integration.",
+      "workingNote": "26 September 2026 \u2014 Parked per Ian\u2019s stated priority: congressional signal is a nice-to-have on the core LIVEWELL workflow. Planning references: docs/research/congressional-signal-track-plan.md and docs/research/lw206-ablation-notebook-sketch.md (ef6ceea, reported pushed). LW-301 frozen-baseline prerequisite is now complete; this does not authorize disclosure acquisition or certify this research task complete.",
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [],
@@ -1399,7 +1440,7 @@
       "startDate": "2026-09-13",
       "milestone": "LW-B1",
       "priority": "medium",
-      "status": "ready",
+      "status": "deferred",
       "dependencies": [
         "LW-107",
         "LW-635"
@@ -1409,8 +1450,8 @@
       "critical": false,
       "evidence": "",
       "blockerReason": "",
-      "nextAction": "",
-      "workingNote": "",
+      "nextAction": "Resume only when Ian prioritizes the optional congressional research spike. Resolve LW-110 before acquiring actual disclosures; follow the notebook-first sequence and complete ablation before production integration.",
+      "workingNote": "office-hours design (docs/designs/congressional-trading-signal.md) settled bridge = sector/index rollup with per-instrument routing (indices strong, commodities medium, forex deferred), curated version-controlled ticker\u2192instrument map, recency-weighted aggregation, ablation as accept/reject gate. Feeds these items; formal definitions still to be written under LW-W1.\n\n26 September 2026 \u2014 Parked per Ian\u2019s stated priority: congressional signal is a nice-to-have on the core LIVEWELL workflow. Planning references: docs/research/congressional-signal-track-plan.md and docs/research/lw206-ablation-notebook-sketch.md (ef6ceea, reported pushed). LW-301 frozen-baseline prerequisite is now complete; this does not authorize disclosure acquisition or certify this research task complete.",
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [],
@@ -1442,8 +1483,8 @@
       "releaseGate": false,
       "critical": false,
       "evidence": "",
-      "blockerReason": "",
-      "nextAction": "",
+      "blockerReason": "Need resolution regarding the use of the congressional trade data for personal research/training.",
+      "nextAction": "Send email to trading authority asking for resolution.",
       "workingNote": "",
       "completedAt": null,
       "owner": "Ian",
@@ -1494,7 +1535,7 @@
       "startDate": "2026-09-13",
       "milestone": "LW-B2",
       "priority": "medium",
-      "status": "ready",
+      "status": "deferred",
       "dependencies": [
         "LW-112",
         "LW-105",
@@ -1505,8 +1546,8 @@
       "critical": false,
       "evidence": "",
       "blockerReason": "",
-      "nextAction": "",
-      "workingNote": "",
+      "nextAction": "Resume only when Ian prioritizes the optional congressional research spike. Resolve LW-110 before acquiring actual disclosures; follow the notebook-first sequence and complete ablation before production integration.",
+      "workingNote": "26 September 2026 \u2014 Parked per Ian\u2019s stated priority: congressional signal is a nice-to-have on the core LIVEWELL workflow. Planning references: docs/research/congressional-signal-track-plan.md and docs/research/lw206-ablation-notebook-sketch.md (ef6ceea, reported pushed). LW-301 frozen-baseline prerequisite is now complete; this does not authorize disclosure acquisition or certify this research task complete.",
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [],
@@ -1557,7 +1598,7 @@
       "startDate": "2026-09-13",
       "milestone": "LW-B2",
       "priority": "medium",
-      "status": "ready",
+      "status": "deferred",
       "dependencies": [
         "LW-203",
         "LW-106",
@@ -1568,8 +1609,8 @@
       "critical": false,
       "evidence": "",
       "blockerReason": "",
-      "nextAction": "",
-      "workingNote": "",
+      "nextAction": "Resume only when Ian prioritizes the optional congressional research spike. Resolve LW-110 before acquiring actual disclosures; follow the notebook-first sequence and complete ablation before production integration.",
+      "workingNote": "26 September 2026 \u2014 Parked per Ian\u2019s stated priority: congressional signal is a nice-to-have on the core LIVEWELL workflow. Planning references: docs/research/congressional-signal-track-plan.md and docs/research/lw206-ablation-notebook-sketch.md (ef6ceea, reported pushed). LW-301 frozen-baseline prerequisite is now complete; this does not authorize disclosure acquisition or certify this research task complete.",
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [
@@ -1590,7 +1631,7 @@
       "startDate": "2026-09-13",
       "milestone": "LW-B2",
       "priority": "critical",
-      "status": "ready",
+      "status": "deferred",
       "dependencies": [
         "LW-205",
         "LW-107",
@@ -1603,8 +1644,8 @@
       "critical": true,
       "evidence": "",
       "blockerReason": "",
-      "nextAction": "",
-      "workingNote": "",
+      "nextAction": "Resume only when Ian prioritizes the optional congressional research spike. Resolve LW-110 before acquiring actual disclosures; follow the notebook-first sequence and complete ablation before production integration.",
+      "workingNote": "26 September 2026 \u2014 Parked per Ian\u2019s stated priority: congressional signal is a nice-to-have on the core LIVEWELL workflow. Planning references: docs/research/congressional-signal-track-plan.md and docs/research/lw206-ablation-notebook-sketch.md (ef6ceea, reported pushed). LW-301 frozen-baseline prerequisite is now complete; this does not authorize disclosure acquisition or certify this research task complete.",
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [
@@ -1752,16 +1793,16 @@
       "startDate": "2026-09-08",
       "milestone": "RW-K0",
       "priority": "critical",
-      "status": "ready",
+      "status": "done",
       "dependencies": [],
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": true,
-      "evidence": "",
+      "evidence": "Account number: 272037674030",
       "blockerReason": "",
       "nextAction": "",
       "workingNote": "",
-      "completedAt": null,
+      "completedAt": "2026-09-12T14:26:55+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [
         "Create a new standalone AWS account under admin@run-well.io, a fresh business identity with no Amazon.com consumer history. Do not use the personal/consumer-linked account."
@@ -1780,18 +1821,18 @@
       "startDate": "2026-09-08",
       "milestone": "RW-K0",
       "priority": "critical",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "RW-6001"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": true,
-      "evidence": "",
+      "evidence": "Name: RUNWELL-OPS\nID:  437603324375\nARN: arn:aws:organizations::272037674030:account/o-kt8vg3q0ot/437603324375\nOrganization path:  o-kt8vg3q0ot/r-ikzy/437603324375/\nEmail: admin@run-well.io",
       "blockerReason": "",
       "nextAction": "",
       "workingNote": "",
-      "completedAt": null,
+      "completedAt": "2026-09-12T16:53:53+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [
         "Place the new account in its own AWS Organizations structure. The management account is the fresh business account, never a personal/consumer-linked one."
@@ -1810,18 +1851,18 @@
       "startDate": "2026-09-08",
       "milestone": "RW-K0",
       "priority": "critical",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "RW-6002"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": true,
-      "evidence": "",
+      "evidence": "MFA added, no keys created.",
       "blockerReason": "",
       "nextAction": "",
       "workingNote": "",
-      "completedAt": null,
+      "completedAt": "2026-09-12T17:25:42+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [
         "Enable root MFA and confirm no root access keys exist. Record root as break-glass only, with no daily use."
@@ -1840,18 +1881,18 @@
       "startDate": "2026-09-08",
       "milestone": "RW-K0",
       "priority": "critical",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "RW-6003"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": true,
-      "evidence": "",
+      "evidence": "user id: ianfmc.",
       "blockerReason": "",
       "nextAction": "",
-      "workingNote": "",
-      "completedAt": null,
+      "workingNote": "Assumed Admin role. .",
+      "completedAt": "2026-09-12T17:29:25+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [
         "Use ianfmc as the human sign-in identity with minimal standing permissions sufficient to assume the dedicated admin role. Require MFA for assumption. Administrative privileges come from this role, never root or a long-lived admin user."
@@ -1870,18 +1911,18 @@
       "startDate": "2026-09-08",
       "milestone": "RW-K0",
       "priority": "critical",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "RW-6004"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": true,
-      "evidence": "",
+      "evidence": "user with ReadOnlyAccess policy attached.",
       "blockerReason": "",
       "nextAction": "",
       "workingNote": "",
-      "completedAt": null,
+      "completedAt": "2026-09-12T20:16:44+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [
         "Configure the runwell-ro read-only IAM profile for AWS review and inspection. Verify permitted reads and denied writes."
@@ -1900,18 +1941,18 @@
       "startDate": "2026-09-13",
       "milestone": "RW-P1",
       "priority": "critical",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "RW-6005"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": true,
-      "evidence": "",
+      "evidence": "Amplify deploy/service role verified in workload account (\u20264375). Role AmplifySSRLoggingRole-*, trusted only by amplify.amazonaws.com; scoped via AWS-managed AmplifyBackendDeployFullAccess (deploy-scoped, not admin); no long-lived IAM user keys in the deploy path (assumed via temporary creds). Scope proven sufficient by successful runwell-saas backend deploy on 2026-09-20.",
       "blockerReason": "",
       "nextAction": "",
-      "workingNote": "",
-      "completedAt": null,
+      "workingNote": "2026-09-20: Evidence supplied by Ian from the verified workload-account session (\u20264375), superseding old management-account app references from the abandoned attempt.",
+      "completedAt": "2026-09-20T23:06:08+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [
         "Deployment role exists in the intended RUNWELL application account and its intended Amplify trust and scoped permissions have been reviewed.",
@@ -1932,18 +1973,18 @@
       "startDate": "2026-09-13",
       "milestone": "RW-P1",
       "priority": "critical",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "RW-6006"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": true,
-      "evidence": "",
+      "evidence": "IaC baseline committed and deployed to workload account (\u20264375). Root amplify.yml (three-app monorepo manifest), Amplify Gen 2 backends, and the shared runwell.platform EventBridge bus (infra/platform-eventbus SAM stack) all committed and deployed. infra/README.md documents the baseline. Caveat: frontend tsc for runwell-saas still fails (Track 1 schema gap) \u2014 out of scope for RW-6007; deploy path does not type-gate.",
       "blockerReason": "",
       "nextAction": "",
-      "workingNote": "",
-      "completedAt": null,
+      "workingNote": "2026-09-20: Evidence supplied by Ian from the verified workload-account session (\u20264375), superseding old management-account app references from the abandoned attempt.",
+      "completedAt": "2026-09-20T23:06:08+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [
         "Infrastructure definitions and required non-secret configuration are committed, with existing resources and any manual owner-only steps accounted for.",
@@ -1964,18 +2005,18 @@
       "startDate": "2026-09-13",
       "milestone": "RW-P1",
       "priority": "critical",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "RW-6007"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
       "critical": true,
-      "evidence": "",
+      "evidence": "Partial verification supplied by Ian, 2026-09-20: runwell-saas and runwell deployed in workload account (\u20264375) through the Amplify service role using temporary credentials; no static keys. Security-parity checks remain outstanding.\n\n2 October 2026 \u2014 Handoff RW-20261002T150000-rw6008-security-parity reports management (\u20264030) root MFA and no root access keys; member/workload (\u20264375) root credentials Not present under centralized root management, with root sign-in/recovery disabled. Management Admin-role console access and workload AWSReservedSSO_RunwellAdmin session verified per handoff; prior RW-6004 records assumed Admin role. Ian explicitly confirms MFA is enforced for all accounts. runwell-ro SSM read succeeded and PutParameter was denied without mutation. Existing IaC and temporary-credential controlled-deployment evidence retained. These are reported verification results plus Ian confirmation, not a new independent AWS security audit.",
       "blockerReason": "",
       "nextAction": "",
-      "workingNote": "",
-      "completedAt": null,
+      "workingNote": "2026-09-20: Test deploy via temporary credentials satisfied: runwell-saas and runwell deployed through the Amplify service role in workload account (\u20264375), with no static keys. SSO access (Step 0), deploy-role review (RW-6006), and IaC (RW-6007) verified. Record sanitized security-parity checks: (1) root MFA enabled and no root access keys in both management (\u20264030) and workload (\u20264375) accounts; (2) MFA-gated admin-role assumption succeeds for ian.aws; (3) runwell-ro permits reads and a write attempt is denied. RW-G11 remains open until all checks pass.\n\n2 October 2026 \u2014 Accepted member-account credential removal as satisfying root-security intent, consistent with AWS centralized-root guidance. One-time management-root use to secure the account is compatible with no daily root use. Ian confirmed MFA enforcement for all accounts. Root-key absence is reported explicitly in the handoff; inactive=false alone would not prove deletion. No requirement to recreate member root credentials/MFA. No production release is authorized.",
+      "completedAt": "2026-10-02T22:08:03+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [
         "Security-parity checks pass: management root MFA with no root access keys; workload root credentials centrally removed with root sign-in/recovery disabled (or root MFA with no root keys); no daily root use; MFA-enforced admin-role access in both accounts; read-only runwell-ro with denied-write evidence; scoped deploy role without long-lived user keys.",
@@ -2017,7 +2058,8 @@
       "conditional": false,
       "track": "foundation",
       "previousStartDate": "2026-09-04",
-      "previousTargetDate": "2026-09-07"
+      "previousTargetDate": "2026-09-07",
+      "effortPoints": 3
     },
     {
       "id": "RW-102",
@@ -2029,7 +2071,7 @@
       "startDate": "2026-09-13",
       "milestone": "RW-P1",
       "priority": "medium",
-      "status": "ready",
+      "status": "blocked",
       "dependencies": [
         "RW-101",
         "RW-635"
@@ -2038,9 +2080,9 @@
       "releaseGate": false,
       "critical": false,
       "evidence": "",
-      "blockerReason": "",
-      "nextAction": "",
-      "workingNote": "",
+      "blockerReason": "Prerequisite RW-101 CI failure resolution and main protection remain incomplete. SaaS build-script contribution is in open PR #318; both-app CI coverage is not verified.",
+      "nextAction": "Preserve the merged SaaS type gate; verify actual CI logs and both-app install/typecheck/unit/build/selected E2E gates. Complete RW-101 required checks and separately repair the recorded Business OS test drift.",
+      "workingNote": "2026-09-26 \u2014 Handoff reports 59 pre-existing failing Business OS unit tests due to schema/test drift. No repairs or passing suite credited to this session; separate fix/business-os-test-drift branch is planned. Plan 5 specifies a static CI guard against browser credential access, but it is not implemented. CI gate installation/completion remains unverified.\n\n27 September 2026 \u2014 Accepted handoff RW-20260927T130000-track1-checklist-schema-mui-v9: SaaS build now runs tsc --noEmit before vite build, with a typecheck script; local build passed in PR #318 (abb5c74). This is a pushed, unmerged per-app contribution, not verified CI coverage. Business OS 59 reported failures remain unresolved. No completed CI gate is claimed.\n\n14 October 2026 \u2014 Applying Ian-approved handoff RW-20261002T234514-checklist-engine-deploy-and-plan2-push (observations from 2 October, not independently reverified today): SaaS tsc-before-build gate reported merged through PR #319/ddc309c and included in successful Amplify job #8. Branch typecheck/tests passed; this remains partial evidence, not both-app CI completion. RW-101 prerequisite remains open.",
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [],
@@ -2048,7 +2090,8 @@
       "conditional": false,
       "track": "foundation",
       "previousStartDate": "2026-10-01",
-      "previousTargetDate": "2026-10-09"
+      "previousTargetDate": "2026-10-09",
+      "effortPoints": 5
     },
     {
       "id": "RW-103",
@@ -2060,7 +2103,7 @@
       "startDate": "2026-09-13",
       "milestone": "RW-P1",
       "priority": "critical",
-      "status": "ready",
+      "status": "doing",
       "dependencies": [
         "RW-635",
         "RW-6008"
@@ -2068,10 +2111,10 @@
       "decisionDependencies": [],
       "releaseGate": true,
       "critical": true,
-      "evidence": "",
+      "evidence": "PR #319 / squash ddc309c (feature 9d63329) merged and reported deployed: Amplify main job #8 SUCCEED, all nine checklist-engine DynamoDB tables present in workload account (\u20264375). Branch typecheck 0 errors and 421 tests/72 files passed. This supersedes the earlier PR #318 unmerged/undeployed record for this schema work. Tenant-isolation negative tests and live builder workflows are not verified.",
       "blockerReason": "",
-      "nextAction": "",
-      "workingNote": "",
+      "nextAction": "Resolve the shared auth/resource.ts clean-install type error before the next SaaS deploy; coordinate ownership with Business OS/platform lane. Prefer the smallest compatible fix, then run clean npm ci, backend typecheck and deployment validation. Preserve tenant-isolation work and do not merge/deploy around the known error.",
+      "workingNote": "2 October 2026 \u2014 RW-6008 security-parity prerequisite cleared. Returned to ready; no new application deployment or completion claimed.\n\n14 October 2026 \u2014 Applying Ian-approved handoff RW-20261002T234514-checklist-engine-deploy-and-plan2-push (observations from 2 October, not independently reverified today): PR #319 / squash ddc309c (feature 9d63329) merged and reported deployed: Amplify main job #8 SUCCEED, all nine checklist-engine DynamoDB tables present in workload account (\u20264375). Branch typecheck 0 errors and 421 tests/72 files passed. This supersedes the earlier PR #318 unmerged/undeployed record for this schema work. Tenant-isolation negative tests and live builder workflows are not verified. Record reproducible application deployment procedure and environment documentation before completion. Clearing RW-6008 alone does not establish explicit deployment authorization; no retrospective authorization is inferred.\n\n14 October 2026 \u2014 Handoff RW-20261014T210000-auth-resource-required-typeerror-deploy-blocker reports a clean npm ci on main 62eaf9f reproduces three TS2353 errors in apps/runwell-saas/amplify/auth/resource.ts: required:false is not accepted on the three custom Cognito attributes under pinned Amplify types. Observation is pre-existing and cross-lane; no fix or deploy claimed. Smaller proposed fix is to remove required:false from custom attributes; dependency upgrade is a separate option. Fresh clean-install verification is required before next deploy.",
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [],
@@ -2080,7 +2123,8 @@
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
       "track": "foundation",
       "previousStartDate": "2026-10-01",
-      "previousTargetDate": "2026-10-09"
+      "previousTargetDate": "2026-10-09",
+      "effortPoints": 5
     },
     {
       "id": "RW-104",
@@ -2092,7 +2136,7 @@
       "startDate": "2026-09-13",
       "milestone": "RW-P1",
       "priority": "critical",
-      "status": "ready",
+      "status": "blocked",
       "dependencies": [
         "RW-103",
         "RW-635"
@@ -2101,9 +2145,9 @@
       "releaseGate": true,
       "critical": true,
       "evidence": "",
-      "blockerReason": "",
-      "nextAction": "",
-      "workingNote": "",
+      "blockerReason": "RW-103 full reproducible SaaS deployment and environment documentation remain incomplete. Schema deployment is reported, but tenant-isolation/per-persona verification remains unperformed.",
+      "nextAction": "Review local tenant-isolation authorization and RW-301 T1 together; after the agreed deploy, provision two test organizations/users and run the non-vacuous deny-path matrix plus same-org checks. Record deployed results.",
+      "workingNote": "Approach decided in Track 1 eng-review: schema-level orgId authorization on all 9 checklist/workflow models in PR1 (Cognito group/custom claim), hooks do query-shaping only; \"never defer security\" logged as a repo principle. Cross-org deny-path test is a PR1 green gate. Fixtures/tests not yet implemented or run.\n\nBlocked pending RW-103: the first reproducible SaaS deployment and environment documentation are not complete. The authorization approach is decided; fixtures and tests remain unimplemented and unrun.\n\n27 September 2026 \u2014 Approved governance review of PR #318 handoff: allow.authenticated() plus an orgId field or hook query shaping is not sufficient evidence of server-side tenant enforcement. Review authorization on all nine models and add meaningful two-organization deny-path tests. Local review/fixture preparation can proceed now; deployed verification remains downstream of RW-103. No new security pass is claimed.\n\n14 October 2026 \u2014 Applying Ian-approved handoff RW-20261002T234514-checklist-engine-deploy-and-plan2-push (observations from 2 October, not independently reverified today): PR #319 / squash ddc309c (feature 9d63329) merged and reported deployed: Amplify main job #8 SUCCEED, all nine checklist-engine DynamoDB tables present in workload account (\u20264375). Branch typecheck 0 errors and 421 tests/72 files passed. This supersedes the earlier PR #318 unmerged/undeployed record for this schema work. Tenant-isolation negative tests and live builder workflows are not verified. Review server-side orgId enforcement before real tenant data use; allow.authenticated() alone is not tenant isolation.\n\n14 October 2026 \u2014 Approved RUNWELL inbox reconciliation: Tenant-isolation implementation is reported local/uncommitted; deployed API remains on prior open authorization. Accept as progress only. The ownerDefinedIn(orgId)/custom:orgId model and schema-level backend grants require review, merge and deployed two-org deny-path evidence. The accept-invite mismatch is handled in RW-301 T1 and is sequenced with this shared SaaS deployment. RW-104 remains blocked.",
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [],
@@ -2112,7 +2156,8 @@
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
       "track": "foundation",
       "previousStartDate": "2026-10-01",
-      "previousTargetDate": "2026-10-09"
+      "previousTargetDate": "2026-10-09",
+      "effortPoints": 8
     },
     {
       "id": "RW-105",
@@ -2124,7 +2169,7 @@
       "startDate": "2026-09-13",
       "milestone": "RW-P1",
       "priority": "high",
-      "status": "ready",
+      "status": "doing",
       "dependencies": [
         "RW-635",
         "RW-6008"
@@ -2134,8 +2179,8 @@
       "critical": false,
       "evidence": "",
       "blockerReason": "",
-      "nextAction": "",
-      "workingNote": "",
+      "nextAction": "Continue approved Plan 3\u20135 work only after coordinating the shared auth/resource.ts blocker. Do not change the shared auth surface unilaterally; use a separate focused fix, review it, run clean-install checks, and report ownership/result.",
+      "workingNote": "2026-09-26 \u2014 Ian-provided verified session handoff; partial completion of RW-105, not completed credential elimination.\n\nCompleted substeps: secrets audit across landing, Business OS and SaaS; server-side agentHandler/support consumers use secret(), and SaaS billing uses Secrets Manager. Browser exposure remains: VITE_ANTHROPIC_API_KEY, VITE_GITHUB_TOKEN and VITE_TAVILY_API_KEY are compiled into client bundles, including executive agents, Strategy and approximately nine domain agents. No secret values recorded here.\n\nADR authored: docs/decisions/2026-09-26-browser-credential-elimination.md, extending the 2026-06-12 agent-framework ADR. All provider/GitHub calls move server-side; no API credential is read in the browser. Coverage inventory and DevTools verification standard documented. Plans 4 (Strategy) and 5 (demand-gen/support/finops plus CI guard) authored under docs/superpowers/plans/2026-09-26-github-app-lambda-agents-plan-4-strategy.md and ...-plan-5-domain-agents.md. Plans 3\u20135 are written, not executed.\n\nPlan 1 COMPLETE and VERIFIED per handoff: RUNWELL-IO owns the runwell-ops GitHub App, installed only on RUNWELL-IO/runwell. Permissions: Issues read/write, Contents read-only, Metadata read-only; webhook disabled. App ID, installation ID and private key stored/read back in SSM in workload account (\u20264375), us-west-1; private key is SecureString. Local private-key file deleted; old personal-account App and key revoked/deleted. Plan's personal ownership and us-east-1 assumptions were corrected. Live App/SSM configuration is independent of the pending source branch.\n\nPlan 2 schema review: AgentProgress/runAgent/getEngineeringSnapshot/createGitHubIssue exist, but AgentProgress lacks allow.resource(agentHandler).to(['create']); Prospect, Sequence, BoatShowEvent, ResearchArtifact and TimelineEntry are owner-only and lack agentHandler resource access for IAM calls. Both remain unfixed. Next: fix the two gaps, then GitHub App auth helper, agent logic, execution engine and gated deployment; SSM reads must use us-west-1.\n\nRepo correction: GITHUB_OWNER changed to RUNWELL-IO in agentHandler/resource.ts and supportTicketClassifierConsumer/resource.ts. Commit 4df46de on feature/infra-github-app-org includes those two configs and docs/agent-context/sprint-state.md. Not pushed, no PR, not merged to main. Remaining Strategy, Playwright/E2E and ctoAgent references are deferred to Plans 4/3. ADR/plan authorship does not establish merge or deployed implementation.\n\nBrowser remains credential-bearing until Plans 3\u20135 land and verification passes; removal is a prerequisite to real-user onboarding. RW-6008 security-parity gate remains open. Unrelated runwell-saas work by another agent is excluded from this evidence.\n\n2 October 2026 \u2014 Handoff RW-20261002T150500-rw105-plan2-schema-fix: AgentProgress create grant and resource grants on Prospect, TimelineEntry, Sequence, BoatShowEvent, ResearchArtifact, AgentRun and AgentMemory committed locally in 350450c on feature/business-os-plan2-schema (also carries 4df46de). Not pushed, merged or deployed. Reported typecheck clean; no runtime verification. This supersedes the earlier unfixed-schema note. GitHub App helper/execution path and Plans 3\u20135 remain; browser credentials are still present. RW-6008 now complete, so the recorded deployment prerequisite is cleared; this task remains incomplete.\n\n14 October 2026 \u2014 Applying Ian-approved handoff RW-20261002T234514-checklist-engine-deploy-and-plan2-push (observations from 2 October, not independently reverified today): 350450c reported pushed to origin/feature/business-os-plan2-schema, still unmerged and undeployed as of the handoff. No new code/runtime success claimed. Approved sequencing: review and land the specific required agentHandler config before dependent grants, not the entire migration program. The branch already contains 4df46de; inspect current ancestry and diff to avoid duplicate config changes. Check actual file overlap and semantic dependencies before parallel work; use separate worktrees/branches. Plans 2\u20135 remain incomplete; browser credentials are still reported present.\n\n14 October 2026 \u2014 Ian approved R1/Option A with qualifications for handoff RW-20261014T181024-rw105-credential-mechanism-reconciliation. Amplify-managed configuration is authoritative for agentHandler: GITHUB_APP_PRIVATE_KEY via secret(); GITHUB_APP_ID and GITHUB_APP_INSTALLATION_ID via explicit non-secret defineFunction environment entries. Existing /runwell-ops/ SSM parameters remain intact until other consumers and rotation dependencies are checked; no deletion/retirement authorized. Amplify retrieves secrets at runtime into memory, not as ordinary plaintext configuration resolved at deploy; the benefit is managed retrieval rather than custom fetching.\n\nPlan 743e730 reported committed/pushed on feature/business-os-plan2-schema above 350450c and 4df46de. Source review confirms handler, GitHub helper and agents already exist on-branch: work is verification and gap closure, superseding the earlier greenfield/helper-not-started account. No application code change, typecheck/unit-test run, runtime verification, merge or deployment claimed by this handoff. The R1 decision is resolved; RW-105 remains doing and incomplete. Reference: https://docs.amplify.aws/react/build-a-backend/functions/environment-variables-and-secrets/\n\n14 October 2026 \u2014 Approved RUNWELL inbox reconciliation: Correction recorded: earlier 350450c model-level resource grants were structurally invalid. Valid schema-level grant and R1 wiring are 93c3d44, pushed on feature/business-os-plan2-schema, unmerged/undeployed. Static tsc and focused agentHandler tests passed; runtime integration remains unverified. The grant is API-wide by Amplify design, narrowed to query/mutate, with no delete/subscribe. Browser credentials and Plans 3\u20135 remain outstanding.\n\n14 October 2026 \u2014 Ian accepts RW-20261014T213802-rw105-deploy-to-verify-results as sufficient deploy-to-verify evidence. Merge 62eaf9f landed 93c3d44; Amplify runwell-ops job #10 succeeded; deployed App-ID environment entries, Amplify-managed secret references, scoped SSM reads and schema-level AppSync Query+Mutation/no Subscription IAM verified read-only. No live runAgent invocation was performed; no production AgentProgress write or external API spend is required for this evidence. RW-105 remains doing because browser credentials and Plans 3\u20135 remain.\n\n14 October 2026 \u2014 Handoff RW-20261014T210000-auth-resource-required-typeerror-deploy-blocker reports a clean npm ci on main 62eaf9f reproduces three TS2353 errors in apps/runwell-saas/amplify/auth/resource.ts: required:false is not accepted on the three custom Cognito attributes under pinned Amplify types. Observation is pre-existing and cross-lane; no fix or deploy claimed. Smaller proposed fix is to remove required:false from custom attributes; dependency upgrade is a separate option. Fresh clean-install verification is required before next deploy.",
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [],
@@ -2143,7 +2188,8 @@
       "conditional": false,
       "track": "foundation",
       "previousStartDate": "2026-09-04",
-      "previousTargetDate": "2026-09-07"
+      "previousTargetDate": "2026-09-07",
+      "effortPoints": 3
     },
     {
       "id": "RW-106",
@@ -2155,7 +2201,7 @@
       "startDate": "2026-09-13",
       "milestone": "RW-W1",
       "priority": "medium",
-      "status": "ready",
+      "status": "doing",
       "dependencies": [
         "RW-635"
       ],
@@ -2165,14 +2211,15 @@
       "evidence": "",
       "blockerReason": "",
       "nextAction": "",
-      "workingNote": "",
+      "workingNote": "Resolved in prior gstack decision (locked EventBridge, not Step Functions) and mirrored by RW-D02. Checklist-agent verification on 2026-09-06: CLAUDE.md still contains the contradiction. Line 110 explicitly excludes Step Functions, while lines 42, 170, and 242 still reference Step Functions as part of the architecture. Documentation reconciliation remains outstanding; not complete. CLAUDE.md was inspected only, not modified.",
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [],
       "sourceId": "RW-106",
       "conditional": false,
       "track": "setup",
-      "previousStartDate": "2026-10-01"
+      "previousStartDate": "2026-10-01",
+      "effortPoints": 2
     },
     {
       "id": "RW-107",
@@ -2184,7 +2231,7 @@
       "startDate": "2026-09-13",
       "milestone": "RW-P1",
       "priority": "medium",
-      "status": "ready",
+      "status": "blocked",
       "dependencies": [
         "RW-103",
         "RW-635",
@@ -2194,8 +2241,8 @@
       "releaseGate": false,
       "critical": false,
       "evidence": "",
-      "blockerReason": "",
-      "nextAction": "",
+      "blockerReason": "AWS deployment is gated by RW-6008: verify dedicated-account security parity and infrastructure as code.",
+      "nextAction": "Complete RW-6001 through RW-6008, then satisfy this task\u2019s other prerequisites before deployment.",
       "workingNote": "",
       "completedAt": null,
       "owner": "Ian",
@@ -2204,7 +2251,8 @@
       "conditional": false,
       "track": "foundation",
       "previousStartDate": "2026-10-01",
-      "previousTargetDate": "2026-10-09"
+      "previousTargetDate": "2026-10-09",
+      "effortPoints": 5
     },
     {
       "id": "RW-108",
@@ -2233,7 +2281,8 @@
       "sourceId": "RW-108",
       "conditional": false,
       "track": "setup",
-      "previousStartDate": "2026-09-04"
+      "previousStartDate": "2026-09-04",
+      "effortPoints": 2
     },
     {
       "id": "RW-201",
@@ -2266,7 +2315,8 @@
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
       "track": "workflow",
       "previousStartDate": "2026-10-12",
-      "previousTargetDate": "2026-11-06"
+      "previousTargetDate": "2026-11-06",
+      "effortPoints": 5
     },
     {
       "id": "RW-202",
@@ -2297,7 +2347,8 @@
       "conditional": false,
       "track": "workflow",
       "previousStartDate": "2026-10-12",
-      "previousTargetDate": "2026-11-06"
+      "previousTargetDate": "2026-11-06",
+      "effortPoints": 5
     },
     {
       "id": "RW-203",
@@ -2309,7 +2360,7 @@
       "startDate": "2026-09-13",
       "milestone": "RW-P1",
       "priority": "medium",
-      "status": "ready",
+      "status": "blocked",
       "dependencies": [
         "RW-201",
         "RW-635"
@@ -2318,9 +2369,9 @@
       "releaseGate": false,
       "critical": false,
       "evidence": "",
-      "blockerReason": "",
-      "nextAction": "",
-      "workingNote": "",
+      "blockerReason": "RW-201 organization/fleet onboarding remains incomplete. Schema deployment is reported, but tenant-isolation and real builder-flow validation are not verified; RW-6008 is already complete.",
+      "nextAction": "After RW-201 and RW-104 deployed deny-path checks pass, validate checklist/workflow builders against real Amplify data and record positive/same-org and failure results.",
+      "workingNote": "27 September 2026 \u2014 Accepted handoff RW-20260927T130000-track1-checklist-schema-mui-v9: nine checklist/workflow models added in PR #318, commit abb5c74, pushed branch feature/charter-ops-checklist-schema-mui-v9. Reported local checks: tsc exit 0, Vitest 421 passed across 72 files, build exit 0. Not merged or deployed; no live Amplify data validation. Reported allow.authenticated() with orgId fields does not establish tenant isolation; review schema authorization and cross-org deny paths under RW-104 before accepting security. Local implementation progress is recorded even though prerequisite-gated validation is blocked.\n\n14 October 2026 \u2014 Applying Ian-approved handoff RW-20261002T234514-checklist-engine-deploy-and-plan2-push (observations from 2 October, not independently reverified today): PR #319 / squash ddc309c (feature 9d63329) merged and reported deployed: Amplify main job #8 SUCCEED, all nine checklist-engine DynamoDB tables present in workload account (\u20264375). Branch typecheck 0 errors and 421 tests/72 files passed. This supersedes the earlier PR #318 unmerged/undeployed record for this schema work. Tenant-isolation negative tests and live builder workflows are not verified.\n\n14 October 2026 \u2014 Approved RUNWELL inbox reconciliation: Tenant-isolation deployment is a prerequisite for real builder validation. Keep blocked; table presence and schema deployment do not prove builder workflows or cross-org authorization.",
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [],
@@ -2328,7 +2379,8 @@
       "conditional": false,
       "track": "workflow",
       "previousStartDate": "2026-10-12",
-      "previousTargetDate": "2026-11-06"
+      "previousTargetDate": "2026-11-06",
+      "effortPoints": 5
     },
     {
       "id": "RW-204",
@@ -2359,7 +2411,8 @@
       "conditional": false,
       "track": "workflow",
       "previousStartDate": "2026-10-12",
-      "previousTargetDate": "2026-11-06"
+      "previousTargetDate": "2026-11-06",
+      "effortPoints": 5
     },
     {
       "id": "RW-205",
@@ -2393,7 +2446,8 @@
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
       "track": "workflow",
       "previousStartDate": "2026-10-12",
-      "previousTargetDate": "2026-11-06"
+      "previousTargetDate": "2026-11-06",
+      "effortPoints": 5
     },
     {
       "id": "RW-206",
@@ -2425,7 +2479,8 @@
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
       "track": "workflow",
       "previousStartDate": "2026-10-12",
-      "previousTargetDate": "2026-11-06"
+      "previousTargetDate": "2026-11-06",
+      "effortPoints": 5
     },
     {
       "id": "RW-207",
@@ -2456,7 +2511,8 @@
       "conditional": false,
       "track": "workflow",
       "previousStartDate": "2026-10-12",
-      "previousTargetDate": "2026-11-06"
+      "previousTargetDate": "2026-11-06",
+      "effortPoints": 5
     },
     {
       "id": "RW-208",
@@ -2489,7 +2545,8 @@
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
       "track": "workflow",
       "previousStartDate": "2026-10-12",
-      "previousTargetDate": "2026-11-06"
+      "previousTargetDate": "2026-11-06",
+      "effortPoints": 5
     },
     {
       "id": "RW-301",
@@ -2501,7 +2558,7 @@
       "startDate": "2026-09-13",
       "milestone": "RW-P1",
       "priority": "critical",
-      "status": "ready",
+      "status": "doing",
       "dependencies": [
         "RW-635"
       ],
@@ -2512,8 +2569,8 @@
       "critical": true,
       "evidence": "",
       "blockerReason": "",
-      "nextAction": "",
-      "workingNote": "",
+      "nextAction": "Carry accept-invite T1 fix in the shared tenant-isolation PR, then verify deployed provisioning and the separate checkout/entitlement lifecycle. Keep status NEW before checkout and ACTIVE only after the agreed billing transition.",
+      "workingNote": "Billing model decided in gstack eng-review (Track 2). Locked: real Stripe + design-partner promo code (100% off, repeating/3mo); expiry lifecycle = grace-then-lock (read-only/limited grace \u2192 hard-lock), reusing SUSPENDED (no EXPIRED enum); re-registration uses a separate 10%-off 12-month thank-you code. Decisions persisted to gstack decision log (ianfmc-runwell, 2026-09-06). Implementation not started. Next: create-checkout-session Lambda + promo support (issue #292).\n\nADR 0002 supersedes the earlier setup sequence. Local planning and coding can continue; /ship and full application deployment require RW-6008. The controlled setup/test deployment within RW-6008 is permitted as part of completing that gate. Out of scope: irreversible payment-ownership or account-transfer actions. These require an explicit human decision and, for M&A transfer, an AWS account-manager conversation. No setup completion authorizes those actions.\n\n14 October 2026 \u2014 Approved RUNWELL inbox reconciliation: Accept-invite T1 fix is reported local/uncommitted: OrgSubscription.create uses schema-valid status NEW and vesselPriceSmallCents/vesselPriceLargeCents; regression test rejects phantom TRIALING/trialEndsAt/pricePerVessel. RW-301 remains doing; no billing completion is claimed. Carry with the tenant-isolation PR because provisioning is required for the deployed test.",
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [
@@ -2526,7 +2583,8 @@
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
       "track": "payments",
       "previousStartDate": "2026-10-01",
-      "previousTargetDate": "2026-10-16"
+      "previousTargetDate": "2026-10-16",
+      "effortPoints": 5
     },
     {
       "id": "RW-302",
@@ -2550,7 +2608,7 @@
       "evidence": "",
       "blockerReason": "",
       "nextAction": "",
-      "workingNote": "",
+      "workingNote": "Test scope clarified by the Track 2 decisions (must cover grace-then-lock transition on promo-end \u2192 SUSPENDED, and re-registration via 10% thank-you code). No tests written. Downstream of RW-301 implementation.",
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [
@@ -2563,7 +2621,8 @@
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
       "track": "payments",
       "previousStartDate": "2026-11-09",
-      "previousTargetDate": "2026-11-20"
+      "previousTargetDate": "2026-11-20",
+      "effortPoints": 3
     },
     {
       "id": "RW-303",
@@ -2575,7 +2634,7 @@
       "startDate": "2026-11-09",
       "milestone": "RW-W3",
       "priority": "medium",
-      "status": "ready",
+      "status": "blocked",
       "dependencies": [
         "RW-103",
         "RW-635",
@@ -2585,8 +2644,8 @@
       "releaseGate": true,
       "critical": false,
       "evidence": "",
-      "blockerReason": "",
-      "nextAction": "",
+      "blockerReason": "AWS deployment is gated by RW-6008: verify dedicated-account security parity and infrastructure as code.",
+      "nextAction": "Complete RW-6001 through RW-6008, then satisfy this task\u2019s other prerequisites before deployment.",
       "workingNote": "",
       "completedAt": null,
       "owner": "Ian",
@@ -2594,7 +2653,8 @@
       "sourceId": "RW-303",
       "conditional": false,
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
-      "track": "release"
+      "track": "release",
+      "effortPoints": 5
     },
     {
       "id": "RW-304",
@@ -2623,7 +2683,8 @@
       "sourceId": "RW-304",
       "conditional": false,
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
-      "track": "release"
+      "track": "release",
+      "effortPoints": 5
     },
     {
       "id": "RW-305",
@@ -2653,7 +2714,8 @@
       "sourceId": "RW-305",
       "conditional": false,
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
-      "track": "release"
+      "track": "release",
+      "effortPoints": 3
     },
     {
       "id": "RW-306",
@@ -2693,7 +2755,8 @@
       "conditional": false,
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
       "track": "partners",
-      "previousStartDate": "2026-11-09"
+      "previousStartDate": "2026-11-09",
+      "effortPoints": 3
     },
     {
       "id": "RW-401",
@@ -2730,7 +2793,8 @@
       "acceptanceCriteria": [],
       "sourceId": "RW-401",
       "conditional": false,
-      "track": "release"
+      "track": "release",
+      "effortPoints": 8
     },
     {
       "id": "RW-402",
@@ -2742,7 +2806,7 @@
       "startDate": "2026-11-23",
       "milestone": "RW-W4",
       "priority": "medium",
-      "status": "ready",
+      "status": "blocked",
       "dependencies": [
         "RW-401",
         "RW-635",
@@ -2752,8 +2816,8 @@
       "releaseGate": true,
       "critical": false,
       "evidence": "",
-      "blockerReason": "",
-      "nextAction": "",
+      "blockerReason": "AWS deployment is gated by RW-6008: verify dedicated-account security parity and infrastructure as code.",
+      "nextAction": "Complete RW-6001 through RW-6008, then satisfy this task\u2019s other prerequisites before deployment.",
       "workingNote": "",
       "completedAt": null,
       "owner": "Ian",
@@ -2761,7 +2825,8 @@
       "sourceId": "RW-402",
       "conditional": false,
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
-      "track": "release"
+      "track": "release",
+      "effortPoints": 5
     },
     {
       "id": "RW-403",
@@ -2784,14 +2849,15 @@
       "evidence": "",
       "blockerReason": "",
       "nextAction": "",
-      "workingNote": "",
+      "workingNote": "Tenant-isolation strategy defined via RW-104 (schema-level orgId auth, PR1 deny-path gate). This task is the final full regression at release; remains ready \u2014 not started, correctly downstream of RW-104 and the PR2/PR3 test matrices.",
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [],
       "sourceId": "RW-403",
       "conditional": false,
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
-      "track": "release"
+      "track": "release",
+      "effortPoints": 8
     },
     {
       "id": "RW-404",
@@ -2803,7 +2869,7 @@
       "startDate": "2026-11-23",
       "milestone": "RW-W4",
       "priority": "medium",
-      "status": "ready",
+      "status": "blocked",
       "dependencies": [
         "RW-103",
         "RW-635",
@@ -2813,8 +2879,8 @@
       "releaseGate": true,
       "critical": false,
       "evidence": "",
-      "blockerReason": "",
-      "nextAction": "",
+      "blockerReason": "AWS deployment is gated by RW-6008: verify dedicated-account security parity and infrastructure as code.",
+      "nextAction": "Complete RW-6001 through RW-6008, then satisfy this task\u2019s other prerequisites before deployment.",
       "workingNote": "",
       "completedAt": null,
       "owner": "Ian",
@@ -2822,7 +2888,8 @@
       "sourceId": "RW-404",
       "conditional": false,
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
-      "track": "release"
+      "track": "release",
+      "effortPoints": 8
     },
     {
       "id": "RW-405",
@@ -2854,7 +2921,8 @@
       "evidenceRequirement": "Record a concise verified result or an appropriate artifact link. AT: sanitized evidence labels only.",
       "track": "partners",
       "previousStartDate": "2026-11-23",
-      "previousTargetDate": "2026-12-01"
+      "previousTargetDate": "2026-12-01",
+      "effortPoints": 5
     },
     {
       "id": "RW-406",
@@ -2866,7 +2934,7 @@
       "startDate": "2026-11-23",
       "milestone": "RW-W4",
       "priority": "critical",
-      "status": "ready",
+      "status": "blocked",
       "dependencies": [
         "RW-402",
         "RW-403",
@@ -2879,21 +2947,22 @@
       "releaseGate": false,
       "critical": true,
       "evidence": "",
-      "blockerReason": "",
-      "nextAction": "",
+      "blockerReason": "Application deployment/production release waits for RW-6008 security parity and controlled-test verification.",
+      "nextAction": "Complete role configuration RW-6006, committed IaC RW-6007, and the bounded test/verification within RW-6008; then satisfy this task\u2019s remaining prerequisites.",
       "workingNote": "",
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [],
       "sourceId": "RW-406",
       "conditional": false,
-      "track": "release"
+      "track": "release",
+      "effortPoints": 8
     },
     {
       "id": "RW-112",
       "project": "RW",
       "title": "Point run-well.io + www.run-well.io to the new landing app (workload account)",
-      "description": "Cut the production marketing domain over to the runwell landing app in workload account (…4375), after the RW-6001–6008 foundation group closes at RW-G11. Reported prerequisite verified 2026-09-20: landing renders green on its Amplify URL, but infra/landing-form is not yet deployed in the workload account and no custom domain is attached. Do not repoint production DNS until the landing-form backend and end-to-end form submission pass and the new landing renders correctly on its *.amplifyapp.com URL.",
+      "description": "Cut the production marketing domain over to the runwell landing app in workload account (\u20264375), after the RW-6001\u20136008 foundation group closes at RW-G11. Reported prerequisite verified 2026-09-20: landing renders green on its Amplify URL, but infra/landing-form is not yet deployed in the workload account and no custom domain is attached. Do not repoint production DNS until the landing-form backend and end-to-end form submission pass and the new landing renders correctly on its *.amplifyapp.com URL.",
       "phase": "Deployment and Domain Cutover",
       "targetDate": null,
       "startDate": "2026-09-20",
@@ -2909,21 +2978,22 @@
       "critical": false,
       "evidence": "",
       "blockerReason": "",
-      "nextAction": "After RW-6008 is complete, deploy infra/landing-form into workload account (…4375) and verify end-to-end early-access form submission and the Amplify landing URL before changing production DNS. Confirm a cutover target date.",
-      "workingNote": "2026-09-20: Ian reports landing rendering verified in workload account (…4375). Landing-form backend and custom-domain association remain outstanding. This launch task is outside the AWS Account & Identity Setup group; foundation closes at RW-G11. Target date to be agreed.",
+      "nextAction": "After RW-6008 is complete, deploy infra/landing-form into workload account (\u20264375) and verify end-to-end early-access form submission and the Amplify landing URL before changing production DNS. Confirm a cutover target date.",
+      "workingNote": "2026-09-20: Ian reports landing rendering verified in workload account (\u20264375). Landing-form backend and custom-domain association remain outstanding. This launch task is outside the AWS Account & Identity Setup group; foundation closes at RW-G11. Target date to be agreed.",
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [
-        "infra/landing-form SAM stack deployed to workload account (…4375), and the early-access form submits successfully end-to-end.",
+        "infra/landing-form SAM stack deployed to workload account (\u20264375), and the early-access form submits successfully end-to-end.",
         "New landing verified rendering on its *.amplifyapp.com URL.",
         "run-well.io and www.run-well.io added as custom domains on the runwell Amplify app, with ACM certificate issued.",
-        "DNS updated at the provider; old-app domain association removed if present (one app per domain). Do not repoint production DNS until criteria 1–2 pass.",
+        "DNS updated at the provider; old-app domain association removed if present (one app per domain). Do not repoint production DNS until criteria 1\u20132 pass.",
         "Custom domain serves the new site with a valid certificate."
       ],
       "sourceId": "RW-112",
       "conditional": false,
       "evidenceRequirement": "Sanitized landing-form deployment and end-to-end submission result, Amplify URL rendering, domain association/certificate, DNS cutover, and final HTTPS verification.",
-      "track": "release"
+      "track": "release",
+      "effortPoints": 3
     },
     {
       "id": "AT-601",
@@ -2935,16 +3005,16 @@
       "startDate": "2026-09-04",
       "milestone": "AT-K0",
       "priority": "high",
-      "status": "ready",
+      "status": "done",
       "dependencies": [],
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
-      "evidence": "",
+      "evidence": "v2.21.1",
       "blockerReason": "",
       "nextAction": "",
       "workingNote": "",
-      "completedAt": null,
+      "completedAt": "2026-09-05T20:31:47+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [],
       "sourceId": "AT-601",
@@ -2961,18 +3031,18 @@
       "startDate": "2026-09-04",
       "milestone": "AT-K0",
       "priority": "high",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "AT-601"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
-      "evidence": "",
+      "evidence": "created file .kiro/steering/project.md for AT, RUNWELL, and LIVEWELL repos",
       "blockerReason": "",
       "nextAction": "",
       "workingNote": "",
-      "completedAt": null,
+      "completedAt": "2026-09-06T01:35:35+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [],
       "sourceId": "DEV-110",
@@ -2989,7 +3059,7 @@
       "startDate": "2026-09-04",
       "milestone": "AT-K0",
       "priority": "high",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "AT-602",
         "AT-635"
@@ -2997,11 +3067,11 @@
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
-      "evidence": "",
+      "evidence": "Completed for AT, RUNWELL, and LIVEWELL repos",
       "blockerReason": "",
       "nextAction": "",
-      "workingNote": "",
-      "completedAt": null,
+      "workingNote": "Reviewed the tool and MCP setup requirements: document each tool\u2019s purpose, start with read-only access, keep credentials separate and out of checklist evidence, and pin server versions after testing. Configure only what the project needs. Installation and verification remain to be confirmed. Issues with aws-core, and react-design-systems",
+      "completedAt": "2026-09-06T02:11:37+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [],
       "sourceId": "DEV-103",
@@ -3035,7 +3105,8 @@
       "acceptanceCriteria": [],
       "sourceId": "DEV-106",
       "conditional": false,
-      "track": "setup"
+      "track": "setup",
+      "effortPoints": 3
     },
     {
       "id": "AT-605",
@@ -3064,7 +3135,8 @@
       "acceptanceCriteria": [],
       "sourceId": "DEV-111",
       "conditional": false,
-      "track": "setup"
+      "track": "setup",
+      "effortPoints": 5
     },
     {
       "id": "AT-606",
@@ -3093,7 +3165,8 @@
       "acceptanceCriteria": [],
       "sourceId": "DEV-113",
       "conditional": false,
-      "track": "setup"
+      "track": "setup",
+      "effortPoints": 2
     },
     {
       "id": "AT-607",
@@ -3121,13 +3194,14 @@
       "acceptanceCriteria": [],
       "sourceId": "DEV-108",
       "conditional": false,
-      "track": "setup"
+      "track": "setup",
+      "effortPoints": 2
     },
     {
       "id": "AT-608",
       "project": "AT",
       "title": "Activate Plan D LLM-router fallback only if needed",
-      "description": "Conditional Plan D under the project’s D10 decision. Use Kiro Auto first; top up Kiro credits at Ian’s discretion when worthwhile; use Qwen selectively for small, easily verified tasks. Consider a separate router only if these options are unsuitable or Kiro itself blocks progress. If activated, use isolated credentials, Ian-selected spending controls, tested model choices, and a bounded comparison. Never record secrets or source contents in checklist evidence.",
+      "description": "Conditional Plan D under the project\u2019s D10 decision. Use Kiro Auto first; top up Kiro credits at Ian\u2019s discretion when worthwhile; use Qwen selectively for small, easily verified tasks. Consider a separate router only if these options are unsuitable or Kiro itself blocks progress. If activated, use isolated credentials, Ian-selected spending controls, tested model choices, and a bounded comparison. Never record secrets or source contents in checklist evidence.",
       "phase": "Development Setup: Kiro, SAP Proxy and CAP MCP",
       "targetDate": null,
       "startDate": "2026-10-01",
@@ -3141,7 +3215,7 @@
       "evidence": "",
       "blockerReason": "",
       "nextAction": "",
-      "workingNote": "13 September 2026 — Router choice resolved as Plan D, not pending a tool-selection decision. Task remains deferred because no router has been installed or activated. It is conditional fallback work, not a prerequisite for project delivery.",
+      "workingNote": "13 September 2026 \u2014 Router choice resolved as Plan D, not pending a tool-selection decision. Task remains deferred because no router has been installed or activated. It is conditional fallback work, not a prerequisite for project delivery.",
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [],
@@ -3185,18 +3259,18 @@
       "startDate": "2026-09-04",
       "milestone": "LW-K0",
       "priority": "high",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "AT-601"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
-      "evidence": "",
+      "evidence": ".kiro/steering/project.md created (current-state summary, implemented vs future, doc references); ignore-rules reviewed \u2014 secrets/.env and generated data (*.parquet, *.pkl, model artifacts) confirmed covered; the one tracked env file holds a public Lambda URL only. Architecture preserved.",
       "blockerReason": "",
       "nextAction": "",
       "workingNote": "",
-      "completedAt": null,
+      "completedAt": "2026-09-06T02:22:10+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [],
       "sourceId": "DEV-110",
@@ -3213,7 +3287,7 @@
       "startDate": "2026-09-04",
       "milestone": "LW-K0",
       "priority": "high",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "LW-602",
         "LW-635"
@@ -3221,11 +3295,11 @@
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
-      "evidence": "",
+      "evidence": ".kiro/settings/mcp.json created with 2 servers, version-pinned: aws-documentation (read-only) and dynamodb-mcp-server (design/service). react-design-systems configured but disabled (upstream startup crash). Credentials by ${AWS_PROFILE} reference only \u2014 none stored in config.",
       "blockerReason": "",
       "nextAction": "",
       "workingNote": "",
-      "completedAt": null,
+      "completedAt": "2026-09-06T02:25:01+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [],
       "sourceId": "DEV-103",
@@ -3259,7 +3333,8 @@
       "acceptanceCriteria": [],
       "sourceId": "DEV-106",
       "conditional": false,
-      "track": "setup"
+      "track": "setup",
+      "effortPoints": 3
     },
     {
       "id": "LW-605",
@@ -3288,7 +3363,8 @@
       "acceptanceCriteria": [],
       "sourceId": "DEV-111",
       "conditional": false,
-      "track": "setup"
+      "track": "setup",
+      "effortPoints": 5
     },
     {
       "id": "LW-606",
@@ -3317,7 +3393,8 @@
       "acceptanceCriteria": [],
       "sourceId": "DEV-113",
       "conditional": false,
-      "track": "setup"
+      "track": "setup",
+      "effortPoints": 2
     },
     {
       "id": "LW-607",
@@ -3345,13 +3422,14 @@
       "acceptanceCriteria": [],
       "sourceId": "DEV-108",
       "conditional": false,
-      "track": "setup"
+      "track": "setup",
+      "effortPoints": 2
     },
     {
       "id": "LW-608",
       "project": "LW",
       "title": "Activate Plan D LLM-router fallback only if needed",
-      "description": "Conditional Plan D under the project’s D10 decision. Use Kiro Auto first; top up Kiro credits at Ian’s discretion when worthwhile; use Qwen selectively for small, easily verified tasks. Consider a separate router only if these options are unsuitable or Kiro itself blocks progress. If activated, use isolated credentials, Ian-selected spending controls, tested model choices, and a bounded comparison. Never record secrets or source contents in checklist evidence.",
+      "description": "Conditional Plan D under the project\u2019s D10 decision. Use Kiro Auto first; top up Kiro credits at Ian\u2019s discretion when worthwhile; use Qwen selectively for small, easily verified tasks. Consider a separate router only if these options are unsuitable or Kiro itself blocks progress. If activated, use isolated credentials, Ian-selected spending controls, tested model choices, and a bounded comparison. Never record secrets or source contents in checklist evidence.",
       "phase": "Development Setup: Kiro and AWS MCP",
       "targetDate": null,
       "startDate": "2026-10-01",
@@ -3365,7 +3443,7 @@
       "evidence": "",
       "blockerReason": "",
       "nextAction": "",
-      "workingNote": "13 September 2026 — Router choice resolved as Plan D, not pending a tool-selection decision. Task remains deferred because no router has been installed or activated. It is conditional fallback work, not a prerequisite for project delivery.",
+      "workingNote": "13 September 2026 \u2014 Router choice resolved as Plan D, not pending a tool-selection decision. Task remains deferred because no router has been installed or activated. It is conditional fallback work, not a prerequisite for project delivery.",
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [],
@@ -3409,18 +3487,18 @@
       "startDate": "2026-09-04",
       "milestone": "RW-K0",
       "priority": "high",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "AT-601"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
-      "evidence": "",
+      "evidence": "See AT-602",
       "blockerReason": "",
       "nextAction": "",
       "workingNote": "",
-      "completedAt": null,
+      "completedAt": "2026-09-06T02:25:02+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [],
       "sourceId": "DEV-110",
@@ -3437,7 +3515,7 @@
       "startDate": "2026-09-04",
       "milestone": "RW-K0",
       "priority": "high",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "RW-602",
         "RW-635"
@@ -3445,11 +3523,11 @@
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
-      "evidence": "",
+      "evidence": "See AT-603",
       "blockerReason": "",
       "nextAction": "",
       "workingNote": "",
-      "completedAt": null,
+      "completedAt": "2026-09-06T02:25:06+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [],
       "sourceId": "DEV-103",
@@ -3466,7 +3544,7 @@
       "startDate": "2026-09-04",
       "milestone": "RW-K0",
       "priority": "high",
-      "status": "ready",
+      "status": "doing",
       "dependencies": [
         "RW-603",
         "RW-635"
@@ -3477,13 +3555,14 @@
       "evidence": "",
       "blockerReason": "",
       "nextAction": "",
-      "workingNote": "",
+      "workingNote": "Session-handoff practice exercised this session (gstack context-save/restore across compaction; decision log + plan + tasks JSONL persisted as durable handoff artifacts). Targeted quality hooks (e.g. pre-write verification, tsc gate) identified but not yet installed as automation.\n\nADR 0002 supersedes the earlier setup sequence. Local planning and coding can continue; /ship and full application deployment require RW-6008. The controlled setup/test deployment within RW-6008 is permitted as part of completing that gate. Out of scope: irreversible payment-ownership or account-transfer actions. These require an explicit human decision and, for M&A transfer, an AWS account-manager conversation. No setup completion authorizes those actions.\n\n2026-09-26 \u2014 Durable handoff refreshed in docs/agent-context/sprint-state.md: all five security-migration plan statuses, ordered next steps, organization migration and two Plan 2 schema gaps. Included in local commit 4df46de on feature/infra-github-app-org, not pushed or merged. This is handoff progress, not completion of automated quality hooks. Plan 5 CI guard is planned; 59 pre-existing Business OS unit-test failures remain. Concurrent SaaS changes by another agent were left untouched and are not credited.",
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [],
       "sourceId": "DEV-106",
       "conditional": false,
-      "track": "setup"
+      "track": "setup",
+      "effortPoints": 3
     },
     {
       "id": "RW-605",
@@ -3506,13 +3585,14 @@
       "evidence": "",
       "blockerReason": "",
       "nextAction": "",
-      "workingNote": "",
+      "workingNote": "\n\nADR 0002 supersedes the earlier setup sequence. Local planning and coding can continue; /ship and full application deployment require RW-6008. The controlled setup/test deployment within RW-6008 is permitted as part of completing that gate. Out of scope: irreversible payment-ownership or account-transfer actions. These require an explicit human decision and, for M&A transfer, an AWS account-manager conversation. No setup completion authorizes those actions.",
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [],
       "sourceId": "DEV-111",
       "conditional": false,
-      "track": "setup"
+      "track": "setup",
+      "effortPoints": 5
     },
     {
       "id": "RW-606",
@@ -3541,7 +3621,8 @@
       "acceptanceCriteria": [],
       "sourceId": "DEV-113",
       "conditional": false,
-      "track": "setup"
+      "track": "setup",
+      "effortPoints": 2
     },
     {
       "id": "RW-607",
@@ -3569,13 +3650,14 @@
       "acceptanceCriteria": [],
       "sourceId": "DEV-108",
       "conditional": false,
-      "track": "setup"
+      "track": "setup",
+      "effortPoints": 2
     },
     {
       "id": "RW-608",
       "project": "RW",
       "title": "Activate Plan D LLM-router fallback only if needed",
-      "description": "Conditional Plan D under the project’s D10 decision. Use Kiro Auto first; top up Kiro credits at Ian’s discretion when worthwhile; use Qwen selectively for small, easily verified tasks. Consider a separate router only if these options are unsuitable or Kiro itself blocks progress. If activated, use isolated credentials, Ian-selected spending controls, tested model choices, and a bounded comparison. Never record secrets or source contents in checklist evidence.",
+      "description": "Conditional Plan D under the project\u2019s D10 decision. Use Kiro Auto first; top up Kiro credits at Ian\u2019s discretion when worthwhile; use Qwen selectively for small, easily verified tasks. Consider a separate router only if these options are unsuitable or Kiro itself blocks progress. If activated, use isolated credentials, Ian-selected spending controls, tested model choices, and a bounded comparison. Never record secrets or source contents in checklist evidence.",
       "phase": "Development Setup: Kiro and AWS MCP",
       "targetDate": null,
       "startDate": "2026-10-01",
@@ -3589,7 +3671,7 @@
       "evidence": "",
       "blockerReason": "",
       "nextAction": "",
-      "workingNote": "13 September 2026 — Router choice resolved as Plan D, not pending a tool-selection decision. Task remains deferred because no router has been installed or activated. It is conditional fallback work, not a prerequisite for project delivery.",
+      "workingNote": "13 September 2026 \u2014 Router choice resolved as Plan D, not pending a tool-selection decision. Task remains deferred because no router has been installed or activated. It is conditional fallback work, not a prerequisite for project delivery.",
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [],
@@ -3650,7 +3732,8 @@
       "acceptanceCriteria": [],
       "sourceId": "DEV-101, DEV-102",
       "conditional": false,
-      "track": "setup"
+      "track": "setup",
+      "effortPoints": 5
     },
     {
       "id": "AT-611",
@@ -3692,7 +3775,7 @@
       "startDate": "2026-09-04",
       "milestone": "LW-K0",
       "priority": "medium",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "LW-602",
         "LW-635"
@@ -3700,11 +3783,11 @@
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
-      "evidence": "",
+      "evidence": "aws-documentation MCP (pinned) returned live docs.aws.amazon.com content in-workspace 2026-09-06; docs-first posture confirmed; one justified service-specific server (DynamoDB), no infra tools added beyond need.",
       "blockerReason": "",
       "nextAction": "",
       "workingNote": "",
-      "completedAt": null,
+      "completedAt": "2026-09-06T16:49:03+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [],
       "sourceId": "DEV-104, DEV-105",
@@ -3721,7 +3804,7 @@
       "startDate": "2026-09-04",
       "milestone": "LW-K0",
       "priority": "medium",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "LW-602",
         "LW-635"
@@ -3729,11 +3812,11 @@
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
-      "evidence": "",
+      "evidence": "dedicated read-only IAM user created (livewell-ro) with ReadOnlyAccess; CLI profile verified 2026-09-06 \u2014 caller identity resolves to the read-only IAM user (not root), S3 read succeeds, S3 PutObject denied by policy; pre-existing write-capable user left unchanged; no credentials in project/tool config (MCP uses ${AWS_PROFILE}). Follow-up tracked: retire root access key + root MFA (see new item).",
       "blockerReason": "",
       "nextAction": "",
       "workingNote": "",
-      "completedAt": null,
+      "completedAt": "2026-09-07T13:44:58+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [],
       "sourceId": "DEV-107",
@@ -3767,7 +3850,8 @@
       "acceptanceCriteria": [],
       "sourceId": "DEV-112",
       "conditional": false,
-      "track": "setup"
+      "track": "setup",
+      "effortPoints": 5
     },
     {
       "id": "RW-610",
@@ -3796,7 +3880,8 @@
       "acceptanceCriteria": [],
       "sourceId": "DEV-104, DEV-105",
       "conditional": false,
-      "track": "setup"
+      "track": "setup",
+      "effortPoints": 5
     },
     {
       "id": "RW-611",
@@ -3826,7 +3911,8 @@
       "acceptanceCriteria": [],
       "sourceId": "DEV-107",
       "conditional": false,
-      "track": "setup"
+      "track": "setup",
+      "effortPoints": 3
     },
     {
       "id": "RW-612",
@@ -3855,19 +3941,20 @@
       "acceptanceCriteria": [],
       "sourceId": "DEV-111",
       "conditional": false,
-      "track": "setup"
+      "track": "setup",
+      "effortPoints": 5
     },
     {
       "id": "AT-620",
       "project": "AT",
       "title": "Confirm Kiro model choices and a small Qwen trial",
-      "description": "Record the four-tier development-tooling plan from the project’s D10 decision: Kiro Auto for normal work; additional Kiro credits at Ian’s discretion; Qwen for small, easily verified tasks; a separate router only as Plan D. Confirm the selected model and record a bounded Qwen trial, reviewer corrections, and a brief usage observation when available. Escalate for architecture, security, tenant isolation where applicable, statistical correctness, or two failed repair attempts. Shared trial evidence may support all three projects. Do not record source contents or secrets. No custom aliases, router setup, or assumed spending cap are required.",
+      "description": "Record the four-tier development-tooling plan from the project\u2019s D10 decision: Kiro Auto for normal work; additional Kiro credits at Ian\u2019s discretion; Qwen for small, easily verified tasks; a separate router only as Plan D. Confirm the selected model and record a bounded Qwen trial, reviewer corrections, and a brief usage observation when available. Escalate for architecture, security, tenant isolation where applicable, statistical correctness, or two failed repair attempts. Shared trial evidence may support all three projects. Do not record source contents or secrets. No custom aliases, router setup, or assumed spending cap are required.",
       "phase": "Development Setup: Kiro, SAP Proxy and CAP MCP",
       "targetDate": "2026-09-07",
       "startDate": "2026-09-04",
       "milestone": "AT-K0",
       "priority": "medium",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "AT-602",
         "AT-635"
@@ -3875,11 +3962,11 @@
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
-      "evidence": "",
+      "evidence": "13 September 2026 \u2014 Shared Kiro CLI model trial supplied by Ian in LIVEWELL. Session status showed qwen3-coder-next. The model returned a bounded review of docs/baseline-v1-manifest.md and infra/README.md. Checklist agent checked the supplied findings against both local files. Trial completed with substantive review corrections; not an unqualified accuracy pass. Bucket name was already explicit; region wording was a clarification rather than a demonstrated blocker; model-runs/model-registry wording was confused. Suggested tag check must dereference the annotated tag to its commit. Artifact listings alone do not verify reproducibility; a frozen-input rerun and output comparison remain necessary. No application edits or AWS baseline execution were performed by the checklist agent. Shared evidence supports AT-620, LW-620 and RW-620; baseline task LW-301 remains open.",
       "blockerReason": "",
       "nextAction": "",
-      "workingNote": "Four-tier operating rule: Plan A: Kiro Auto for normal project work. Plan B: Ian may purchase additional Kiro credits when needed to preserve productive momentum; this is a preference, not authorization for automatic purchases or a spending cap. Plan C: Qwen3 Coder Next inside Kiro for small, well-defined tasks whose output is inexpensive to verify. Plan D: consider a separate LLM router only if the earlier options are unsuitable or Kiro availability, workflow, or economics blocks progress. No router installation or activation is currently required.",
-      "completedAt": null,
+      "workingNote": "Operating rule (updated 13 September 2026): Plan A: Kiro Auto for normal project work. Plan B: Ian may purchase additional Kiro credits when needed to preserve productive momentum; this is a preference, not authorization for automatic purchases or a spending cap. Plan C: Qwen3 Coder Next inside Kiro for small, well-defined tasks whose output is inexpensive to verify. Plan D: consider a separate LLM router only if the earlier options are unsuitable or Kiro availability, workflow, or economics blocks progress. No router installation or activation is currently required. Escalate for architecture, security, tenant isolation where applicable, statistical correctness, or two failed repair attempts. This first trial needed substantive reviewer corrections, so Qwen output is not authoritative acceptance evidence without checking. Installed CLI default Auto and Qwen availability were independently checked; Ian confirmed Qwen in the trial session. Usage observation: Ian reports about 30% of monthly quota consumed since approximately 4 September with useful progress; trial-specific credit delta was not supplied. The displayed 12% was not recorded as billing usage. Router remains deferred; no custom aliases or spending cap required.",
+      "completedAt": "2026-09-13T20:58:37+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [
         "The selected Kiro model and four-tier plan are recorded, including verification and escalation rules.",
@@ -3894,13 +3981,13 @@
       "id": "LW-620",
       "project": "LW",
       "title": "Confirm Kiro model choices and a small Qwen trial",
-      "description": "Record the four-tier development-tooling plan from the project’s D10 decision: Kiro Auto for normal work; additional Kiro credits at Ian’s discretion; Qwen for small, easily verified tasks; a separate router only as Plan D. Confirm the selected model and record a bounded Qwen trial, reviewer corrections, and a brief usage observation when available. Escalate for architecture, security, tenant isolation where applicable, statistical correctness, or two failed repair attempts. Shared trial evidence may support all three projects. Do not record source contents or secrets. No custom aliases, router setup, or assumed spending cap are required.",
+      "description": "Record the four-tier development-tooling plan from the project\u2019s D10 decision: Kiro Auto for normal work; additional Kiro credits at Ian\u2019s discretion; Qwen for small, easily verified tasks; a separate router only as Plan D. Confirm the selected model and record a bounded Qwen trial, reviewer corrections, and a brief usage observation when available. Escalate for architecture, security, tenant isolation where applicable, statistical correctness, or two failed repair attempts. Shared trial evidence may support all three projects. Do not record source contents or secrets. No custom aliases, router setup, or assumed spending cap are required.",
       "phase": "Development Setup: Kiro and AWS MCP",
       "targetDate": "2026-09-07",
       "startDate": "2026-09-04",
       "milestone": "LW-K0",
       "priority": "medium",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "LW-602",
         "LW-635"
@@ -3908,11 +3995,11 @@
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
-      "evidence": "",
+      "evidence": "13 September 2026 \u2014 Shared Kiro CLI model trial supplied by Ian in LIVEWELL. Session status showed qwen3-coder-next. The model returned a bounded review of docs/baseline-v1-manifest.md and infra/README.md. Checklist agent checked the supplied findings against both local files. Trial completed with substantive review corrections; not an unqualified accuracy pass. Bucket name was already explicit; region wording was a clarification rather than a demonstrated blocker; model-runs/model-registry wording was confused. Suggested tag check must dereference the annotated tag to its commit. Artifact listings alone do not verify reproducibility; a frozen-input rerun and output comparison remain necessary. No application edits or AWS baseline execution were performed by the checklist agent. Shared evidence supports AT-620, LW-620 and RW-620; baseline task LW-301 remains open.",
       "blockerReason": "",
       "nextAction": "",
-      "workingNote": "Four-tier operating rule: Plan A: Kiro Auto for normal project work. Plan B: Ian may purchase additional Kiro credits when needed to preserve productive momentum; this is a preference, not authorization for automatic purchases or a spending cap. Plan C: Qwen3 Coder Next inside Kiro for small, well-defined tasks whose output is inexpensive to verify. Plan D: consider a separate LLM router only if the earlier options are unsuitable or Kiro availability, workflow, or economics blocks progress. No router installation or activation is currently required.",
-      "completedAt": null,
+      "workingNote": "Operating rule (updated 13 September 2026): Plan A: Kiro Auto for normal project work. Plan B: Ian may purchase additional Kiro credits when needed to preserve productive momentum; this is a preference, not authorization for automatic purchases or a spending cap. Plan C: Qwen3 Coder Next inside Kiro for small, well-defined tasks whose output is inexpensive to verify. Plan D: consider a separate LLM router only if the earlier options are unsuitable or Kiro availability, workflow, or economics blocks progress. No router installation or activation is currently required. Escalate for architecture, security, tenant isolation where applicable, statistical correctness, or two failed repair attempts. This first trial needed substantive reviewer corrections, so Qwen output is not authoritative acceptance evidence without checking. Installed CLI default Auto and Qwen availability were independently checked; Ian confirmed Qwen in the trial session. Usage observation: Ian reports about 30% of monthly quota consumed since approximately 4 September with useful progress; trial-specific credit delta was not supplied. The displayed 12% was not recorded as billing usage. Router remains deferred; no custom aliases or spending cap required.",
+      "completedAt": "2026-09-13T20:58:32+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [
         "The selected Kiro model and four-tier plan are recorded, including verification and escalation rules.",
@@ -3927,13 +4014,13 @@
       "id": "RW-620",
       "project": "RW",
       "title": "Confirm Kiro model choices and a small Qwen trial",
-      "description": "Record the four-tier development-tooling plan from the project’s D10 decision: Kiro Auto for normal work; additional Kiro credits at Ian’s discretion; Qwen for small, easily verified tasks; a separate router only as Plan D. Confirm the selected model and record a bounded Qwen trial, reviewer corrections, and a brief usage observation when available. Escalate for architecture, security, tenant isolation where applicable, statistical correctness, or two failed repair attempts. Shared trial evidence may support all three projects. Do not record source contents or secrets. No custom aliases, router setup, or assumed spending cap are required.",
+      "description": "Record the four-tier development-tooling plan from the project\u2019s D10 decision: Kiro Auto for normal work; additional Kiro credits at Ian\u2019s discretion; Qwen for small, easily verified tasks; a separate router only as Plan D. Confirm the selected model and record a bounded Qwen trial, reviewer corrections, and a brief usage observation when available. Escalate for architecture, security, tenant isolation where applicable, statistical correctness, or two failed repair attempts. Shared trial evidence may support all three projects. Do not record source contents or secrets. No custom aliases, router setup, or assumed spending cap are required.",
       "phase": "Development Setup: Kiro and AWS MCP",
       "targetDate": "2026-09-07",
       "startDate": "2026-09-04",
       "milestone": "RW-K0",
       "priority": "medium",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "RW-602",
         "RW-635"
@@ -3941,11 +4028,11 @@
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
-      "evidence": "",
+      "evidence": "13 September 2026 \u2014 Shared Kiro CLI model trial supplied by Ian in LIVEWELL. Session status showed qwen3-coder-next. The model returned a bounded review of docs/baseline-v1-manifest.md and infra/README.md. Checklist agent checked the supplied findings against both local files. Trial completed with substantive review corrections; not an unqualified accuracy pass. Bucket name was already explicit; region wording was a clarification rather than a demonstrated blocker; model-runs/model-registry wording was confused. Suggested tag check must dereference the annotated tag to its commit. Artifact listings alone do not verify reproducibility; a frozen-input rerun and output comparison remain necessary. No application edits or AWS baseline execution were performed by the checklist agent. Shared evidence supports AT-620, LW-620 and RW-620; baseline task LW-301 remains open.",
       "blockerReason": "",
       "nextAction": "",
-      "workingNote": "Four-tier operating rule: Plan A: Kiro Auto for normal project work. Plan B: Ian may purchase additional Kiro credits when needed to preserve productive momentum; this is a preference, not authorization for automatic purchases or a spending cap. Plan C: Qwen3 Coder Next inside Kiro for small, well-defined tasks whose output is inexpensive to verify. Plan D: consider a separate LLM router only if the earlier options are unsuitable or Kiro availability, workflow, or economics blocks progress. No router installation or activation is currently required.",
-      "completedAt": null,
+      "workingNote": "Operating rule (updated 13 September 2026): Plan A: Kiro Auto for normal project work. Plan B: Ian may purchase additional Kiro credits when needed to preserve productive momentum; this is a preference, not authorization for automatic purchases or a spending cap. Plan C: Qwen3 Coder Next inside Kiro for small, well-defined tasks whose output is inexpensive to verify. Plan D: consider a separate LLM router only if the earlier options are unsuitable or Kiro availability, workflow, or economics blocks progress. No router installation or activation is currently required. Escalate for architecture, security, tenant isolation where applicable, statistical correctness, or two failed repair attempts. This first trial needed substantive reviewer corrections, so Qwen output is not authoritative acceptance evidence without checking. Installed CLI default Auto and Qwen availability were independently checked; Ian confirmed Qwen in the trial session. Usage observation: Ian reports about 30% of monthly quota consumed since approximately 4 September with useful progress; trial-specific credit delta was not supplied. The displayed 12% was not recorded as billing usage. Router remains deferred; no custom aliases or spending cap required.",
+      "completedAt": "2026-09-13T20:58:34+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [
         "The selected Kiro model and four-tier plan are recorded, including verification and escalation rules.",
@@ -3966,18 +4053,18 @@
       "startDate": "2026-09-13",
       "milestone": "LW-A1",
       "priority": "high",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "LW-635"
       ],
       "decisionDependencies": [],
       "releaseGate": true,
       "critical": true,
-      "evidence": "",
+      "evidence": "Baseline frozen and verified 2026-09-26, per Ian\u2019s session handover (LW-G01). Code tag baseline-v1 (e5ec61e) pushed to origin. Inputs/model/results snapshotted to s3://livewell-data-prod/frozen/baseline-v1/ \u2014 563 objects (~65 MB): prices/features/signals (187 each), model v20260507T144919.joblib, results/signals-export.json. Manifest marked FROZEN in docs/baseline-v1-manifest.md (commit f77c0bd, pushed). Reproduction procedure: git checkout baseline-v1, point pipeline at frozen prefix, use pinned model and compare against signals-export.json. Earlier working-note evidence records end-to-end baseline reproduction; this session completes the remaining snapshot/export, tag push and manifest freeze. Clarification 27 September: frozen round-trip replay was not executed this cycle; verify under LW-302.",
       "blockerReason": "",
       "nextAction": "",
-      "workingNote": "",
-      "completedAt": null,
+      "workingNote": "baseline verified reproducible end-to-end this session \u2014 ran ingest\u2192features\u2192signals\u2192score live against S3, and confirmed a scheduled-pipeline-written scored signal already persisted in DynamoDB. Freeze manifest drafted (docs/baseline-v1-manifest.md) capturing code commit, model version, registered metrics, and S3 freeze layout. Git tag baseline-v1 created locally (annotated, chore:-style). Remaining before DONE: run the S3 snapshot/export commands (frozen prefix + results export), push the tag, flip manifest status DRAFT\u2192FROZEN. Evidence when complete = the manifest + frozen S3 prefix (gate LW-G01).\n\n26 September 2026 \u2014 Remaining freeze steps completed per Ian: frozen inputs/model/results verified read-only, tag pushed, manifest FROZEN (f77c0bd). This closes LW-G01 and the baseline milestone. Separate core reliability/readiness tasks LW-302/303 are not certified by this completion.\n\n27 September 2026 \u2014 Approved reconciliation of LW-20260927-baseline-and-track-b-gate: frozen artifact, tag and manifest verified; no fresh round-trip replay from baseline-v1 regenerated signals-export.json this cycle. Earlier live-pipeline execution is distinct from frozen-artifact replay. Freeze remains done; frozen replay verification is explicitly assigned to LW-302. LW-302/303 remain open, so the full core track is not complete.",
+      "completedAt": "2026-09-27T01:25:38+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [],
       "sourceId": "LW-301",
@@ -4211,7 +4298,7 @@
       "id": "LW-902",
       "project": "LW",
       "title": "Offering LIVEWELL to other users or as a commercial product",
-      "description": "Outside the current scope. LIVEWELL is solely Ian’s personal NADEX early-warning system; there is no planned multi-user scenario or product. Reconsider only if Ian explicitly changes this scope.",
+      "description": "Outside the current scope. LIVEWELL is solely Ian\u2019s personal NADEX early-warning system; there is no planned multi-user scenario or product. Reconsider only if Ian explicitly changes this scope.",
       "phase": "Development Setup: Kiro and AWS MCP",
       "targetDate": null,
       "startDate": "2026-09-04",
@@ -4452,13 +4539,13 @@
       "id": "AT-631",
       "project": "AT",
       "title": "Check gstack prerequisites for Kiro",
-      "description": "In this project’s development environment, verify Git, Bun v1.0 or newer, and working Kiro access. Check git --version and bun --version; use kiro-cli --version if using the CLI. Inspect any existing ~/gstack checkout and ~/.kiro/skills/gstack installation before changing them. Reuse a compatible installation; do not overwrite an unrelated checkout.",
+      "description": "In this project\u2019s development environment, verify Git, Bun v1.0 or newer, and working Kiro access. Check git --version and bun --version; use kiro-cli --version if using the CLI. Inspect any existing ~/gstack checkout and ~/.kiro/skills/gstack installation before changing them. Reuse a compatible installation; do not overwrite an unrelated checkout.",
       "phase": "Development Setup: Kiro, SAP Proxy and CAP MCP",
       "targetDate": "2026-09-07",
       "startDate": "2026-09-05",
       "milestone": "AT-K0",
       "priority": "high",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "AT-601"
       ],
@@ -4469,10 +4556,10 @@
       "blockerReason": "",
       "nextAction": "",
       "workingNote": "",
-      "completedAt": null,
+      "completedAt": "2026-09-05T22:06:55+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [
-        "Git and Bun are available to Kiro’s terminal.",
+        "Git and Bun are available to Kiro\u2019s terminal.",
         "Existing gstack origin and installed revision are recorded, or absence is confirmed."
       ],
       "sourceId": "gstack-kiro-e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc",
@@ -4488,28 +4575,28 @@
     {
       "id": "AT-632",
       "project": "AT",
-      "title": "Install gstack for Kiro from Ian’s fork",
+      "title": "Install gstack for Kiro from Ian\u2019s fork",
       "description": "One-time machine setup. If ~/gstack is absent, run:\ngit clone --single-branch --depth 1 https://github.com/ianfmc/gstack.git ~/gstack\ncd ~/gstack\n./setup --host kiro\n\nIf the directory exists, check its origin and local changes before updating; do not clone over it. Review the setup script first. Setup builds the browser tools and installs Chromium when needed. Keep the source checkout in place because installed runtime assets link to it. Record the actual commit with git -C ~/gstack rev-parse HEAD. The reviewed reference is e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc. Use the explicit Kiro host; the default and Claude team/local instructions are not the Kiro installation route.",
       "phase": "Development Setup: Kiro, SAP Proxy and CAP MCP",
       "targetDate": "2026-09-07",
       "startDate": "2026-09-05",
       "milestone": "AT-K0",
       "priority": "high",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "AT-631"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
-      "evidence": "",
+      "evidence": "/code init run in AT, RUNWELL, and LIVEWELL repos",
       "blockerReason": "",
       "nextAction": "",
       "workingNote": "",
-      "completedAt": null,
+      "completedAt": "2026-09-05T22:07:34+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [
-        "Kiro skill files and runtime assets resolve in this project’s environment.",
+        "Kiro skill files and runtime assets resolve in this project\u2019s environment.",
         "Installation succeeds without the missing generated-skills warning; investigate bun run build and rerun setup if that warning occurs."
       ],
       "sourceId": "gstack-kiro-e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc",
@@ -4532,18 +4619,18 @@
       "startDate": "2026-09-05",
       "milestone": "AT-K0",
       "priority": "medium",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "AT-632"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
-      "evidence": "",
+      "evidence": "/review run in AT, LIVEWELL, and RUNWELL repos",
       "blockerReason": "",
       "nextAction": "",
       "workingNote": "",
-      "completedAt": null,
+      "completedAt": "2026-09-05T22:10:33+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [
         "Kiro discovers and loads the installed review and browser skill instructions.",
@@ -4563,13 +4650,13 @@
       "id": "AT-634",
       "project": "AT",
       "title": "Add project-specific gstack usage guidance",
-      "description": "Add a concise gstack section to this project’s Kiro steering, preserving its existing architecture and instructions. Use planning/review/QA skills for bounded tasks, keep deterministic checks authoritative, and make shipping or deployment a separate explicit action. Keep project context separate even though the skills are installed globally. Use sanitized demo inputs and approved SAP development access. Keep gstack out of CAP application dependencies and deployment artifacts; record only sanitized verification results in this checklist.",
+      "description": "Add a concise gstack section to this project\u2019s Kiro steering, preserving its existing architecture and instructions. Use planning/review/QA skills for bounded tasks, keep deterministic checks authoritative, and make shipping or deployment a separate explicit action. Keep project context separate even though the skills are installed globally. Use sanitized demo inputs and approved SAP development access. Keep gstack out of CAP application dependencies and deployment artifacts; record only sanitized verification results in this checklist.",
       "phase": "Development Setup: Kiro, SAP Proxy and CAP MCP",
       "targetDate": "2026-09-07",
       "startDate": "2026-09-05",
       "milestone": "AT-K0",
       "priority": "medium",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "AT-633",
         "AT-602"
@@ -4577,11 +4664,11 @@
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
-      "evidence": "",
+      "evidence": "created file .kiro/steering/gstack.md for AT, RUNWELL, and LIVEWELL repos",
       "blockerReason": "",
       "nextAction": "",
       "workingNote": "",
-      "completedAt": null,
+      "completedAt": "2026-09-06T01:36:35+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [
         "Project steering identifies when to use gstack without changing the application architecture.",
@@ -4607,18 +4694,18 @@
       "startDate": "2026-09-05",
       "milestone": "AT-K0",
       "priority": "medium",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "AT-634"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
-      "evidence": "",
+      "evidence": "RUNWELL: Pass\nLIVEWELL: Pass\nAT: Pass",
       "blockerReason": "",
       "nextAction": "",
-      "workingNote": "",
-      "completedAt": null,
+      "workingNote": "All 4 steps completed for each repo.",
+      "completedAt": "2026-09-06T02:09:37+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [
         "A bounded review and a browser smoke check both succeed.",
@@ -4638,27 +4725,27 @@
       "id": "LW-631",
       "project": "LW",
       "title": "Check gstack prerequisites for Kiro",
-      "description": "In this project’s development environment, verify Git, Bun v1.0 or newer, and working Kiro access. Check git --version and bun --version; use kiro-cli --version if using the CLI. Inspect any existing ~/gstack checkout and ~/.kiro/skills/gstack installation before changing them. Reuse a compatible installation; do not overwrite an unrelated checkout.",
+      "description": "In this project\u2019s development environment, verify Git, Bun v1.0 or newer, and working Kiro access. Check git --version and bun --version; use kiro-cli --version if using the CLI. Inspect any existing ~/gstack checkout and ~/.kiro/skills/gstack installation before changing them. Reuse a compatible installation; do not overwrite an unrelated checkout.",
       "phase": "Development Setup: Kiro and AWS MCP",
       "targetDate": "2026-09-07",
       "startDate": "2026-09-05",
       "milestone": "LW-K0",
       "priority": "high",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "AT-601"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
-      "evidence": "",
+      "evidence": "gstack install verified \u2014 version 1.80.0.0, review skill ran read-only on a sample diff, browser skill launched Chromium against a local test page and read the heading + click result. Prereqs (git, Bun, Kiro) confirmed. Skills discovered under the global install.",
       "blockerReason": "",
       "nextAction": "",
       "workingNote": "",
-      "completedAt": null,
+      "completedAt": "2026-09-06T02:23:04+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [
-        "Git and Bun are available to Kiro’s terminal.",
+        "Git and Bun are available to Kiro\u2019s terminal.",
         "Existing gstack origin and installed revision are recorded, or absence is confirmed."
       ],
       "sourceId": "gstack-kiro-e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc",
@@ -4681,7 +4768,7 @@
       "startDate": "2026-09-05",
       "milestone": "LW-K0",
       "priority": "high",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "LW-631",
         "AT-632"
@@ -4689,14 +4776,14 @@
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
-      "evidence": "",
+      "evidence": "gstack install verified \u2014 version 1.80.0.0, review skill ran read-only on a sample diff, browser skill launched Chromium against a local test page and read the heading + click result. Prereqs (git, Bun, Kiro) confirmed. Skills discovered under the global install.",
       "blockerReason": "",
       "nextAction": "",
       "workingNote": "",
-      "completedAt": null,
+      "completedAt": "2026-09-06T02:24:59+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [
-        "Kiro skill files and runtime assets resolve in this project’s environment.",
+        "Kiro skill files and runtime assets resolve in this project\u2019s environment.",
         "Installation succeeds without the missing generated-skills warning; investigate bun run build and rerun setup if that warning occurs."
       ],
       "sourceId": "gstack-kiro-e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc",
@@ -4719,18 +4806,18 @@
       "startDate": "2026-09-05",
       "milestone": "LW-K0",
       "priority": "medium",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "LW-632"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
-      "evidence": "",
+      "evidence": "gstack install verified \u2014 version 1.80.0.0, review skill ran read-only on a sample diff, browser skill launched Chromium against a local test page and read the heading + click result. Prereqs (git, Bun, Kiro) confirmed. Skills discovered under the global install.",
       "blockerReason": "",
       "nextAction": "",
       "workingNote": "",
-      "completedAt": null,
+      "completedAt": "2026-09-06T02:24:59+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [
         "Kiro discovers and loads the installed review and browser skill instructions.",
@@ -4750,13 +4837,13 @@
       "id": "LW-634",
       "project": "LW",
       "title": "Add project-specific gstack usage guidance",
-      "description": "Add a concise gstack section to this project’s Kiro steering, preserving its existing architecture and instructions. Use planning/review/QA skills for bounded tasks, keep deterministic checks authoritative, and make shipping or deployment a separate explicit action. Keep project context separate even though the skills are installed globally. Retain the NADEX baseline, point-in-time availability rules, and reproducible research fixtures. Use synthetic disclosure samples for the first review and browser check.",
+      "description": "Add a concise gstack section to this project\u2019s Kiro steering, preserving its existing architecture and instructions. Use planning/review/QA skills for bounded tasks, keep deterministic checks authoritative, and make shipping or deployment a separate explicit action. Keep project context separate even though the skills are installed globally. Retain the NADEX baseline, point-in-time availability rules, and reproducible research fixtures. Use synthetic disclosure samples for the first review and browser check.",
       "phase": "Development Setup: Kiro and AWS MCP",
       "targetDate": "2026-09-07",
       "startDate": "2026-09-05",
       "milestone": "LW-K0",
       "priority": "medium",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "LW-633",
         "LW-602"
@@ -4764,11 +4851,11 @@
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
-      "evidence": "",
+      "evidence": "gstack install verified \u2014 version 1.80.0.0, review skill ran read-only on a sample diff, browser skill launched Chromium against a local test page and read the heading + click result. Prereqs (git, Bun, Kiro) confirmed. Skills discovered under the global install.",
       "blockerReason": "",
       "nextAction": "",
       "workingNote": "",
-      "completedAt": null,
+      "completedAt": "2026-09-06T02:25:00+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [
         "Project steering identifies when to use gstack without changing the application architecture.",
@@ -4794,18 +4881,18 @@
       "startDate": "2026-09-05",
       "milestone": "LW-K0",
       "priority": "medium",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "LW-634"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
-      "evidence": "",
+      "evidence": "gstack install verified \u2014 version 1.80.0.0, review skill ran read-only on a sample diff, browser skill launched Chromium against a local test page and read the heading + click result. Prereqs (git, Bun, Kiro) confirmed. Skills discovered under the global install.",
       "blockerReason": "",
       "nextAction": "",
       "workingNote": "",
-      "completedAt": null,
+      "completedAt": "2026-09-06T02:25:00+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [
         "A bounded review and a browser smoke check both succeed.",
@@ -4825,27 +4912,27 @@
       "id": "RW-631",
       "project": "RW",
       "title": "Check gstack prerequisites for Kiro",
-      "description": "In this project’s development environment, verify Git, Bun v1.0 or newer, and working Kiro access. Check git --version and bun --version; use kiro-cli --version if using the CLI. Inspect any existing ~/gstack checkout and ~/.kiro/skills/gstack installation before changing them. Reuse a compatible installation; do not overwrite an unrelated checkout.",
+      "description": "In this project\u2019s development environment, verify Git, Bun v1.0 or newer, and working Kiro access. Check git --version and bun --version; use kiro-cli --version if using the CLI. Inspect any existing ~/gstack checkout and ~/.kiro/skills/gstack installation before changing them. Reuse a compatible installation; do not overwrite an unrelated checkout.",
       "phase": "Development Setup: Kiro and AWS MCP",
       "targetDate": "2026-09-07",
       "startDate": "2026-09-05",
       "milestone": "RW-K0",
       "priority": "high",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "AT-601"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
-      "evidence": "",
+      "evidence": "See AT-631",
       "blockerReason": "",
       "nextAction": "",
       "workingNote": "",
-      "completedAt": null,
+      "completedAt": "2026-09-06T02:25:02+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [
-        "Git and Bun are available to Kiro’s terminal.",
+        "Git and Bun are available to Kiro\u2019s terminal.",
         "Existing gstack origin and installed revision are recorded, or absence is confirmed."
       ],
       "sourceId": "gstack-kiro-e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc",
@@ -4868,7 +4955,7 @@
       "startDate": "2026-09-05",
       "milestone": "RW-K0",
       "priority": "high",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "RW-631",
         "AT-632"
@@ -4876,14 +4963,14 @@
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
-      "evidence": "",
+      "evidence": "See AT-632",
       "blockerReason": "",
       "nextAction": "",
       "workingNote": "",
-      "completedAt": null,
+      "completedAt": "2026-09-06T02:25:03+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [
-        "Kiro skill files and runtime assets resolve in this project’s environment.",
+        "Kiro skill files and runtime assets resolve in this project\u2019s environment.",
         "Installation succeeds without the missing generated-skills warning; investigate bun run build and rerun setup if that warning occurs."
       ],
       "sourceId": "gstack-kiro-e23ff280a1c2e517daaee89ccc1a0e415e5aa9bc",
@@ -4906,18 +4993,18 @@
       "startDate": "2026-09-05",
       "milestone": "RW-K0",
       "priority": "medium",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "RW-632"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
-      "evidence": "",
+      "evidence": "See AT-633",
       "blockerReason": "",
       "nextAction": "",
       "workingNote": "",
-      "completedAt": null,
+      "completedAt": "2026-09-06T02:25:04+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [
         "Kiro discovers and loads the installed review and browser skill instructions.",
@@ -4937,13 +5024,13 @@
       "id": "RW-634",
       "project": "RW",
       "title": "Add project-specific gstack usage guidance",
-      "description": "Add a concise gstack section to this project’s Kiro steering, preserving its existing architecture and instructions. Use planning/review/QA skills for bounded tasks, keep deterministic checks authoritative, and make shipping or deployment a separate explicit action. Keep project context separate even though the skills are installed globally. Retain the existing React/MUI and AWS application architecture, tenant boundaries, and CI checks. Use a test fleet and a local or dedicated test environment for first QA.",
+      "description": "Add a concise gstack section to this project\u2019s Kiro steering, preserving its existing architecture and instructions. Use planning/review/QA skills for bounded tasks, keep deterministic checks authoritative, and make shipping or deployment a separate explicit action. Keep project context separate even though the skills are installed globally. Retain the existing React/MUI and AWS application architecture, tenant boundaries, and CI checks. Use a test fleet and a local or dedicated test environment for first QA.",
       "phase": "Development Setup: Kiro and AWS MCP",
       "targetDate": "2026-09-07",
       "startDate": "2026-09-05",
       "milestone": "RW-K0",
       "priority": "medium",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "RW-633",
         "RW-602"
@@ -4951,11 +5038,11 @@
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
-      "evidence": "",
+      "evidence": "See AT-634",
       "blockerReason": "",
       "nextAction": "",
       "workingNote": "",
-      "completedAt": null,
+      "completedAt": "2026-09-06T02:25:04+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [
         "Project steering identifies when to use gstack without changing the application architecture.",
@@ -4981,18 +5068,18 @@
       "startDate": "2026-09-05",
       "milestone": "RW-K0",
       "priority": "medium",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "RW-634"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": false,
-      "evidence": "",
+      "evidence": "See AT-635",
       "blockerReason": "",
       "nextAction": "",
       "workingNote": "",
-      "completedAt": null,
+      "completedAt": "2026-09-06T02:25:05+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [
         "A bounded review and a browser smoke check both succeed.",
@@ -5018,7 +5105,7 @@
       "startDate": "2026-09-07",
       "milestone": "LW-K0",
       "priority": "critical",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "LW-611",
         "LW-635"
@@ -5026,11 +5113,11 @@
       "decisionDependencies": [],
       "releaseGate": true,
       "critical": true,
-      "evidence": "",
+      "evidence": "User-reported completion: migrated the personal AWS account from all-root operation to scoped non-root identities, verified at each step.\n- ianfmc: everyday human identity; console password set, MFA enabled, and key rotated after an in-session exposure (exposed key deleted). Minimal standing permissions: billing read-only and assume-admin.\n- Admin role: AdministratorAccess, assumed with MFA required. Verified through CLI (assumed-role/Admin) and console Switch Role.\n- livewell-ro: read-only inspection; S3 read succeeds and write is denied.\n- checklist-tools: scoped tool identity for Codex/deploy.sh; S3 Get/Put/Delete and List on two buckets, plus read-only cloudformation:DescribeStacks and lambda:GetFunctionConfiguration. GET_OK and deploy.sh reads verified. Last workload migrated off root.\n- Default CLI profile repointed from root to ianfmc; identity verified as user/ianfmc.\n- Root MFA enabled (AccountMFAEnabled=1); root access key deleted (AccountAccessKeysPresent=0). Root console login retained for MFA-protected break-glass recovery only.\n- Billing IAM access enabled for non-root cost/billing visibility.\nResult: root has no programmatic credentials. Daily, administrative, and tool access use scoped non-root identities. Completion reported by Ian; no credential values recorded.",
       "blockerReason": "",
       "nextAction": "",
-      "workingNote": "",
-      "completedAt": null,
+      "workingNote": "Consolidates the account-security roll-up, absorbing LW-614 (deployment identity) and LW-615 (legacy IAM cleanup). Establish and verify a non-root admin identity, enable root MFA, then retire the root programmatic access key in a lockout-safe order. Retain root console login for owner recovery; delete only the root access key.\n\n1. Confirm or establish admin IAM identity ianfmc with AdministratorAccess and MFA; verify non-root access.\n2. Confirm livewell-ro read-only access works (already verified under LW-611).\n3. Enable root MFA.\n4. Deactivate the root access key.\n5. Confirm nothing breaks across LIVEWELL and RUNWELL over approximately 24 hours.\n6. Delete the root access key after verification.\n7. Repoint or remove the default CLI profile so it no longer uses root.\n8. Remove the legacy amplify-elys user only after confirming it powers nothing live.\n\nEvidence when complete: Sanitized evidence: admin identity verified non-root with MFA; root MFA enabled; root access key deleted; default CLI profile no longer root; legacy user removed. Retain root console login for owner recovery.\n\nPrior notes retained for context; the consolidated sequence above governs:\nLW-614: CDK deploys should assume a role with MFA rather than use a long-lived user key; livewell-ro for read, deploy-role for writes. Parallels the read/write separation.\nLW-615: review existing personal IAM user; drop the legacy amplify-elys user (from the retired elys.cloud app) after confirming it powers nothing live \u2014 deactivate key \u2192 confirm \u2192 delete.",
+      "completedAt": "2026-09-08T00:38:09+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [
         "1. Confirm or establish admin IAM identity ianfmc with AdministratorAccess and MFA; verify non-root access.",
@@ -5053,23 +5140,23 @@
       "title": "Identify the decision, decision-makers, and decision date",
       "description": "First action. Establish what is being decided about the next tournament, who decides and advises, and when recommendations must arrive. The actual decision window governs scheduling; accelerate the remaining tasks if needed. Record sanitized role labels and dates here; keep internal details in the approved work repository. Do not wait for the demo.",
       "track": "program",
-      "phase": "Program Recommendation — Priority",
+      "phase": "Program Recommendation \u2014 Priority",
       "milestone": "AT-P1",
       "targetDate": "2026-09-14",
       "startDate": "2026-09-13",
       "priority": "critical",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "AT-635"
       ],
       "decisionDependencies": [],
       "releaseGate": false,
       "critical": true,
-      "evidence": "",
+      "evidence": "Completed 15 September 2026; evidence reviewed and clarified 23 September 2026. Project owner confirmed the decision sought: next-tournament direction and outcomes, timing alternatives, partner participation, BTP Hackathon alignment, sustainable staffing, and whether/how to introduce agent-assisted tournament operations. Executive Sponsor holds ultimate outcome authority; Execution Lead and Program Delivery Lead prepare alternatives and execution recommendations, informed by internal/external partner, market-unit, NA and LAC advisers. Confirmed window: adviser input by 23 September; revised leadership pre-read by 25 September; leadership decisions by 30 September 2026. The initial 16\u201318 September preparation schedule was checked against that window on 15 September and retained. The deliverable is a decision-support framework with alternatives and trade-offs, not an approved program or delivery calendar. Supporting artifact reviewed: Autonomous Tournament peer pre-read v3, particularly the decision options, pilot proposal, and leadership-discussion framing. The deck supports the decision scope; authority and dates are established by the project-owner-confirmed AT-108 decision record. AT-635 is complete. Adviser-input application/demo readiness is not a prerequisite. Both AT-108 acceptance criteria are satisfied; this closure does not assert completion of AT-109, AT-110 or AT-111.",
       "blockerReason": "",
       "nextAction": "",
-      "workingNote": "",
-      "completedAt": null,
+      "workingNote": "AT-108 completed decision record \u2014 15 September 2026\n\nPurpose: prepare an evidence-backed presentation framework enabling LT decisions about the next tournament. Present alternatives, trade-offs and open questions; a complete program and approved tournament delivery timeline are outside this preparation scope.\n\nDecision sought by 30 September 2026: next-tournament direction and outcomes; timing alternatives; internal/external partner participation; alignment or combination with the annual BTP Hackathon; sustainable staffing without negative impact on personnel or existing programs; and whether/how to introduce an Autonomous Tournament using agents and assistants.\n\nGoals: drive AI, BDC and BTP consumption; generate compelling positive customer stories and testimonials; create or support RISE and other sales opportunities.\n\nDecision authority: Executive Sponsor holds ultimate outcome authority and will defer substantially to the Execution Team on particulars. Execution Lead and Program Delivery Lead are responsible for execution and preparation of alternatives. Advisers: Internal Partner Leadership, External Partner Leadership, Market Unit Leadership, NA Tournament Lead and LAC Tournament Lead. Internal names, assignments and detailed evidence belong in the approved work repository; shared record uses sanitized roles and dates.\n\nCritical path: customer selection based on credible commitments and accountability for attending agreed events. Evaluate alternatives against the three goals, customer commitment, partner/Hackathon alignment and sustainable staffing. Autonomous Tournament remains an option for LT discussion, not an approved design.\n\nConfirmed decision/input dates: adviser input by 23 September 2026; revised LT pre-read by 25 September 2026; leadership decisions by 30 September 2026.\n\nSchedule checked: AT-109 evidence/results/sustainability gaps 16 September; AT-110 initial decision-support framework draft 17 September; AT-111 colleague review/initial framework ready 18 September. Retain these preparation targets ahead of the confirmed input, pre-read and decision dates. The 18 September milestone is the initial framework, followed by adviser input and revision. No acceleration currently required; if preparation slips, prioritize the framework and input synthesis to protect 25 and 30 September. Several next-tournament delivery timeline alternatives must be discussed; none is approved.\n\nInput channel: the application being created in parallel, colloquially called the demo, is intended to capture adviser input. It supports the decision process and is not merely a presentation demonstration. AT-108 does not require its completion. If unavailable in time, recommended contingency is to collect structured input in the approved work repository and incorporate it into the pre-read; do not delay the input or leadership decision deadlines for application readiness.\n\nAcceptance: decision sought, sanitized decision-making/adviser roles, decision/input dates recorded; preparation schedule checked against actual window. AT-635 complete. Both AT-108 acceptance criteria satisfied.",
+      "completedAt": "2026-09-15T15:52:07+00:00",
       "owner": "Ian",
       "acceptanceCriteria": [
         "Decision sought, decision-making roles, and decision/input dates are recorded.",
@@ -5082,14 +5169,14 @@
       "id": "AT-109",
       "project": "AT",
       "title": "Capture organizer observations and lessons",
-      "description": "Capture Ian’s delivery experience: what worked, contributions, regional differences, exceptional effort, capacity constraints and sustainability gaps. Distinguish direct observations, interpretations, estimates and unanswered questions. Record available results and evidence gaps without inventing outcomes. A candid organizer assessment sufficient to support a proposal completes this step; peer validation and comprehensive outcome measurement are not prerequisites. Keep detailed internal material in the approved work repository; use sanitized references here.",
+      "description": "Capture Ian\u2019s delivery experience: what worked, contributions, regional differences, exceptional effort, capacity constraints and sustainability gaps. Distinguish direct observations, interpretations, estimates and unanswered questions. Record available results and evidence gaps without inventing outcomes. A candid organizer assessment sufficient to support a proposal completes this step; peer validation and comprehensive outcome measurement are not prerequisites. Keep detailed internal material in the approved work repository; use sanitized references here.",
       "track": "program",
-      "phase": "Program Recommendation — Priority",
+      "phase": "Program Recommendation \u2014 Priority",
       "milestone": "AT-P1",
       "targetDate": "2026-09-23",
       "startDate": "2026-09-13",
       "priority": "critical",
-      "status": "ready",
+      "status": "doing",
       "dependencies": [
         "AT-108",
         "AT-635"
@@ -5100,7 +5187,7 @@
       "evidence": "",
       "blockerReason": "",
       "nextAction": "",
-      "workingNote": "",
+      "workingNote": "15 September 2026 \u2014 Work started. Agreed evidence dimensions: results against AI/BDC/BTP consumption, customer stories/testimonials and RISE/other sales opportunities; customer/SAP/partner contributions; sustainability gaps including customer accountability, staffing and follow-through; missing evidence and adviser questions. For each finding, capture what happened, supporting evidence, decision relevance and adviser question. LessonsLearned application is currently local for testing and under development; no real adviser observations have been entered per project owner. Common BTP tenant deployment is planned as parallel enabling work, not recorded as achieved. AT-109 remains open until evidence is captured and reviewed. Initial evidence target remains 16 September; framework 18 September; adviser input 23 September; revised LT pre-read 25 September; decisions by 30 September. Internal details stay in approved work repository; shared checklist contains sanitized progress only.\n\n23 September 2026 \u2014 Scope clarified: organizer observations and lessons are the starting evidence, not an audited retrospective. This supersedes earlier wording that implied comprehensive measured outcomes or adviser validation were needed before drafting. Peer pre-read v3 contains relevant attendance recollections, contributions and coordination/sustainability observations. A reported peer discussion exposed a gap in awareness of the NA championship; the interpretation that regional nurturing differs is recorded as an organizer hypothesis, not a demonstrated cause. Detailed examples and identities remain in the approved work repository.",
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [
@@ -5109,15 +5196,16 @@
       ],
       "sourceId": "strategy-2026-09-13",
       "conditional": false,
-      "previousTargetDate": "2026-09-16"
+      "previousTargetDate": "2026-09-16",
+      "effortPoints": 3
     },
     {
       "id": "AT-110",
       "project": "AT",
       "title": "Draft the proposal and decisions for peer discussion",
-      "description": "Develop a proposal grounded in Ian’s delivery experience. Explain the recommended direction, meaningful alternatives and trade-offs, and decisions needed. Cover the proposed operating model, responsibilities, continuing roles for experienced contributors, and staffing/resource questions. The deliverable is a peer pre-read, not an approved program or executive-final deck. Assignments, funding and final timing may remain open for discussion. Reuse the existing peer pre-read; no demo-readiness prerequisite.",
+      "description": "Develop a proposal grounded in Ian\u2019s delivery experience. Explain the recommended direction, meaningful alternatives and trade-offs, and decisions needed. Cover the proposed operating model, responsibilities, continuing roles for experienced contributors, and staffing/resource questions. The deliverable is a peer pre-read, not an approved program or executive-final deck. Assignments, funding and final timing may remain open for discussion. Reuse the existing peer pre-read; no demo-readiness prerequisite.",
       "track": "program",
-      "phase": "Program Recommendation — Priority",
+      "phase": "Program Recommendation \u2014 Priority",
       "milestone": "AT-P1",
       "targetDate": "2026-09-23",
       "startDate": "2026-09-13",
@@ -5133,7 +5221,7 @@
       "evidence": "",
       "blockerReason": "",
       "nextAction": "",
-      "workingNote": "",
+      "workingNote": "23 September 2026 \u2014 Peer pre-read v3 reviewed and recognized as substantial drafting evidence. The immediate deliverable is a proposal and decisions for peer discussion; the final executive deck is now AT-112. Current status retained pending completion recording against the revised criteria.",
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [
@@ -5142,15 +5230,16 @@
       ],
       "sourceId": "strategy-2026-09-13",
       "conditional": false,
-      "previousTargetDate": "2026-09-17"
+      "previousTargetDate": "2026-09-17",
+      "effortPoints": 2
     },
     {
       "id": "AT-111",
       "project": "AT",
       "title": "Review with peers and record the recommendation",
-      "description": "Gather input from the small peer group and test the proposal’s assumptions. Give substantial weight to Ian’s first-hand delivery experience and accountability; weigh other input by relevant experience and supporting evidence, not equal votes. Record accepted corrections, proposed changes and their disposition, agreement and remaining differences. Seek consensus without requiring unanimity. Carry the resulting recommendation and any material dissent forward to AT-112; do not delay the executive decision window waiting for universal agreement.",
+      "description": "Gather input from the small peer group and test the proposal\u2019s assumptions. Give substantial weight to Ian\u2019s first-hand delivery experience and accountability; weigh other input by relevant experience and supporting evidence, not equal votes. Record accepted corrections, proposed changes and their disposition, agreement and remaining differences. Seek consensus without requiring unanimity. Carry the resulting recommendation and any material dissent forward to AT-112; do not delay the executive decision window waiting for universal agreement.",
       "track": "program",
-      "phase": "Program Recommendation — Priority",
+      "phase": "Program Recommendation \u2014 Priority",
       "milestone": "AT-P1",
       "targetDate": "2026-09-23",
       "startDate": "2026-09-13",
@@ -5166,7 +5255,7 @@
       "evidence": "",
       "blockerReason": "",
       "nextAction": "",
-      "workingNote": "",
+      "workingNote": "23 September 2026 \u2014 Ian reports an initial peer discussion. This establishes that consultation has begun, not that the full proposal has been reviewed or consensus reached. Capture feedback and its disposition, giving substantial weight to direct delivery experience; unresolved differences can accompany the recommendation. Executive synthesis moves to AT-112.",
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [
@@ -5175,7 +5264,8 @@
       ],
       "sourceId": "strategy-2026-09-13",
       "conditional": false,
-      "previousTargetDate": "2026-09-18"
+      "previousTargetDate": "2026-09-18",
+      "effortPoints": 2
     },
     {
       "id": "AT-112",
@@ -5183,7 +5273,7 @@
       "title": "Prepare the executive decision deck",
       "description": "Convert the peer-reviewed proposal into a concise executive-ready deck for the confirmed leadership decision window. Present the recommendation, supporting observations and results with their limits, meaningful alternatives, resource and capacity implications, proposed roles for experienced contributors, and explicit decisions requested. Carry forward material disagreements rather than require unanimity. Prepare the revised leadership pre-read by 25 September for decisions by 30 September 2026. No demo prerequisite. Sending or submitting materials is a separate explicit action.",
       "track": "program",
-      "phase": "Program Recommendation — Priority",
+      "phase": "Program Recommendation \u2014 Priority",
       "milestone": "AT-P1",
       "targetDate": "2026-09-25",
       "startDate": "2026-09-23",
@@ -5209,13 +5299,14 @@
       ],
       "sourceId": "strategy-2026-09-23",
       "conditional": false,
-      "evidenceRequirement": "Sanitized executive-deck reference and readiness record identifying the decision request, peer-feedback disposition and confirmed decision window."
+      "evidenceRequirement": "Sanitized executive-deck reference and readiness record identifying the decision request, peer-feedback disposition and confirmed decision window.",
+      "effortPoints": 2
     },
     {
       "id": "RW-109",
       "project": "RW",
       "title": "Define the design-partner offer and pilot success criteria",
-      "description": "Define a bounded pilot for charter operators with 3–20 vessels. Cover the checklist workflow AND the payment experience using the agreed Stripe coupons at no additional cost. Include trial duration, feedback expectations, success criteria, support and Business OS defect handling.",
+      "description": "Define a bounded pilot for charter operators with 3\u201320 vessels. Cover the checklist workflow AND the payment experience using the agreed Stripe coupons at no additional cost. Include trial duration, feedback expectations, success criteria, support and Business OS defect handling.",
       "track": "partners",
       "phase": "Design-Partner Preparation",
       "milestone": "RW-P1",
@@ -5240,7 +5331,8 @@
         "Coupon terms, support expectations and measurable pilot success criteria are recorded."
       ],
       "sourceId": "strategy-2026-09-13",
-      "conditional": false
+      "conditional": false,
+      "effortPoints": 2
     },
     {
       "id": "RW-110",
@@ -5272,7 +5364,8 @@
         "Invitation is prepared with pilot scope, coupon-supported pricing and feedback expectations."
       ],
       "sourceId": "strategy-2026-09-13",
-      "conditional": false
+      "conditional": false,
+      "effortPoints": 2
     },
     {
       "id": "RW-111",
@@ -5304,7 +5397,8 @@
         "Live demonstrations wait for the relevant security and deployment gates."
       ],
       "sourceId": "strategy-2026-09-13",
-      "conditional": false
+      "conditional": false,
+      "effortPoints": 5
     },
     {
       "id": "RW-308",
@@ -5326,8 +5420,8 @@
       "critical": true,
       "evidence": "",
       "blockerReason": "",
-      "nextAction": "",
-      "workingNote": "",
+      "nextAction": "Define the first daily operating loop and a bounded trial duration or work-item count, using existing gstack context. Record entry/success criteria and manual steps for RW-309; keep payment insight under RW-310 coequal with defect repair.",
+      "workingNote": "27 September 2026 \u2014 Ian approved the bootstrapping-to-dogfooding refinement. Trial planning belongs to RW-308 and execution/review to RW-309. No trial execution or completion is claimed. RW-310 retains financial-insight verification.",
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [
@@ -5336,7 +5430,8 @@
         "A bounded dogfooding trial plan records duration or work-item count, entry conditions, ownership, success criteria, permitted manual steps and the review point. Reuse existing gstack plans/reviews; clarify scope with office-hours/plan-ceo-review as needed and review execution with plan-eng-review."
       ],
       "sourceId": "strategy-2026-09-13",
-      "conditional": false
+      "conditional": false,
+      "effortPoints": 2
     },
     {
       "id": "RW-309",
@@ -5362,8 +5457,8 @@
       "critical": true,
       "evidence": "",
       "blockerReason": "",
-      "nextAction": "",
-      "workingNote": "",
+      "nextAction": "Prepare the trial from RW-308; after prerequisites, run a real defect through Business OS with code review, deterministic tests and browser QA. Execute the agreed trial and record a gstack retrospective with improvement proposals.",
+      "workingNote": "2026-09-26 \u2014 Supporting GitHub App foundation verified per Ian\u2019s handoff: organization-owned runwell-ops App and workload-account SSM configuration live in us-west-1. Two backend GITHUB_OWNER fixes are local commit 4df46de only, not pushed/merged. Agent migration and schema authorization gaps remain under RW-105. No end-to-end defect-to-repair workflow verification is claimed; this task stays open.\n\n27 September 2026 \u2014 Ian approved the bootstrapping-to-dogfooding refinement. Trial planning belongs to RW-308 and execution/review to RW-309. No trial execution or completion is claimed. RW-310 retains financial-insight verification.",
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [
@@ -5372,7 +5467,8 @@
         "The RW-308 dogfooding trial is executed and reviewed: at least one real defect completes the verified repair loop; work handled, tool escapes, manual workarounds and friction are recorded. A gstack retrospective documents success-criteria results and proposes the next improvement. Shipping/deployment retains existing explicit approval and gates."
       ],
       "sourceId": "strategy-2026-09-13",
-      "conditional": false
+      "conditional": false,
+      "effortPoints": 5
     },
     {
       "id": "RW-310",
@@ -5406,7 +5502,8 @@
         "Coupon discounts and zero collected revenue are represented accurately; sensitive payment details are not exposed."
       ],
       "sourceId": "strategy-2026-09-13",
-      "conditional": false
+      "conditional": false,
+      "effortPoints": 5
     },
     {
       "id": "LW-110",
@@ -5416,7 +5513,7 @@
       "track": "research",
       "phase": "Disclosure Source and Access",
       "milestone": "LW-B1",
-      "targetDate": "2026-09-30",
+      "targetDate": "2026-10-25",
       "startDate": "2026-09-13",
       "priority": "high",
       "status": "blocked",
@@ -5427,9 +5524,9 @@
       "releaseGate": false,
       "critical": false,
       "evidence": "",
-      "blockerReason": "Awaiting answers to the specific disclosure-access questions recorded under LW-103.",
-      "nextAction": "Ian to obtain and record the applicable access clarification through the documented follow-up channels; do not acquire actual records before this gate is satisfied.",
-      "workingNote": "",
+      "blockerReason": "Personal trading research commercial-purpose classification remains unverified for official House and Senate sources; no follow-up calls have been made. Actual disclosure acquisition, including a one-time notebook pull, must wait. Research is parked by priority.",
+      "nextAction": "Ian to send the prepared House/Senate inquiries and record sent dates. Review responses four weeks after sending (provisionally 25 October 2026). If unanswered, choose follow-up/escalation or continued deferral; no actual disclosure acquisition until LW-110 is resolved.",
+      "workingNote": "26 September 2026 \u2014 Handover confirms this is the outstanding acquisition gate. Follow-ups: House Legislative Resource Center (202) 226-5200; Senate Office of Public Records (202) 224-0322; automation/retention questions through clerkweb@mail.house.gov and Senate Public Records. No answers are claimed. Track B is optional and parked; offline preparation is also paused by priority, independently of acquisition restrictions.\n\n27 September 2026 \u2014 Ian plans to email the disclosure offices. Sending is not yet confirmed. Agreed response window: four weeks from actual sending; provisional review date 25 October 2026 assumes sending 27 September. Adjust if sent later. At the deadline, review replies; if unanswered, decide on a written follow-up/escalation or keep optional research parked. Silence does not resolve the access question. House contact correction: info.clerkweb@mail.house.gov (official LRC contact), replacing the previously recorded shorter address. Senate OPR routing contact: lobby@sec.senate.gov; secondary Ethics contact: mailbox_office@ethics.senate.gov (older official listing). Official House/Senate guidance repeats the commercial-purpose restriction but the material found does not specifically resolve personal trading research. Reddit research discussions are not access clearance.",
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [
@@ -5437,7 +5534,8 @@
         "Permitted scope and any remaining production-automation restrictions are recorded."
       ],
       "sourceId": "strategy-2026-09-13",
-      "conditional": false
+      "conditional": false,
+      "effortPoints": 5
     },
     {
       "id": "LW-111",
@@ -5450,7 +5548,7 @@
       "targetDate": "2026-09-30",
       "startDate": "2026-09-13",
       "priority": "high",
-      "status": "ready",
+      "status": "deferred",
       "dependencies": [
         "LW-104",
         "LW-635"
@@ -5460,8 +5558,8 @@
       "critical": false,
       "evidence": "",
       "blockerReason": "",
-      "nextAction": "",
-      "workingNote": "",
+      "nextAction": "Resume only when Ian prioritizes the optional congressional research spike. Resolve LW-110 before acquiring actual disclosures; follow the notebook-first sequence and complete ablation before production integration.",
+      "workingNote": "26 September 2026 \u2014 Parked per Ian\u2019s stated priority: congressional signal is a nice-to-have on the core LIVEWELL workflow. Planning references: docs/research/congressional-signal-track-plan.md and docs/research/lw206-ablation-notebook-sketch.md (ef6ceea, reported pushed). LW-301 frozen-baseline prerequisite is now complete; this does not authorize disclosure acquisition or certify this research task complete.",
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [
@@ -5482,7 +5580,7 @@
       "targetDate": "2026-09-30",
       "startDate": "2026-09-13",
       "priority": "high",
-      "status": "ready",
+      "status": "deferred",
       "dependencies": [
         "LW-110",
         "LW-111",
@@ -5493,8 +5591,8 @@
       "critical": false,
       "evidence": "",
       "blockerReason": "",
-      "nextAction": "",
-      "workingNote": "",
+      "nextAction": "Resume only when Ian prioritizes the optional congressional research spike. Resolve LW-110 before acquiring actual disclosures; follow the notebook-first sequence and complete ablation before production integration.",
+      "workingNote": "26 September 2026 \u2014 Parked per Ian\u2019s stated priority: congressional signal is a nice-to-have on the core LIVEWELL workflow. Planning references: docs/research/congressional-signal-track-plan.md and docs/research/lw206-ablation-notebook-sketch.md (ef6ceea, reported pushed). LW-301 frozen-baseline prerequisite is now complete; this does not authorize disclosure acquisition or certify this research task complete.",
       "completedAt": null,
       "owner": "Ian",
       "acceptanceCriteria": [
@@ -5508,7 +5606,7 @@
       "id": "LW-113",
       "project": "LW",
       "title": "Approve production integration only after positive ablation",
-      "description": "Activate only if the completed ablation supports retaining the signal. Record Ian’s explicit acceptance and the evidence supporting production integration. A negative or inconclusive result keeps production work deferred; finishing research alone does not authorize integration.",
+      "description": "Activate only if the completed ablation supports retaining the signal. Record Ian\u2019s explicit acceptance and the evidence supporting production integration. A negative or inconclusive result keeps production work deferred; finishing research alone does not authorize integration.",
       "track": "integration",
       "phase": "Baseline-versus-Augmented Ablation",
       "milestone": "LW-W3",
@@ -5547,7 +5645,7 @@
       "targetDate": "2026-11-13",
       "startDate": "2026-09-13",
       "priority": "high",
-      "status": "ready",
+      "status": "done",
       "dependencies": [
         "LW-301",
         "LW-613",
@@ -5556,11 +5654,11 @@
       "decisionDependencies": [],
       "releaseGate": true,
       "critical": false,
-      "evidence": "",
+      "evidence": "Handoff LW-20261002-replay-verification-result: local read-only scoring replay against frozen baseline using pinned model v20260507T144919 and existing feature-vector/predict_proba path. All 1,831 scored/versioned rows matched exactly (Decimal comparison), 0 mismatches/errors. Frozen export has 16,863 rows, including 15,032 unscored/unversioned rows excluded from scoring comparison. Plan 65b1ad6 committed/pushed; no code changes, cloud writes or deployment claimed. Operational reliability and full upstream regeneration are not certified by this result. Handoff LW-20261015-deployed-scheduling-verification: local compute/failure-recovery, scratch API, rendered UI and read-only deployed EventBridge plus scheduled-run evidence accepted; commit 5c3e628.",
       "blockerReason": "",
-      "nextAction": "",
-      "workingNote": "",
-      "completedAt": null,
+      "nextAction": "Proceed to LW-303 readiness, security and cost review.",
+      "workingNote": "27 September 2026 \u2014 Ian approved adding the frozen replay check here, keeping core verification independent of parked congressional research and LW-206. This is planned verification, not a passing result.\n\n2 October 2026 \u2014 Accepted partial scoring-reproducibility evidence from LW-20261002-replay-verification-result. Task now doing, not done. Scratch results were deleted per handoff; retain the sanitized verification summary. The export population count differs from the approximate manifest count and should be reconciled, without treating unscored rows as a newly proven defect. Deployment/scheduling/API/UI/failure-recovery remain unverified.\n\n15 October 2026 \u2014 DONE. Accepted complete evidence from LW-20261015-deployed-scheduling-verification: deployed EventBridge schedule matches CDK, one observed scheduled run dispatched 19 instruments with no errors and wrote scored output using the pinned model. Combined with prior local, recovery, API and rendered-UI evidence, LW-302 acceptance is satisfied. Backtest is separate LW-304.",
+      "completedAt": "2026-10-15",
       "owner": "Ian",
       "acceptanceCriteria": [
         "Core deployment and end-to-end workflow are verified with sanitized evidence.",
@@ -5600,7 +5698,43 @@
         "Access and operational checks pass with the baseline preserved."
       ],
       "sourceId": "strategy-2026-09-13",
-      "conditional": false
+      "conditional": false,
+      "effortPoints": 2
+    },
+    {
+      "id": "LW-304",
+      "project": "LW",
+      "title": "Validate backtest surface",
+      "description": "Validate the S3-backed /api/backtest/summary path and BacktestResults UI separately from the core signal workflow.",
+      "track": "core",
+      "phase": "Core Baseline and Production",
+      "milestone": "LW-A2",
+      "targetDate": "2026-11-20",
+      "startDate": "2026-10-15",
+      "priority": "medium",
+      "status": "ready",
+      "dependencies": [
+        "LW-302"
+      ],
+      "decisionDependencies": [],
+      "releaseGate": false,
+      "critical": false,
+      "evidence": "",
+      "blockerReason": "",
+      "nextAction": "Use /plan-eng-review to scope production-free validation from frozen inputs; produce a scratch backtest artifact, verify the API and rendered UI, and prove headline figures are reproducible.",
+      "workingNote": "15 October 2026 \u2014 Created as a standalone task from LW-20261015-backtest-coverage-task-proposal. Separate from completed LW-302 because it reads an S3 backtest/summary.json artifact rather than the core DynamoDB signal path. No implementation yet. Production writes and deployed/scheduled backtest runs are out of scope unless explicitly authorized.",
+      "completedAt": null,
+      "owner": "Ian",
+      "acceptanceCriteria": [
+        "Produce a backtest summary artifact from frozen baseline inputs in a scratch/non-production location.",
+        "Verify /api/backtest/summary returns 200 with a schema-valid BacktestSummary.",
+        "Verify BacktestResults UI renders the summary with zero console errors.",
+        "Reproduce headline figures deterministically from frozen inputs.",
+        "Do not deploy or write to production without explicit authorization."
+      ],
+      "sourceId": "LW-20261015-backtest-coverage-task-proposal",
+      "conditional": false,
+      "effortPoints": 5
     }
   ],
   "milestones": [
@@ -5801,10 +5935,10 @@
       "project": "LW",
       "title": "Personal NADEX early-warning scope",
       "dueDate": "2026-09-04",
-      "impact": "Defines Ian’s personal alert-and-review workflow",
+      "impact": "Defines Ian\u2019s personal alert-and-review workflow",
       "status": "resolved",
       "recordedDecision": "LIVEWELL is solely my personal early-warning system to help identify potential trades on NADEX. Assume no multi-user scenario or commercial product for the time being.",
-      "note": "Scope clarified by Ian on 5 September 2026.",
+      "note": "No cogent plan for providing the workflow as a service\nScope clarified by Ian on 5 September 2026: personal NADEX early-warning system only; no multi-user or commercial product scenario.",
       "blocks": [
         "LW-101"
       ]
@@ -5815,8 +5949,8 @@
       "title": "Official disclosure sources or licensed feed",
       "dueDate": "2026-09-04",
       "impact": "Controls acquisition route",
-      "status": "open",
-      "recordedDecision": "",
+      "status": "resolved",
+      "recordedDecision": "Source is a community/open-source extract-and-normalize pipeline over the official public disclosures (House Clerk FD portal + Senate eFD), not a paid feed and not Capitol Trades.  Rationale: reuse maintained community tooling rather than hand-writing House/Senate parsers; the underlying data is public. Normalize to a canonical CSV on S3. LW-103 confirms the specific repo/access method chosen and its automation/storage/reuse terms; LW-201/202 build ingestion + parser against it. Executive-branch (OGE) out of scope for v1.",
       "note": "",
       "blocks": [
         "LW-201",
@@ -5829,9 +5963,9 @@
       "title": "Live billing or manually entitled design partners",
       "dueDate": "2026-10-16",
       "impact": "Determines pilot entitlement",
-      "status": "open",
-      "recordedDecision": "",
-      "note": "",
+      "status": "resolved",
+      "recordedDecision": "Build production billing. A \"discount code\" will be provided to design partners.",
+      "note": "Provides additional firewall to the application.",
       "blocks": [
         "RW-301"
       ]
@@ -5842,8 +5976,8 @@
       "title": "Resolve Step Functions architecture contradiction",
       "dueDate": "2026-10-09",
       "impact": "Clarify existing architecture before dependent changes",
-      "status": "open",
-      "recordedDecision": "",
+      "status": "resolved",
+      "recordedDecision": "AWS step function service will not be used. Architecture is a collection of microservices connected via AWS EventBridge.",
       "note": "",
       "blocks": []
     },
@@ -5855,7 +5989,7 @@
       "impact": "Development tooling only; application architecture unchanged",
       "status": "resolved",
       "recordedDecision": "Plan A: Kiro Auto for normal project work. Plan B: Ian may purchase additional Kiro credits when needed to preserve productive momentum; this is a preference, not authorization for automatic purchases or a spending cap. Plan C: Qwen3 Coder Next inside Kiro for small, well-defined tasks whose output is inexpensive to verify. Plan D: consider a separate LLM router only if the earlier options are unsuitable or Kiro availability, workflow, or economics blocks progress. No router installation or activation is currently required.",
-      "note": "13 September 2026 — Four-tier plan agreed after the shared Qwen trial. Prior router Plan B wording is superseded. Development-tooling decision only; application architecture unchanged. See the project’s -620 evidence and deferred -608 task.",
+      "note": "13 September 2026 \u2014 Four-tier plan agreed after the shared Qwen trial. Prior router Plan B wording is superseded. Development-tooling decision only; application architecture unchanged. See the project\u2019s -620 evidence and deferred -608 task.",
       "blocks": []
     },
     {
@@ -5866,7 +6000,7 @@
       "impact": "Development tooling only; application architecture unchanged",
       "status": "resolved",
       "recordedDecision": "Plan A: Kiro Auto for normal project work. Plan B: Ian may purchase additional Kiro credits when needed to preserve productive momentum; this is a preference, not authorization for automatic purchases or a spending cap. Plan C: Qwen3 Coder Next inside Kiro for small, well-defined tasks whose output is inexpensive to verify. Plan D: consider a separate LLM router only if the earlier options are unsuitable or Kiro availability, workflow, or economics blocks progress. No router installation or activation is currently required.",
-      "note": "13 September 2026 — Four-tier plan agreed after the shared Qwen trial. Prior router Plan B wording is superseded. Development-tooling decision only; application architecture unchanged. See the project’s -620 evidence and deferred -608 task.",
+      "note": "13 September 2026 \u2014 Four-tier plan agreed after the shared Qwen trial. Prior router Plan B wording is superseded. Development-tooling decision only; application architecture unchanged. See the project\u2019s -620 evidence and deferred -608 task.",
       "blocks": []
     },
     {
@@ -5877,7 +6011,7 @@
       "impact": "Development tooling only; application architecture unchanged",
       "status": "resolved",
       "recordedDecision": "Plan A: Kiro Auto for normal project work. Plan B: Ian may purchase additional Kiro credits when needed to preserve productive momentum; this is a preference, not authorization for automatic purchases or a spending cap. Plan C: Qwen3 Coder Next inside Kiro for small, well-defined tasks whose output is inexpensive to verify. Plan D: consider a separate LLM router only if the earlier options are unsuitable or Kiro availability, workflow, or economics blocks progress. No router installation or activation is currently required.",
-      "note": "13 September 2026 — Four-tier plan agreed after the shared Qwen trial. Prior router Plan B wording is superseded. Development-tooling decision only; application architecture unchanged. See the project’s -620 evidence and deferred -608 task.",
+      "note": "13 September 2026 \u2014 Four-tier plan agreed after the shared Qwen trial. Prior router Plan B wording is superseded. Development-tooling decision only; application architecture unchanged. See the project\u2019s -620 evidence and deferred -608 task.",
       "blocks": []
     }
   ],
@@ -6255,7 +6389,7 @@
     "weekendEnd": "2026-09-07",
     "switchDate": null,
     "timezone": "America/Los_Angeles",
-    "note": "AT organizer assessment and peer proposal feed peer input by 23 September, an executive pre-read by 25 September and leadership decisions by 30 September. Delivery experience carries substantial weight; unanimity and demo readiness are not prerequisites. RUNWELL workflow, payments and Business OS advance now toward a 25 September internal readiness checkpoint. LIVEWELL core baseline and bounded research proceed in parallel; production signal integration is conditional on positive ablation. Planning allocation: AT 55%, RUNWELL 35%, LIVEWELL 10%. Review priorities weekly; no automatic October switch. Weekly capacity: 15 total project hours — AT 8h15m within SAP working hours; RUNWELL 5h15m and LIVEWELL 1h30m during evenings/weekends (6h45m personal time total). Start with this sustainable baseline; review weekly before increasing hours.",
+    "note": "AT organizer assessment and peer proposal feed peer input by 23 September, an executive pre-read by 25 September and leadership decisions by 30 September. Delivery experience carries substantial weight; unanimity and demo readiness are not prerequisites. RUNWELL workflow, payments and Business OS advance now toward a 25 September internal readiness checkpoint. LIVEWELL core baseline and bounded research proceed in parallel; production signal integration is conditional on positive ablation. Planning allocation: AT 55%, RUNWELL 35%, LIVEWELL 10%. Review priorities weekly; no automatic October switch. Weekly capacity: 15 total project hours \u2014 AT 8h15m within SAP working hours; RUNWELL 5h15m and LIVEWELL 1h30m during evenings/weekends (6h45m personal time total). Start with this sustainable baseline; review weekly before increasing hours.",
     "allocationPercent": {
       "AT": 55,
       "RW": 35,
@@ -6278,5 +6412,12 @@
       "personalHours": 6.75,
       "reviewCadence": "weekly"
     }
+  },
+  "_governanceSnapshot": {
+    "retrievedAt": "2026-10-16T10:00:00Z",
+    "source": "s3://three-program-recovery-715853571315-us-west-2/data.json",
+    "sourceRevision": 179,
+    "purpose": "Read-only local snapshot; never upload over live state.",
+    "revision": 179
   }
 }

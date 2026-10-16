@@ -20,3 +20,7 @@ input:not([type=checkbox]),select,textarea{font-size:16px}
 .task.blocked{border-left-color:#b34e68}
 
 .next-support{padding:12px;border:1px solid var(--line);border-radius:6px;align-self:start}.next-support>summary{cursor:pointer;font-size:14px;font-weight:700}.next-support .next-item{margin-top:10px}.next-item>b{display:block;font-size:13px;color:var(--teal,#137d72);margin-bottom:8px}
+
+/* Effort points: neutral task badges and status-segmented project bars. */
+.effort-badge{display:inline-block;margin-left:7px;padding:1px 6px;border:1px solid #cfc6e5;border-radius:10px;background:#f7f4fc;color:#59468f;font-size:11px;font-weight:800;vertical-align:2px;white-space:nowrap}.effort-summary{display:flex;align-items:center;gap:18px;margin:18px 0;padding:14px 16px;background:#faf9fc;border:1px solid var(--line);border-radius:7px}.effort-summary b{display:block;font-size:14px}.effort-summary small{display:block;color:#665d79;font-size:12px}.effort-bar{height:10px;display:flex;flex:1;min-width:160px;overflow:hidden;background:#eeeaf5;border-radius:8px}.effort-bar span{display:block;height:100%}.effort-done{background:#29977e}.effort-doing{background:#22b9ad}.effort-blocked{background:#c84a70}.effort-ready{background:#9b85d6}
+@media(max-width:800px){.effort-summary{align-items:stretch;flex-direction:column;gap:8px}.effort-bar{min-width:0}}
