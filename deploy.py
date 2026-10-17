@@ -75,7 +75,7 @@ for font in (ROOT/'fonts').iterdir():
  if font.suffix in ('.woff2','.ttf'):
   mime='woff2' if font.suffix=='.woff2' else 'ttf'
   css=css.replace('fonts/'+font.name,'data:font/'+mime+';base64,'+base64.b64encode(font.read_bytes()).decode())
-html=(ROOT/'index.html').read_text().replace('<link rel="stylesheet" href="styles.css">','<style>'+css+'</style>').replace('window.CONFIG=null;','window.CONFIG='+config+';')
+html=(ROOT/'index.html').read_text().replace('VELOCITY_URL',velocity_url).replace('<link rel="stylesheet" href="styles.css">','<style>'+css+'</style>').replace('window.CONFIG=null;','window.CONFIG='+config+';')
 for f in ('logic.js','app.js'):html=html.replace(f'<script src="{f}"></script>','<script>'+(ROOT/f).read_text()+'</script>')
 s3.put_object(Bucket=BUCKET,Key='index.html',Body=html.encode(),ContentType='text/html; charset=utf-8',CacheControl='no-cache, no-store',ServerSideEncryption='AES256')
 url=s3.generate_presigned_url('get_object',Params={'Bucket':BUCKET,'Key':'index.html'},ExpiresIn=604800)

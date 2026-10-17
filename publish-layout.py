@@ -23,7 +23,7 @@ css=(ROOT/'styles.css').read_text()
 for font in (ROOT/'fonts').iterdir():
  if font.suffix in ['.woff2','.ttf']:
   mime=font.suffix[1:];css=css.replace('fonts/'+font.name,'data:font/'+mime+';base64,'+base64.b64encode(font.read_bytes()).decode())
-html=(ROOT/'index.html').read_text().replace('<link rel="stylesheet" href="styles.css">','<style>'+css+'</style>').replace('window.CONFIG=null;','window.CONFIG='+config+';')
+html=(ROOT/'index.html').read_text().replace('VELOCITY_URL',velocity_url).replace('<link rel="stylesheet" href="styles.css">','<style>'+css+'</style>').replace('window.CONFIG=null;','window.CONFIG='+config+';')
 for file in ['logic.js','app.js']:html=html.replace(f'<script src="{file}"></script>','<script>'+(ROOT/file).read_text()+'</script>')
 s3.put_object(Bucket=settings['bucket'],Key='index.html',Body=html.encode(),ContentType='text/html; charset=utf-8',CacheControl='no-cache, no-store',ServerSideEncryption='AES256')
 u=s3.generate_presigned_url('get_object',Params={'Bucket':settings['bucket'],'Key':'index.html'},ExpiresIn=604800)
