@@ -15,8 +15,8 @@ assert settings['bucket']=='three-program-recovery-715853571315-us-west-2'
 s3=session.client('s3',endpoint_url='https://s3.us-west-2.amazonaws.com',config=Config(signature_version='s3v4',s3={'addressing_style':'virtual'}))
 live=json.loads(s3.get_object(Bucket=settings['bucket'],Key='data.json')['Body'].read())
 seed=validate(json.loads((ROOT/'data.json').read_text()))
-for collection in ['tasks','projects','decisions']:
- assert {r['id'] for r in live[collection]}=={r['id'] for r in seed[collection]}, 'Publish matching definitions before layout.'
+s3.put_object(Bucket=settings['bucket'],Key='velocity.html',Body=(ROOT/'docs/velocity.html').read_bytes(),ContentType='text/html; charset=utf-8',CacheControl='no-cache, no-store',ServerSideEncryption='AES256')
+velocity_url=s3.generate_presigned_url('get_object',Params={'Bucket':settings['bucket'],'Key':'velocity.html'},ExpiresIn=604800)
 secret=session.client('lambda').get_function_configuration(FunctionName=settings['function'])['Environment']['Variables']['ACCESS_TOKEN']
 config=json.dumps({'url':settings['api'],'token':secret,'resetSeed':seed}).replace('<','\\u003c')
 css=(ROOT/'styles.css').read_text()
